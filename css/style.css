@@ -8,7 +8,7 @@
 *::before{
    margin: 0;
    padding: 0;
-  box-sizing: inherit;
+   box-sizing: inherit;
 }
 
 html{
@@ -28,11 +28,9 @@ html{
 /* slide1 */
 
 #slideblock1{
-    background-color: red;
+    background-image: linear-gradient(to left top, rgb(255, 6, 6), rgb(250, 139, 35));
 }
-#slideblock2{
-    background-color: blue;
-}
+
 
 #pic1{
     width: 65%;
@@ -47,8 +45,9 @@ html{
     transform: translate(-50%, -50%);
     transform: rotate(-17deg);
     z-index: 1000;
-    animation: slideleft .8s ease-in;
+    animation: slideleft .8s ease-in-out;
 }
+
 
 
 .white-text{
@@ -70,7 +69,7 @@ html{
 #airjordan{
     font-size: 5rem;
     position: absolute;
-    left: 12%;
+    left: 9%;
     top: 30%;
     margin: 0;
     animation: popup .8s ease-in;
@@ -80,7 +79,7 @@ html{
 
 #v-bred{
     position: absolute;
-    left: 23%;
+    left: 19%;
     top: 40%;
     font-size: 5rem;
     animation: popup 1s ease-in;
@@ -89,34 +88,46 @@ html{
 }
 
 /* slide2 */
+#slideblock2{
+    background-color:#3354FB;
+}
 
 #shoe2{
     width: 55%;
     position: absolute;
     top: 10%;
     left: 8%;
+    animation: slideleft 0.8s ease-in-out;
+}
+
+#slide2div{
+    position: absolute;
+    display: inline-block;
+    top: 20%;
+    right: 10%;
+    animation: slideleft 0.7s ease-in;
 }
 
 #hyper{
- font-size: 30px;
+ font-size: 25px;
  text-transform: uppercase;
  font-weight: bold;
- position: absolute;
  transform: rotate(90deg);
- top: 25%;
- left: 60%;
+ position: absolute;
+ left: -52%;
+ top: 41%;
 }
 
 #nike2{
     font-style: italic;
-    font-size: 30px;
-    position: absolute;
+    font-size: 50px;
+    /* position: absolute; */
     top: 10%;
     left: 70%;
 }
 
 #air{
-    position: absolute;
+    /* position: absolute; */
     top: 15%;
     left: 70.2%;
     font-size: 50px;
@@ -124,17 +135,126 @@ html{
 }
 
 #jordan{
-    position: absolute;
+    /* position: absolute; */
     top: 23%;
     left: 70.2%;
     font-size: 50px;
     text-transform: uppercase;
 }
 
+#nine{
+    font-size: 150px;
+    position: absolute;
+    top: -15%;
+    right: 0%;
+    color: rgb(9, 3, 63);
+    animation: slideleft 0.8s ease-in;
+}
+
+/* slide 3 */
+
+#slideblock3{
+    background-color: #F8D765;
+}
 
 
+#guyonstairs{
+    width: 35%;
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    animation: slideleft 1s ease-in-out;
+    
+}
+
+#shoe3{
+    width: 38%;
+    transform: rotate(-32deg) rotateY(180deg);
+    position: absolute;
+    right: 5%;
+    top: 30%;
+    animation: popup 2s;
+
+}
+
+#slide3div{
+    font-size: 80px;
+    text-transform: uppercase;
+    position: absolute;
+    top: 8%;
+    margin: 10px;
+    color: #121637;
+    animation: popup 2s;
+}
+
+#slide3div2{
+    font-size: 25px;
+    text-transform: uppercase;
+    position: absolute;
+    top: 15%;
+    margin: 10px;
+    right: 25%;
+    color: #121637;
+    font-style: italic;  
+    animation: slideleft 1s ease-in-out;
+}
+
+/* slide 4 */
+#slideblock4{
+   background-image: linear-gradient(to bottom right, rgb(0, 225, 255) 10%, rgb(0, 2, 8));
+    
+}
+#slide4bg{
+    width: 80%;
+    position: absolute;
+    right: 0;
+}
+
+#shoe4{
+    width: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(20deg);
+
+}
+
+#slide4div{
+    font-size: 80px;
+    position: absolute;
+    top: 50%;
+    margin: 15px;
+    transform: translateY(-50%);
+    text-transform: uppercase;
+    /* animation: slideleft 1s ease-in-out; */
+}
+
+#dc{
+    color: white;
+}
+#pure{
+    background-image: linear-gradient(to left, cyan 40%, rgb(2, 6, 255));
+    background-clip: text;
+    color: transparent;
+}
+
+/* slide 5 */
+
+#slideblock5{
+    background-image: url(../img/steven-lelham-atSaEOeE8Nk-unsplash.jpg);
+    background-size: cover;
+}
+
+#slide5div{
+    font-size:100px;
+    text-transform: uppercase;
+    margin-left: 10px;
+    position: absolute;
+    top: 10%;
+}
 
 /* ANIMATIONS */
+
 
 @keyframes popup{
     0%{
@@ -160,8 +280,10 @@ html{
 }
 
 
+
+
 /* button animation */
-@keyframes animate1{
+@keyframes btnanimate1{
     0%{
         transform: translateX(-100%);
         
@@ -172,7 +294,7 @@ html{
     }
 }
 
-@keyframes animate2{
+@keyframes btnanimate2{
     0%{
         transform: translateY(-100%);
         
@@ -183,7 +305,7 @@ html{
     }
 }
 
-@keyframes animate3{
+@keyframes btnanimate3{
     0%{
         transform: translateX(100%);
         
@@ -194,7 +316,7 @@ html{
     }
 }
 
-@keyframes animate4{
+@keyframes btnanimate4{
     0%{
         transform: translateY(100%);
         
@@ -207,15 +329,45 @@ html{
 
 /* buttons(component) */
 
-#nikebtn{
+#nikebtn,
+#nike2btn,
+#adidasbtn,
+#dcbtn,
+#racebtn{
     position: absolute;
     top: 80%;
+    left: 0%;
 }
 
+
+#adidasbtn{
+    color: #121637;
+}
+
+#racebtn{
+    color: black;
+}
+
+
+#adidasbtn:hover span{
+    background: linear-gradient(to right, #0077ff, #121637);
+}
 
 #nikebtn:hover span{
     background: linear-gradient(to right, #ff0000, #ff8717);
 } 
+
+#nike2btn:hover span{
+    background: linear-gradient(to right, #0077ff, #110068);
+} 
+
+#dcbtn:hover span{
+    background: linear-gradient(to right, #00c3ff, rgb(255, 255, 255));
+}
+
+#racebtn:hover span{
+    background: linear-gradient(to right, rgb(211, 61, 38), rgb(221, 21, 21));
+}
 
 .btn{
     /* position: relative;     */
@@ -229,8 +381,7 @@ html{
     overflow: hidden;
     z-index: 300;
     transition: all .4s;
-    animation: popup 1s ease-in;
-    
+    animation: popup 1s ease-in;  
     }
     
     .btn:hover{
@@ -259,7 +410,7 @@ html{
     left: 0;
     width: 100%;
     height: 2px;
-    animation: animate1 2s linear infinite;
+    animation: btnanimate1 2s linear infinite;
 }
 
 
@@ -269,7 +420,7 @@ html{
     right: 0;
     width: 2px;
     height: 100%;
-    animation: animate2 2s linear infinite;
+    animation: btnanimate2 2s linear infinite;
     animation-delay: 1s; 
 
 }
@@ -280,7 +431,7 @@ html{
     right: 0;
     width: 100%;
     height: 2px;
-    animation: animate3 2s linear infinite;
+    animation: btnanimate3 2s linear infinite;
 
 }
 
@@ -290,12 +441,12 @@ html{
     left: 0;
     width: 2px;
     height: 100%;
-    animation: animate4 2s linear infinite;
+    animation: btnanimate4 2s linear infinite;
     animation-delay: 1s; 
 }
 
 
-/* pricetag(components) */
+/* pricebox(components) */
 .pncbox{
   box-shadow: 0 20px 50px rgba(0, 0, 0, .5);
     display: inline-block; 
@@ -306,8 +457,13 @@ html{
     top: 50%;
     right: 0;  
     transition: all .3s;
+    margin:  5px 0px 5px 5px;
+    animation: slideleft 0.8s ease-in;
 }
 
+.colors{
+    cursor: pointer;
+}
 
 
 
@@ -334,6 +490,19 @@ html{
     color: white;
 }
 
+
+#pt2,
+#pt2 p{
+    color: #121637;
+}
+
+#pt3,
+#pt3 p{
+    color: black;
+}
+
+
+
 .colorblock{
     display: flex;
 }
@@ -343,9 +512,9 @@ html{
 }
 
 /* slider styles */
-.glider{
+/* .glider{
     height: 670px;
-}
+} */
 
 .arrow{
    font-size: 40px;

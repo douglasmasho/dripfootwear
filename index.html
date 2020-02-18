@@ -10,32 +10,34 @@
 <!-- <link href="https://fonts.googleapis.com/css?family=Abel&display=swap" rel="stylesheet"> -->
 <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet"> 
 <link href="https://fonts.googleapis.com/css?family=Montserrat|Montserrat+Subrayada&display=swap" rel="stylesheet">
+<link href="img/drip logo-2.png" rel="shortcut icon" >
 <script src="https://kit.fontawesome.com/0c4273f4d0.js" crossorigin="anonymous"></script>  
 </head>
-<body>
+<body onload="startTimer(), startTimer2()">
+ 
 
+  
     <div class="glider-contain">
-        <div class="glider">
-          <div>    
+      <div class="glider">
+
              <div class = "slideblock" id="slideblock1">
-              <img src="img/unsplash.jpg" alt=" some dude Dunking" id="pic1">
-              <img src="img/72.png" alt="shoe" id="pic2">
-               <div class="slide1div">
-                 <p class="white-text" id="nike">Nike</p>
-                 <p class="black text" id="airjordan">Air Jordan</p>
-                 <p class="white-text" id="v-bred">V-bred</p>
-                </div>
-              <a href="#" class="btn" id="nikebtn">
+                <img src="img/unsplash.jpg" alt=" some dude Dunking" id="pic1" class="animate1">
+                 <img src="img/72.png" alt="shoe" id="pic2" class="animate2">
+                 <p class="white-text animate1" id="nike">Nike</p>
+                 <p class="black text animate1" id="airjordan">Air Jordan</p>
+                 <p class="white-text animate1" id="v-bred" >V-bred</p> 
+
+               <a href="#" class="btn animate1" id="nikebtn">
                   <span></span>
                   <span></span>
                   <span></span>
                   <span></span>
                   shop now
-              </a>
+               </a>
 
-                <div class="pncbox">
+                <div class="pncbox animate2">
                     <div class="pricetag" id="pt1">
-                       $80                 
+                       $100               
                        <p>Colors</p>
                     </div>
                     <div class="colorblock">
@@ -45,33 +47,136 @@
                       <div class="colors" style="background: blue;">&nbsp;</div>
                    </div>   
                 </div>
-
            </div>
-        </div>
-        <div>
-            <div class="slideblock" id="slideblock2">
-              <img src="img/hyper.png" alt="shoe2" id="shoe2">
-              <p id="hyper" class="white-text">hyper royal</p>
-              <p class="white-text" id="nike2">Nike</p>
-              <p class="white-text" id="air">air</p>
-              <p class="white-text" id="jordan">jordan</p>
+
+          <div class="slideblock" id="slideblock2">
+                <div id="shoe2container">
+                  <img src="img/hyper.png" alt="shoe2" id="shoe2" class="animate2">
+                </div>  
+                <div id="slide2div" class="animate2">
+                  <p id="hyper" class="white-text">hyper royal</p>
+                  <p class="white-text" id="nike2">Nike</p>
+                  <p class="white-text" id="air">air</p>
+                  <p class="white-text" id="jordan">jordan</p>
+                  <p id="nine">9</p>
+                </div> 
+
+                <a href="#" class="btn animate1" id="nike2btn">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  show me
+              </a>
+
+                <div class="pncbox animate2">
+                  <div class="pricetag" id="pt1">
+                     $150                 
+                     <p>Colors</p>
+                  </div>
+                  <div class="colorblock">
+                    <div class="colors" style="background: rgb(17, 0, 255);">&nbsp;</div>
+                    <div class="colors" style="background: black;">&nbsp;</div>
+                    <div class="colors" style="background: rgb(255, 0, 0);">&nbsp;</div>
+                    <div class="colors" style="background: rgb(9, 255, 0);">&nbsp;</div>
+                 </div>   
+               </div>
+          </div>
+    
+        <div class="slideblock" id="slideblock3">
+              <img src="img/larqnobg.png.jpg.png" id="guyonstairs" class="animate2">
+              <img src="img/adidasenergy.png" alt="shoe3" id="shoe3" class="animate1">
+              <div id="slide3div" class="animate1">
+                <p>ready</p>
+                <p>to</p>
+                <p>go</p>
+              </div>
+              <div id="slide3div2" class="animate2">
+                <h1>adidas</h1>
+                <h1>energy</h1>
+              </div>
+
+              <a href="#" class="btn animate1" id="adidasbtn">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                let's go
+            </a>
+
+            <div class="pncbox animate2">
+              <div class="pricetag" id="pt2">
+                 $85                 
+                 <p>Colors</p>
+              </div>
+              <div class="colorblock">
+                <div class="colors" style="background: rgb(251, 255, 0);">&nbsp;</div>
+                <div class="colors" style="background: #121637;">&nbsp;</div>
+                <div class="colors" style="background: rgb(255, 0, 0);">&nbsp;</div>
+                <div class="colors" style="background: rgb(9, 255, 0);">&nbsp;</div>
+             </div>   
+           </div>
+         </div>
 
 
+          <div class="slideblock" id="slideblock4">
+            <img src="img/jan.jpg" alt="man on bike" id="slide4bg" class="animate1">
+            <img src="img/dccyan.png" alt="dc-shoe" id="shoe4" class="animate2">
+            <div id="slide4div" class="animate2">
+              <p id="dc">dc</p>
+              <p id="pure">pure</p>
             </div>
 
+            <a href="#" class="btn animate1" id="dcbtn">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              shop now
+           </a>
 
-        </div>
-          <div>your content here</div>
-          <div>your content here</div>
-        </div>
+           <div class="pncbox animate2">
+            <div class="pricetag" id="pt3">
+               $60                
+               <p>Colors</p>
+            </div>
+            <div class="colorblock">
+              <div class="colors" style="background: rgb(0, 195, 255);" onclick="changedctocyan()">&nbsp;</div>
+              <div class="colors" style="background: rgb(255, 255, 255);" onclick="changedctowhite()">&nbsp;</div>
+              <div class="colors" style="background: #000000;" onclick="changedctoblack()">&nbsp;</div>
+              <div class="colors" style="background: rgb(255, 0, 0);" id="dcred" onclick="changedctored()">&nbsp;</div>
+           </div>   
+         </div>
+          </div>
 
-        <span class="arrow" id="slider-prev"><i class="lnr lnr-chevron-left" ></i></span>    
-        <span class="arrow" id="slider-next"><i class="lnr lnr-chevron-right"></i></span> 
+          <div class="slideblock" id="slideblock5">
+
+            <div id="slide5div" class="animate2">
+              <p>the</p>
+              <p>drip</p>
+              <p>sprint</p>
+              <p>kit</p>
+            </div>
+
+            <a href="#" class="btn animate1" id="racebtn">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              check it out
+           </a>
+
+          </div>
+    </div>
+
+        <span class="arrow" id="slider-prev" onclick="trigger(), startTimer(), trigger2(), startTimer2()"><i class="lnr lnr-chevron-left" ></i></span>    
+        <span class="arrow" id="slider-next" onclick="trigger(), startTimer(), trigger2(), startTimer2()"><i class="lnr lnr-chevron-right"></i></span> 
   
         <div class="dots-container" role="tablist">
             <div class="dots"></div>
         </div>
   </div>
+
 
    <script src="js/glider.min.js"></script>
    <script src="js/index.js"></script>
