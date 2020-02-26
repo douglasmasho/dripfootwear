@@ -1,546 +1,481 @@
-/* #test:hover span{
-    background: linear-gradient(to right, #0077ff, #02000c);
-}  */
+@keyframes popup {
+  0% {
+    opacity: 0;
+    /* transform: scale(0.8); */ }
+  100% {
+    opacity: 100%; } }
 
-/* base */
-*,
-*::after,
-*::before{
-   margin: 0;
-   padding: 0;
-   box-sizing: inherit;
-}
-
-html{
-    font-family: "Montserrat", sans-serif;
-}
-
-/* SLIDES */
-.slideblock{
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
-    position: relative;
-    width: 100vw;
-    height: 100%;
-}
-
-/* slide1 */
-
-#slideblock1{
-    background-image: linear-gradient(to left top, rgb(255, 6, 6), rgb(250, 139, 35));
-}
-
-
-#pic1{
-    width: 65%;
-    animation: popup .8s ease-in;
-}
-
-#pic2{
-    width: 57%;
-    position: absolute;
-    top: 18%;
-    left: 23%;
-    transform: translate(-50%, -50%);
-    transform: rotate(-17deg);
-    z-index: 1000;
-    animation: slideleft .8s ease-in-out;
-}
-
-
-
-.white-text{
-    color: white;
-    margin: 0;
-}
-
-
-#nike{
-    position: absolute;
-    top: 25%;
-    left: 13%;
-    animation: popup 1s ease-in;
-    font-weight: bold;
-    font-style: italic;
-    font-size: 40px;
-}
-
-#airjordan{
-    font-size: 5rem;
-    position: absolute;
-    left: 9%;
-    top: 30%;
-    margin: 0;
-    animation: popup .8s ease-in;
-    text-transform: uppercase;
-    font-weight: 100;
-}
-
-#v-bred{
-    position: absolute;
-    left: 19%;
-    top: 40%;
-    font-size: 5rem;
-    animation: popup 1s ease-in;
-    text-transform: uppercase;
-    font-style: italic;
-}
-
-/* slide2 */
-#slideblock2{
-    background-color:#3354FB;
-}
-
-#shoe2{
-    width: 55%;
-    position: absolute;
-    top: 10%;
-    left: 8%;
-    animation: slideleft 0.8s ease-in-out;
-}
-
-#slide2div{
-    position: absolute;
-    display: inline-block;
-    top: 20%;
-    right: 10%;
-    animation: slideleft 0.7s ease-in;
-}
-
-#hyper{
- font-size: 25px;
- text-transform: uppercase;
- font-weight: bold;
- transform: rotate(90deg);
- position: absolute;
- left: -52%;
- top: 41%;
-}
-
-#nike2{
-    font-style: italic;
-    font-size: 50px;
-    /* position: absolute; */
-    top: 10%;
-    left: 70%;
-}
-
-#air{
-    /* position: absolute; */
-    top: 15%;
-    left: 70.2%;
-    font-size: 50px;
-    text-transform: uppercase;
-}
-
-#jordan{
-    /* position: absolute; */
-    top: 23%;
-    left: 70.2%;
-    font-size: 50px;
-    text-transform: uppercase;
-}
-
-#nine{
-    font-size: 150px;
-    position: absolute;
-    top: -15%;
-    right: 0%;
-    color: rgb(9, 3, 63);
-    animation: slideleft 0.8s ease-in;
-}
-
-/* slide 3 */
-
-#slideblock3{
-    background-color: #F8D765;
-}
-
-
-#guyonstairs{
-    width: 35%;
-    position: absolute;
-    bottom: 0;
-    left: 10%;
-    animation: slideleft 1s ease-in-out;
-    
-}
-
-#shoe3{
-    width: 38%;
-    transform: rotate(-32deg) rotateY(180deg);
-    position: absolute;
-    right: 5%;
-    top: 30%;
-    animation: popup 2s;
-
-}
-
-#slide3div{
-    font-size: 80px;
-    text-transform: uppercase;
-    position: absolute;
-    top: 8%;
-    margin: 10px;
-    color: #121637;
-    animation: popup 2s;
-}
-
-#slide3div2{
-    font-size: 25px;
-    text-transform: uppercase;
-    position: absolute;
-    top: 15%;
-    margin: 10px;
-    right: 25%;
-    color: #121637;
-    font-style: italic;  
-    animation: slideleft 1s ease-in-out;
-}
-
-/* slide 4 */
-#slideblock4{
-   background-image: linear-gradient(to bottom right, rgb(0, 225, 255) 10%, rgb(0, 2, 8));
-    
-}
-#slide4bg{
-    width: 80%;
-    position: absolute;
-    right: 0;
-}
-
-#shoe4{
-    width: 50%;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%) rotate(20deg);
-
-}
-
-#slide4div{
-    font-size: 80px;
-    position: absolute;
-    top: 50%;
-    margin: 15px;
-    transform: translateY(-50%);
-    text-transform: uppercase;
-    /* animation: slideleft 1s ease-in-out; */
-}
-
-#dc{
-    color: white;
-}
-#pure{
-    background-image: linear-gradient(to left, cyan 40%, rgb(2, 6, 255));
-    background-clip: text;
-    color: transparent;
-}
-
-/* slide 5 */
-
-#slideblock5{
-    background-image: url(../img/steven-lelham-atSaEOeE8Nk-unsplash.jpg);
-    background-size: cover;
-}
-
-#slide5div{
-    font-size:100px;
-    text-transform: uppercase;
-    margin-left: 10px;
-    position: absolute;
-    top: 10%;
-}
-
-/* ANIMATIONS */
-
-
-@keyframes popup{
-    0%{
-        opacity: 0;
-        /* transform: scale(0.8); */
-    }
-
-    100%{
-        opacity: 100%;
-    }
-
-}
-
-
-@keyframes slideleft{
-    0%{
-        opacity: 0;
-        transform: translateX(10%);
-    }
-    100%{
-        opacity: 100%;
-    }
-}
-
-
-
+@keyframes slideleft {
+  0% {
+    opacity: 0;
+    transform: translateX(10%); }
+  100% {
+    opacity: 100%; } }
 
 /* button animation */
-@keyframes btnanimate1{
-    0%{
-        transform: translateX(-100%);
-        
-    }
-    100%{
-        transform: translateX(100%);
-        
-    }
-}
+@keyframes btnanimate1 {
+  0% {
+    transform: translateX(-100%); }
+  100% {
+    transform: translateX(100%); } }
 
-@keyframes btnanimate2{
-    0%{
-        transform: translateY(-100%);
-        
-    }
-    100%{
-        transform: translateY(100%);
-        
-    }
-}
+@keyframes btnanimate2 {
+  0% {
+    transform: translateY(-100%); }
+  100% {
+    transform: translateY(100%); } }
 
-@keyframes btnanimate3{
-    0%{
-        transform: translateX(100%);
-        
-    }
-    100%{
-        transform: translateX(-100%);
-        
-    }
-}
+@keyframes btnanimate3 {
+  0% {
+    transform: translateX(100%); }
+  100% {
+    transform: translateX(-100%); } }
 
-@keyframes btnanimate4{
-    0%{
-        transform: translateY(100%);
-        
-    }
-    100%{
-        transform: translateY(-100%);
-        
-    }
-}
+@keyframes btnanimate4 {
+  0% {
+    transform: translateY(100%); }
+  100% {
+    transform: translateY(-100%); } }
+
+@keyframes fadein {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 100%; } }
+
+@keyframes fadeout {
+  0% {
+    opacity: 100%; }
+  100% {
+    opacity: 0; } }
+
+@keyframes goaway {
+  0% {
+    left: 0;
+    width: 100%; }
+  100% {
+    left: 100vw;
+    width: 0; } }
+
+@keyframes comein {
+  0% {
+    left: 100vw; }
+  100% {
+    left: 0;
+    top: 0;
+    position: fixed;
+    width: 100%; } }
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-family: "Montserrat", sans-serif; }
+
+.white-text {
+  color: white;
+  margin: 0; }
 
 /* buttons(component) */
-
 #nikebtn,
 #nike2btn,
 #adidasbtn,
 #dcbtn,
-#racebtn{
-    position: absolute;
-    top: 80%;
-    left: 0%;
-}
+#racebtn {
+  position: absolute;
+  top: 80%;
+  left: 0%; }
 
+#adidasbtn {
+  color: #121637; }
 
-#adidasbtn{
-    color: #121637;
-}
+#racebtn {
+  color: black; }
 
-#racebtn{
-    color: black;
-}
+#adidasbtn:hover span {
+  background: linear-gradient(to right, #0077ff, #121637); }
 
+#nikebtn:hover span {
+  background: linear-gradient(to right, #ff0000, #ff8717); }
 
-#adidasbtn:hover span{
-    background: linear-gradient(to right, #0077ff, #121637);
-}
+#nike2btn:hover span {
+  background: linear-gradient(to right, #0077ff, #110068); }
 
-#nikebtn:hover span{
-    background: linear-gradient(to right, #ff0000, #ff8717);
-} 
+#dcbtn:hover span {
+  background: linear-gradient(to right, #00c3ff, white); }
 
-#nike2btn:hover span{
-    background: linear-gradient(to right, #0077ff, #110068);
-} 
+#racebtn:hover span {
+  background: linear-gradient(to right, #d33d26, #dd1515); }
 
-#dcbtn:hover span{
-    background: linear-gradient(to right, #00c3ff, rgb(255, 255, 255));
-}
+.btn {
+  /* position: relative;     */
+  color: #ffffff;
+  padding: 20px 20px;
+  font-size: 20px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  text-decoration: none;
+  overflow: hidden;
+  z-index: 300;
+  transition: all .4s;
+  animation: popup 1s ease-in; }
+  .btn:hover {
+    transform: translateX(5px); }
+    .btn:hover span:nth-child(1) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      animation: btnanimate1 2s linear infinite; }
+    .btn:hover span:nth-child(2) {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 2px;
+      height: 100%;
+      animation: btnanimate2 2s linear infinite;
+      animation-delay: 1s; }
+    .btn:hover span:nth-child(3) {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 2px;
+      animation: btnanimate3 2s linear infinite; }
+    .btn:hover span:nth-child(4) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 2px;
+      height: 100%;
+      animation: btnanimate4 2s linear infinite;
+      animation-delay: 1s; }
+  .btn:active {
+    transform: scale(0.9); }
 
-#racebtn:hover span{
-    background: linear-gradient(to right, rgb(211, 61, 38), rgb(221, 21, 21));
-}
-
-.btn{
-    /* position: relative;     */
-    color: #ffffff;
-    padding: 20px 20px;
-    font-size: 20px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, .5);
-    text-decoration: none;
-    overflow: hidden;
-    z-index: 300;
-    transition: all .4s;
-    animation: popup 1s ease-in;  
-    }
-    
-    .btn:hover{
-      transform:  translateX(5px);
-    }
-    
-    .btn:active{
-        transform: scale(0.9);
-      }
-    
-    .btn:before{
-        content: "";
-        position: absolute;
-        top: 2px;
-        left: 2px;
-        bottom: 2px;
-        width: 50%;
-        background: rgba(255, 255, 255, 0.05)
-    }
-    
-    
-
-.btn:hover span:nth-child(1){
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    animation: btnanimate1 2s linear infinite;
-}
-
-
-.btn:hover span:nth-child(2){
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 2px;
-    height: 100%;
-    animation: btnanimate2 2s linear infinite;
-    animation-delay: 1s; 
-
-}
-
-.btn:hover span:nth-child(3){
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    height: 2px;
-    animation: btnanimate3 2s linear infinite;
-
-}
-
-.btn:hover span:nth-child(4){
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 2px;
-    height: 100%;
-    animation: btnanimate4 2s linear infinite;
-    animation-delay: 1s; 
-}
-
-
-/* pricebox(components) */
-.pncbox{
-  box-shadow: 0 20px 50px rgba(0, 0, 0, .5);
-    display: inline-block; 
-    display: flex;
-    flex-direction: column;
-    width: 150px;
-    position: absolute;
-    top: 50%;
-    right: 0;  
-    transition: all .3s;
-    margin:  5px 0px 5px 5px;
-    animation: slideleft 0.8s ease-in;
-}
-
-.colors{
-    cursor: pointer;
-}
-
-
-
-.pricetag{
+.pncbox {
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  width: 150px;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transition: all .3s;
+  margin: 5px 0px 5px 5px;
+  animation: slideleft 0.8s ease-in; }
+  .pncbox--pricetag {
     padding: 16px 0px;
     font-weight: lighter;
     font-size: 60px;
     width: 90%;
-    position: relative;
-}
+    position: relative; }
+    .pncbox--pricetag p {
+      /* transform: rotate(90deg); */
+      position: absolute;
+      font-size: 15px;
+      bottom: 0;
+      color: white;
+      text-transform: uppercase; }
+  .pncbox--colorblock {
+    display: flex; }
+    .pncbox--colorblock__colors {
+      width: 25%;
+      cursor: pointer; }
 
-
-.pricetag p{
-    /* transform: rotate(90deg); */
-    position: absolute;
-    font-size: 15px;
-    bottom: 0;
-    color: white;
-    text-transform: uppercase;
-}
-
-
-#pt1{
-    color: white;
-}
-
+#pt1 {
+  color: white; }
 
 #pt2,
-#pt2 p{
-    color: #121637;
-}
+#pt2 p {
+  color: #121637; }
 
 #pt3,
-#pt3 p{
-    color: black;
-}
+#pt3 p {
+  color: black; }
 
-
-
-.colorblock{
-    display: flex;
-}
-
-.colors{
-    width: 25%;
-}
+/* pricebox(components) */
+.nav {
+  height: 100%;
+  width: 0;
+  background-color: black;
+  z-index: 1000;
+  position: absolute;
+  right: 100vw;
+  overflow: hidden; }
+  .nav--backdrop {
+    /* height: 100%; */
+    width: 100%;
+    position: absolute; }
+  .nav--icon {
+    position: fixed;
+    z-index: 1000;
+    top: 5px;
+    right: 5px;
+    /* top: 1px; */
+    font-size: 40px; }
+  .nav--back {
+    position: absolute;
+    z-index: 2000;
+    font-size: 40px;
+    right: 0;
+    text-decoration: none;
+    color: white; }
+  .nav--list {
+    position: absolute;
+    bottom: 10%;
+    z-index: 2000; }
+  .nav__item {
+    display: block;
+    margin: 20px;
+    background-image: linear-gradient(102deg, white 0%, #00ffb7 30%, #00ffc3 30%, blue 100%);
+    background-size: 350%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    transition: all 0.5s; }
+    .nav__item:hover {
+      background-position: 100%;
+      transform: translateX(7px);
+      font-weight: bold; }
+  .nav__link {
+    font-size: 50px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    color: transparent; }
 
 /* slider styles */
 /* .glider{
     height: 670px;
 } */
+.arrow {
+  font-size: 40px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all .3s; }
+  .arrow:hover {
+    color: white; }
 
-.arrow{
-   font-size: 40px;
-   position: absolute;
-   top: 50%;
-   transform: translateY(-50%);
-   transition: all .3s;
-}
+#slider-prev {
+  left: 0; }
 
-.arrow:hover{
-    color:white;
-}
+#slider-next {
+  right: 0; }
 
+.dots-container {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%); }
 
-#slider-prev{
-    left: 0;
-}
+/* SLIDES */
+.slideblock {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  width: 100vw;
+  height: 100%; }
 
-#slider-next{
-    right: 0;
-}
+.logo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3000;
+  width: 150px;
+  margin: 10px; }
 
-.dots-container{
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-}
+/* slide1 */
+#slideblock1 {
+  background-image: linear-gradient(to left top, #ff0606, #fa8b23); }
 
+#pic1 {
+  width: 65%;
+  animation: popup .8s ease-in; }
+
+#pic2 {
+  width: 57%;
+  position: absolute;
+  top: 18%;
+  left: 23%;
+  transform: translate(-50%, -50%);
+  transform: rotate(-17deg);
+  z-index: 1000;
+  animation: slideleft .8s ease-in-out; }
+
+#nike {
+  position: absolute;
+  top: 25%;
+  left: 13%;
+  animation: popup 1s ease-in;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 40px; }
+
+#airjordan {
+  font-size: 5rem;
+  position: absolute;
+  left: 9%;
+  top: 30%;
+  margin: 0;
+  animation: popup .8s ease-in;
+  text-transform: uppercase;
+  font-weight: 100; }
+
+#v-bred {
+  position: absolute;
+  left: 19%;
+  top: 40%;
+  font-size: 5rem;
+  animation: popup 1s ease-in;
+  text-transform: uppercase;
+  font-style: italic; }
+
+/* slide2 */
+#slideblock2 {
+  background-color: #3354FB; }
+
+#shoe2 {
+  width: 55%;
+  position: absolute;
+  top: 10%;
+  left: 8%;
+  animation: slideleft 0.8s ease-in-out; }
+
+#slide2div {
+  position: absolute;
+  display: inline-block;
+  top: 20%;
+  right: 10%;
+  animation: slideleft 0.7s ease-in; }
+
+#hyper {
+  font-size: 25px;
+  text-transform: uppercase;
+  font-weight: bold;
+  transform: rotate(90deg);
+  position: absolute;
+  left: -52%;
+  top: 41%; }
+
+#nike2 {
+  font-style: italic;
+  font-size: 50px;
+  /* position: absolute; */
+  top: 10%;
+  left: 70%; }
+
+#air {
+  /* position: absolute; */
+  top: 15%;
+  left: 70.2%;
+  font-size: 50px;
+  text-transform: uppercase; }
+
+#jordan {
+  /* position: absolute; */
+  top: 23%;
+  left: 70.2%;
+  font-size: 50px;
+  text-transform: uppercase; }
+
+#nine {
+  font-size: 150px;
+  position: absolute;
+  top: -15%;
+  right: 0%;
+  color: #09033f;
+  animation: slideleft 0.8s ease-in; }
+
+/* slide 3 */
+#slideblock3 {
+  background-color: #F8D765; }
+
+#guyonstairs {
+  width: 35%;
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  animation: slideleft 1s ease-in-out; }
+
+#shoe3 {
+  width: 38%;
+  transform: rotate(-32deg) rotateY(180deg);
+  position: absolute;
+  right: 5%;
+  top: 30%;
+  animation: popup 2s; }
+
+#slide3div {
+  font-size: 80px;
+  text-transform: uppercase;
+  position: absolute;
+  top: 8%;
+  margin: 10px;
+  color: #121637;
+  animation: popup 2s; }
+
+#slide3div2 {
+  font-size: 25px;
+  text-transform: uppercase;
+  position: absolute;
+  top: 15%;
+  margin: 10px;
+  right: 25%;
+  color: #121637;
+  font-style: italic;
+  animation: slideleft 1s ease-in-out; }
+
+/* slide 4 */
+#slideblock4 {
+  background-image: linear-gradient(to bottom right, #00e1ff 10%, #000208); }
+
+#slide4bg {
+  width: 80%;
+  position: absolute;
+  right: 0; }
+
+#shoe4 {
+  width: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(20deg); }
+
+#slide4div {
+  font-size: 80px;
+  position: absolute;
+  top: 50%;
+  margin: 15px;
+  transform: translateY(-50%);
+  text-transform: uppercase;
+  /* animation: slideleft 1s ease-in-out; */ }
+
+#dc {
+  color: white; }
+
+#pure {
+  background-image: linear-gradient(to left, cyan 40%, #0206ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent; }
+
+/* slide 5 */
+#slideblock5 {
+  background-image: url(../img/steven-lelham-atSaEOeE8Nk-unsplash.jpg);
+  background-size: cover; }
+
+#slide5div {
+  font-size: 100px;
+  text-transform: uppercase;
+  margin-left: 10px;
+  position: absolute;
+  top: 10%; }

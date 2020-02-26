@@ -75,4 +75,67 @@ function changedctocyan(){
     document.getElementById("shoe4").src = "img/dccyan.png";
 }
 
+//NAVIGATION STYLING
+var navbg = document.querySelector(".nav");
+
+//nav--comein and goaway
+
+document.querySelector(".nav--icon").addEventListener("click", comein);
+
+
+function comein(){
+    navbg.style.animation = "comein 0.5s forwards"; 
+}
+
+document.querySelector(".nav--back").addEventListener("click", go);
+
+function go(){
+    navbg.style.animation = "goaway 0.5s forwards"; 
+}
+
+
+//backgroundchange
+
+function changemen(){
+ document.querySelector("#men").style.animation = "fadein 0.8s forwards";
+ document.querySelector("#women").style.animation = "fadeout 0.8s forwards";
+ document.querySelector("#girls").style.animation = "fadeout 0.8s forwards";
+ document.querySelector("#boys").style.animation = "fadeout 0.8s forwards";
+ document.querySelector("#brands").style.animation = "fadeout 0.8s forwards";
+
+}
+
+function changewomen(){
+    document.querySelector("#women").style.animation = "fadein 0.8s forwards";
+    document.querySelector("#men").style.animation = "fadeout 0.8s forwards";
+    document.querySelector("#girls").style.animation = "fadeout 0.8s forwards";
+    document.querySelector("#boys").style.animation = "fadeout 0.8s forwards";
+    document.querySelector("#brands").style.animation = "fadeout 0.8s forwards";
+}
+
+function changegirls(){
+    document.querySelector("#girls").style.animation = "fadein 0.8s forwards";
+    document.querySelector("#women").style.animation = "fadeout 0.8s forwards";
+    document.querySelector("#men").style.animation = "fadeout 0.8s forwards";
+    document.querySelector("#boys").style.animation = "fadeout 0.8s forwards";
+    document.querySelector("#brands").style.animation = "fadeout 0.8s forwards";
+}
+
+function changeboys(){
+    document.querySelector("#boys").style.animation = "fadein 0.8s forwards";
+    document.querySelector("#girls").style.animation = "fadeout 0.8s forwards";
+    document.querySelector("#women").style.animation = "fadeout 0.8s forwards";
+    document.querySelector("#men").style.animation = "fadeout 0.8s forwards";
+    document.querySelector("#brands").style.animation = "fadeout 0.8s forwards";
+}
+
+
+function changebrands(){
+    document.querySelector("#brands").style.animation = "fadein 0.8s forwards";
+    document.querySelector("#boys").style.animation = "fadeout 0.8s forwards";
+    document.querySelector("#girls").style.animation = "fadeout 0.8s forwards";
+    document.querySelector("#women").style.animation = "fadeout 0.8s forwards";
+    document.querySelector("#men").style.animation = "fadeout 0.8s forwards";
+}
+
 

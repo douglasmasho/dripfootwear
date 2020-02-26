@@ -3,20 +3,52 @@
 <meta charset="utf-8">    
 <meta name = "Author" content ="Douglas Mashonganyika">
 <meta name = "viewport" content = "width=device-width, initial scale = 1.0">
-<title>Drip| streetwear</title>
-<link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+<title>Drip Footwear</title>
 <link href = "css/style.css" type= "text/css" rel ="stylesheet">
+<link href = "css/icon-font.css" type= "text/css" rel ="stylesheet">
+
 <link href="css/glider.min.css" rel="stylesheet">
 <!-- <link href="https://fonts.googleapis.com/css?family=Abel&display=swap" rel="stylesheet"> -->
 <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet"> 
 <link href="https://fonts.googleapis.com/css?family=Montserrat|Montserrat+Subrayada&display=swap" rel="stylesheet">
 <link href="img/drip logo-2.png" rel="shortcut icon" >
-<script src="https://kit.fontawesome.com/0c4273f4d0.js" crossorigin="anonymous"></script>  
+<!-- <script src="https://kit.fontawesome.com/0c4273f4d0.js" crossorigin="anonymous"></script>   -->
+<!-- <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css"> -->
 </head>
 <body onload="startTimer(), startTimer2()">
- 
-
+  <!-- <header class="header">
+    <div class="logo-container">
+      <img src="img/navlogodrip.png" alt="logo" class="logo-header">
+    </div> 
+    <ul class="navigation">
+      <li class="navigation__item"><a class="navigation__link" href="#">shop</a></li>
+      <li class="navigation__item"><a class="navigation__link" href="#">offers</a></li>
+      <li class="navigation__item"><a class="navigation__link" href="#">new arrivals</a></li>
+      <li class="navigation__item"><a class="navigation__link" href="#">brands</a></li>
+    </ul>
+  </header> -->
   
+<span class="nav--icon lnr lnr-menu"></span>
+<img src="img/navlogodrip.png" alt="drip-logo" class="logo">    
+    <div class="nav">
+        <!-- <span id="slider-prev" class="menu--back"><i class="lnr lnr-chevron-left" >back</i></span>     -->
+       <a href="#" class="nav--back">
+        <span><i class="lnr lnr-cross" ></i></span>    
+       </a> 
+      <ul class="nav--list">
+         <li class="nav__item"><a href="#" class="nav__link" onmouseover="changemen()">Men</a></li>
+         <li class="nav__item"><a href="#" class="nav__link" onmouseover="changewomen()">women</a></li>
+         <li class="nav__item"><a href="#" class="nav__link" onmouseover="changegirls()">girls</a></li>
+         <li class="nav__item"><a href="#" class="nav__link" onmouseover="changeboys()">boys</a></li>
+         <li class="nav__item"><a href="#" class="nav__link" onmouseover="changebrands()">brands</a></li>
+      </ul>
+       <img src="img/men.jpg" alt="backdrop-men" class="nav--backdrop" id="men">
+       <img src="img/women.jpg" alt="backdrop-women" class="nav--backdrop" id="women">
+       <img src="img/girls.jpg" alt="backdrop-girls" class="nav--backdrop" id="girls">
+       <img src="img/boys1.jpg" alt="backdrop-boys" class="nav--backdrop" id="boys">
+       <img src="img/brands.jpg" alt="backdrop-brands" class="nav--backdrop" id="brands">
+    </div>
+     
     <div class="glider-contain">
       <div class="glider">
 
@@ -36,15 +68,15 @@
                </a>
 
                 <div class="pncbox animate2">
-                    <div class="pricetag" id="pt1">
+                    <div class="pncbox--pricetag" id="pt1">
                        $100               
                        <p>Colors</p>
                     </div>
-                    <div class="colorblock">
-                      <div class="colors" style="background: white;">&nbsp;</div>
-                      <div class="colors" style="background: black;">&nbsp;</div>
-                      <div class="colors" style="background: rgb(145, 0, 0);">&nbsp;</div>
-                      <div class="colors" style="background: blue;">&nbsp;</div>
+                    <div class="pncbox--colorblock">
+                      <div class="pncbox--colorblock__colors" style="background: white;">&nbsp;</div>
+                      <div class="pncbox--colorblock__colors" style="background: black;">&nbsp;</div>
+                      <div class="pncbox--colorblock__colors" style="background: rgb(145, 0, 0);">&nbsp;</div>
+                      <div class="pncbox--colorblock__colors" style="background: blue;">&nbsp;</div>
                    </div>   
                 </div>
            </div>
@@ -70,15 +102,15 @@
               </a>
 
                 <div class="pncbox animate2">
-                  <div class="pricetag" id="pt1">
+                  <div class="pncbox--pricetag" id="pt1">
                      $150                 
                      <p>Colors</p>
                   </div>
-                  <div class="colorblock">
-                    <div class="colors" style="background: rgb(17, 0, 255);">&nbsp;</div>
-                    <div class="colors" style="background: black;">&nbsp;</div>
-                    <div class="colors" style="background: rgb(255, 0, 0);">&nbsp;</div>
-                    <div class="colors" style="background: rgb(9, 255, 0);">&nbsp;</div>
+                  <div class="pncbox--colorblock">
+                    <div class="pncbox--colorblock__colors" style="background: rgb(17, 0, 255);">&nbsp;</div>
+                    <div class="pncbox--colorblock__colors" style="background: black;">&nbsp;</div>
+                    <div class="pncbox--colorblock__colors" style="background: rgb(255, 0, 0);">&nbsp;</div>
+                    <div class="pncbox--colorblock__colors" style="background: rgb(9, 255, 0);">&nbsp;</div>
                  </div>   
                </div>
           </div>
@@ -105,15 +137,15 @@
             </a>
 
             <div class="pncbox animate2">
-              <div class="pricetag" id="pt2">
+              <div class="pncbox--pricetag" id="pt2">
                  $85                 
                  <p>Colors</p>
               </div>
-              <div class="colorblock">
-                <div class="colors" style="background: rgb(251, 255, 0);">&nbsp;</div>
-                <div class="colors" style="background: #121637;">&nbsp;</div>
-                <div class="colors" style="background: rgb(255, 0, 0);">&nbsp;</div>
-                <div class="colors" style="background: rgb(9, 255, 0);">&nbsp;</div>
+              <div class="pncbox--colorblock">
+                <div class="pncbox--colorblock__colors" style="background: rgb(251, 255, 0);">&nbsp;</div>
+                <div class="pncbox--colorblock__colors" style="background: #121637;">&nbsp;</div>
+                <div class="pncbox--colorblock__colors" style="background: rgb(255, 0, 0);">&nbsp;</div>
+                <div class="pncbox--colorblock__colors" style="background: rgb(9, 255, 0);">&nbsp;</div>
              </div>   
            </div>
          </div>
@@ -121,7 +153,7 @@
 
           <div class="slideblock" id="slideblock4">
             <img src="img/jan.jpg" alt="man on bike" id="slide4bg" class="animate1">
-            <img src="img/dccyan.png" alt="dc-shoe" id="shoe4" class="animate2">
+            <img src="img/dcwhite.png" alt="dc-shoe" id="shoe4" class="animate2">
             <div id="slide4div" class="animate2">
               <p id="dc">dc</p>
               <p id="pure">pure</p>
@@ -136,15 +168,15 @@
            </a>
 
            <div class="pncbox animate2">
-            <div class="pricetag" id="pt3">
+            <div class="pncbox--pricetag" id="pt3">
                $60                
                <p>Colors</p>
             </div>
-            <div class="colorblock">
-              <div class="colors" style="background: rgb(0, 195, 255);" onclick="changedctocyan()">&nbsp;</div>
-              <div class="colors" style="background: rgb(255, 255, 255);" onclick="changedctowhite()">&nbsp;</div>
-              <div class="colors" style="background: #000000;" onclick="changedctoblack()">&nbsp;</div>
-              <div class="colors" style="background: rgb(255, 0, 0);" id="dcred" onclick="changedctored()">&nbsp;</div>
+            <div class="pncbox--colorblock">
+              <div class="pncbox--colorblock__colors" style="background: rgb(255, 255, 255);" onclick="changedctowhite()">&nbsp;</div>
+              <div class="pncbox--colorblock__colors" style="background: rgb(0, 195, 255);" onclick="changedctocyan()">&nbsp;</div>
+              <div class="pncbox--colorblock__colors" style="background: #000000;" onclick="changedctoblack()">&nbsp;</div>
+              <div class="pncbox--colorblock__colors" style="background: rgb(255, 0, 0);" id="dcred" onclick="changedctored()">&nbsp;</div>
            </div>   
          </div>
           </div>
@@ -177,7 +209,7 @@
         </div>
   </div>
 
-
+  <i class="fas fa-bars"></i>
    <script src="js/glider.min.js"></script>
    <script src="js/index.js"></script>
 </body>
