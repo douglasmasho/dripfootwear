@@ -108,6 +108,7 @@
 /* slide2 */
 #slideblock2{
     background-color:#3354FB;
+    position: relative;
 }
 
 #shoe2{
@@ -171,6 +172,18 @@
     animation: slideleft 0.8s ease-in;
 }
 
+.shoej9{
+    width: 55%;
+    position: absolute;
+    top: 10%;
+    left: 8%;
+    animation: slideleft 0.8s ease-in-out;
+    z-index: 2;
+
+}
+
+
+
 /* slide 3 */
 
 #slideblock3{
@@ -230,14 +243,6 @@
     right: 0;
 }
 
-#shoe4{
-    width: 50%;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%) rotate(20deg);
-
-}
 
 #slide4div{
     font-size: 80px;
@@ -259,14 +264,20 @@
     color: transparent;
 }
 
+.shoe-dc{
+    width: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(20deg);
+}
+
 /* slide 5 */
 
 #slideblock5{
     background-image: url(../img/steven-lelham-atSaEOeE8Nk-unsplash.jpg);
     background-size: cover;
 }
-
-
 
 #slide5div{
     font-size:100px;

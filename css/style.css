@@ -341,7 +341,8 @@ html {
 
 /* slide2 */
 #slideblock2 {
-  background-color: #3354FB; }
+  background-color: #3354FB;
+  position: relative; }
 
 #shoe2 {
   width: 55%;
@@ -397,6 +398,14 @@ html {
   color: #09033f;
   animation: slideleft 0.8s ease-in; }
 
+.shoej9 {
+  width: 55%;
+  position: absolute;
+  top: 10%;
+  left: 8%;
+  animation: slideleft 0.8s ease-in-out;
+  z-index: 2; }
+
 /* slide 3 */
 #slideblock3 {
   background-color: #F8D765; }
@@ -445,13 +454,6 @@ html {
   position: absolute;
   right: 0; }
 
-#shoe4 {
-  width: 50%;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%) rotate(20deg); }
-
 #slide4div {
   font-size: 80px;
   position: absolute;
@@ -469,6 +471,13 @@ html {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent; }
+
+.shoe-dc {
+  width: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(20deg); }
 
 /* slide 5 */
 #slideblock5 {

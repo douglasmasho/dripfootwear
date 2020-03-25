@@ -14,6 +14,7 @@ var animatedElements1 = document.querySelectorAll(".animate1");
 function trigger(){
     animatedElements1.forEach(function(element){
        element.style.animation = "popup 1s ease-in";
+       document.querySelector("#slideblock2").style.backgroundColor = "#3354FB";
     })
 }
 
@@ -57,23 +58,6 @@ dots.forEach(function(element){
 })
 
 
-
-function changedctowhite(){
-    document.getElementById("shoe4").src = "img/dcwhite.png";
-
-}
-
-function changedctored(){
-    document.getElementById("shoe4").src = "img/dcred.png";
-}
-
-function changedctoblack(){
-    document.getElementById("shoe4").src = "img/dcblack.png";
-}
-
-function changedctocyan(){
-    document.getElementById("shoe4").src = "img/dccyan.png";
-}
 
 //NAVIGATION STYLING
 var navbg = document.querySelector(".nav");
@@ -137,5 +121,34 @@ function changebrands(){
     document.querySelector("#women").style.animation = "fadeout 0.8s forwards";
     document.querySelector("#men").style.animation = "fadeout 0.8s forwards";
 }
+
+//airjordan9 color change
+document.querySelector("#j9-block").addEventListener("click", function(event){
+    var button;
+    button = event.target;
+    document.querySelectorAll(".shoej9").forEach(function(curr){
+        if(curr.id.slice(7,8) === button.id.slice(3,4)){
+            curr.style.animation = "fadein 0.3s forwards";
+        }else if(curr.id.slice(7,8) !== button.id.slice(3,4)){
+            curr.style.animation = "fadeout 0.3s forwards";
+        }
+
+        document.querySelector("#slideblock2").style.backgroundColor = button.classList[1].slice(3, 10);
+        
+    })
+})
+
+//dc color change
+document.querySelector("#dc-block").addEventListener("click", function(event){
+    var button;
+    button = event.target;
+    document.querySelectorAll(".shoe-dc").forEach(function(curr){
+        if(curr.id.slice(7,8) === button.id.slice(3,4)){
+            curr.style.animation = "fadein 0.3s forwards";
+        }else if(curr.id.slice(7,8) !== button.id.slice(3,4)){
+            curr.style.animation = "fadeout 0.3s forwards";
+        }
+    })
+})
 
 
