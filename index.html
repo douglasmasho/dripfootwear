@@ -6,14 +6,12 @@
 <title>Drip Footwear</title>
 <link href = "css/style.css" type= "text/css" rel ="stylesheet">
 <link href = "css/icon-font.css" type= "text/css" rel ="stylesheet">
-
+<link rel="stylesheet" href="css/glide.core.min.css">
+<link rel="stylesheet" href="css/glide.theme.min.css">
 <link href="css/glider.min.css" rel="stylesheet">
-<!-- <link href="https://fonts.googleapis.com/css?family=Abel&display=swap" rel="stylesheet"> -->
 <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet"> 
 <link href="https://fonts.googleapis.com/css?family=Montserrat|Montserrat+Subrayada&display=swap" rel="stylesheet">
 <link href="img/drip logo-2.png" rel="shortcut icon" >
-<!-- <script src="https://kit.fontawesome.com/0c4273f4d0.js" crossorigin="anonymous"></script>   -->
-<!-- <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css"> -->
 </head>
 <body onload="startTimer(), startTimer2()">
   <!-- <header class="header">
@@ -27,7 +25,6 @@
       <li class="navigation__item"><a class="navigation__link" href="#">brands</a></li>
     </ul>
   </header> -->
-  
 <span class="nav--icon lnr lnr-menu"></span>
 <img src="img/navlogodrip.png" alt="drip-logo" class="logo">    
     <div class="nav">
@@ -48,118 +45,131 @@
        <img src="img/boys1.jpg" alt="backdrop-boys" class="nav--backdrop" id="boys">
        <img src="img/brands.jpg" alt="backdrop-brands" class="nav--backdrop" id="brands">
     </div>
-     
-    <div class="glider-contain">
-      <div class="glider">
 
-             <div class = "slideblock" id="slideblock1">
-                <img src="img/unsplash.jpg" alt=" some dude Dunking" id="pic1" class="animate1">
-                 <img src="img/72.png" alt="shoe" id="pic2" class="animate2">
-                 <p class="white-text animate1" id="nike">Nike</p>
-                 <p class="black text animate1" id="airjordan">Air Jordan</p>
-                 <p class="white-text animate1" id="v-bred" >V-bred</p> 
+<div class="glide" style="position: relative;">
+    <div class="glide__track" data-glide-el="track">
+      <ul class="glide__slides">
+        <li class="glide__slide">
+          
+          
+          <div class = "slideblock" id="slideblock1">
+            <div class="rect rect__1">&nbsp;
+             <p class="white-text animate1 corner" >Nike</p>
+             <p class="red-text animate1 name">Air <br> Jordan</p>
+             <p class="white-text animate1 subname" id="v-bred" >V-bred</p>  
+             <img src="img/72.png" alt="shoe" id="pic2" class="animate2">
+            </div>
+            <!-- <img src="img/unsplash.jpg" alt=" some dude Dunking" id="pic1" class="animate1"> -->
 
-               <a href="#" class="btn animate1" id="nikebtn">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                  shop now
-               </a>
+          <a href="#" class="btn animate1" id="nikebtn">
+             <span></span>
+             <span></span>
+             <span></span>
+             <span></span>
+             shop now
+          </a>
 
-                <div class="pncbox animate2">
-                    <div class="pncbox--pricetag" id="pt1">
-                       $100               
-                       <p>Colors</p>
-                    </div>
-                    <div class="pncbox--colorblock">
-                      <div class="pncbox--colorblock__colors" style="background: white;">&nbsp;</div>
-                      <div class="pncbox--colorblock__colors" style="background: black;">&nbsp;</div>
-                      <div class="pncbox--colorblock__colors" style="background: rgb(145, 0, 0);">&nbsp;</div>
-                      <div class="pncbox--colorblock__colors" style="background: blue;">&nbsp;</div>
-                   </div>   
-                </div>
+           <div class="pncbox animate2">
+               <div class="pncbox--pricetag" id="pt1">
+                  $100               
+                  <p>Colors</p>
+               </div>
+               <div class="pncbox--colorblock">
+                 <div class="pncbox--colorblock__colors" style="background: white;">&nbsp;</div>
+                 <div class="pncbox--colorblock__colors" style="background: black;">&nbsp;</div>
+                 <div class="pncbox--colorblock__colors" style="background: rgb(145, 0, 0);">&nbsp;</div>
+                 <div class="pncbox--colorblock__colors" style="background: blue;">&nbsp;</div>
+              </div>   
            </div>
+      </div>
+
+        </li>
+        <li class="glide__slide">
 
           <div class="slideblock" id="slideblock2">
-                <div id="shoe2container">
-                  <img src="img/j9-green.png" alt="shoe2" id="shoej9-4" class="shoej9 animate2">
-                  <img src="img/j9-red.png" alt="shoe2" id="shoej9-3" class="shoej9 animate2">
-                  <img src="img/j9-black.png" alt="shoe2" id="shoej9-2" class="shoej9 animate2">
-                  <img src="img/hyper.png" alt="shoe2" id="shoej9-1" class="shoej9 animate2">
-                </div>  
-                <div id="slide2div" class="animate2">
-                  <p id="hyper" class="white-text">hyper royal</p>
-                  <p class="white-text" id="nike2">Nike</p>
-                  <p class="white-text" id="air">air</p>
-                  <p class="white-text" id="jordan">jordan</p>
-                  <p id="nine">9</p>
-                </div> 
 
-                <a href="#" class="btn animate1" id="nike2btn">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                  show me
-              </a>
+            <div class="rect rect__2">
+              <div id="shoe2container">
+                <img src="img/j9-green.png" alt="shoe2" id="shoej9-4" class="shoej9 animate2">
+                <img src="img/j9-red.png" alt="shoe2" id="shoej9-3" class="shoej9 animate2">
+                <img src="img/j9-black.png" alt="shoe2" id="shoej9-2" class="shoej9 animate2">
+                <img src="img/hyper.png" alt="shoe2" id="shoej9-1" class="shoej9 animate2">
+              </div>  
+             <p class="white-text corner animate1">Nike</p>
+             <p class="white-text animate1 name">Air <br> Jordan</p>
+             <p id="nine">9</p>
 
-                <div class="pncbox animate2">
-                  <div class="pncbox--pricetag" id="pt1">
-                     $150                 
-                     <p>Colors</p>
-                  </div>
-                  <div class="pncbox--colorblock" id="j9-block">
-                    <div class="pncbox--colorblock__colors j9-#3354FB" id="j9-1" style="background: #1100ff;">&nbsp;</div>
-                    <div class="pncbox--colorblock__colors j9-#2b2b2b" id="j9-2" style="background: #000000;">&nbsp;</div>
-                    <div class="pncbox--colorblock__colors j9-#ff0f0f" id="j9-3" style="background: #ff0000;">&nbsp;</div>
-                    <div class="pncbox--colorblock__colors j9-#0ac403" id="j9-4" style="background: #09ff00;">&nbsp;</div>
-                 </div>   
-               </div>
-          </div>
-    
-        <div class="slideblock" id="slideblock3">
-              <img src="img/larqnobg.png.jpg.png" id="guyonstairs" class="animate2">
-              <img src="img/adidasenergy.png" alt="shoe3" id="shoe3" class="animate1">
-              <div id="slide3div" class="animate1">
-                <p>ready</p>
-                <p>to</p>
-                <p>go</p>
-              </div>
-              <div id="slide3div2" class="animate2">
-                <h1>adidas</h1>
-                <h1>energy</h1>
-              </div>
 
-              <a href="#" class="btn animate1" id="adidasbtn">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                let's go
-            </a>
+            </div>
+
+
+            <a href="#" class="btn animate1" id="nike2btn">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              show me
+          </a>
 
             <div class="pncbox animate2">
-              <div class="pncbox--pricetag" id="pt2">
-                 $85                 
+              <div class="pncbox--pricetag" id="pt1">
+                 $150                 
                  <p>Colors</p>
               </div>
-              <div class="pncbox--colorblock">
-                <div class="pncbox--colorblock__colors" style="background: rgb(251, 255, 0);">&nbsp;</div>
-                <div class="pncbox--colorblock__colors" style="background: #121637;">&nbsp;</div>
-                <div class="pncbox--colorblock__colors" style="background: rgb(255, 0, 0);">&nbsp;</div>
-                <div class="pncbox--colorblock__colors" style="background: rgb(9, 255, 0);">&nbsp;</div>
+              <div class="pncbox--colorblock" id="j9-block">
+                <div class="pncbox--colorblock__colors j9-#3354FB" id="j9-1" style="background: #1100ff;">&nbsp;</div>
+                <div class="pncbox--colorblock__colors j9-#2b2b2b" id="j9-2" style="background: #000000;">&nbsp;</div>
+                <div class="pncbox--colorblock__colors j9-#ff0f0f" id="j9-3" style="background: #ff0000;">&nbsp;</div>
+                <div class="pncbox--colorblock__colors j9-#0ac403" id="j9-4" style="background: #09ff00;">&nbsp;</div>
              </div>   
            </div>
+      </div>
+        </li>
+
+        <li class="glide__slide">
+          <div class="slideblock" id="slideblock3">
+            <img src="img/larqnobg.png.jpg.png" id="guyonstairs" class="animate2">
+            <img src="img/adidasenergy.png" alt="shoe3" id="shoe3" class="animate1">
+            <div id="slide3div" class="animate1">
+              <p>ready</p>
+              <p>to</p>
+              <p>go</p>
+            </div>
+            <div id="slide3div2" class="animate2">
+              <h1>adidas</h1>
+              <h1>energy</h1>
+            </div>
+
+            <a href="#" class="btn animate1" id="adidasbtn">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              let's go
+          </a>
+
+          <div class="pncbox animate2">
+            <div class="pncbox--pricetag" id="pt2">
+               $85                 
+               <p>Colors</p>
+            </div>
+            <div class="pncbox--colorblock">
+              <div class="pncbox--colorblock__colors" style="background: rgb(251, 255, 0);">&nbsp;</div>
+              <div class="pncbox--colorblock__colors" style="background: #121637;">&nbsp;</div>
+              <div class="pncbox--colorblock__colors" style="background: rgb(255, 0, 0);">&nbsp;</div>
+              <div class="pncbox--colorblock__colors" style="background: rgb(9, 255, 0);">&nbsp;</div>
+           </div>   
          </div>
+       </div>
+        </li>
 
-
+        <li class="glide__slide">
           <div class="slideblock" id="slideblock4">
             <img src="img/jan.jpg" alt="man on bike" id="slide4bg" class="animate1">
 
-            <img src="img/dc-red.png" alt="dc-shoe" id="shoedc-4" class="shoe-dc animate2">
-            <img src="img/dc-black.png" alt="dc-shoe" id="shoedc-3" class="shoe-dc animate2">
-            <img src="img/dc-cyan.png" alt="dc-shoe" id="shoedc-2" class="shoe-dc animate2">
+            <img src="img/dc-red.png" alt="dc-shoe" id="shoedc-4" class="shoe-dc animate2" style="opacity:0;">
+            <img src="img/dc-black.png" alt="dc-shoe" id="shoedc-3" class="shoe-dc animate2" style="opacity:0;">
+            <img src="img/dc-cyan.png" alt="dc-shoe" id="shoedc-2" class="shoe-dc animate2" style="opacity:0;">
             <img src="img/dcwhite.png" alt="dc-shoe" id="shoedc-1" class="shoe-dc animate2">
 
             <div id="slide4div" class="animate2">
@@ -188,7 +198,9 @@
            </div>   
          </div>
           </div>
-
+        </li>
+        <li class="glide__slide">
+          
           <div class="slideblock" id="slideblock5">
 
             <div id="slide5div" class="animate2">
@@ -207,20 +219,89 @@
            </a>
 
           </div>
+
+        </li>
+
+      </ul>
     </div>
 
-        <span class="arrow" id="slider-prev" onclick="trigger(), startTimer(), trigger2(), startTimer2()"><i class="lnr lnr-chevron-left" ></i></span>    
-        <span class="arrow" id="slider-next" onclick="trigger(), startTimer(), trigger2(), startTimer2()"><i class="lnr lnr-chevron-right"></i></span> 
-  
-        <div class="dots-container" role="tablist">
-            <div class="dots"></div>
-        </div>
-  </div>
+    <div class="glide__arrows" data-glide-el="controls">
+      <button onclick="trigger(), startTimer(), trigger2(), startTimer2()"  class="glide__arrow glide__arrow--left" data-glide-dir="<"><i class="lnr lnr-chevron-left" id="slider-prev"></i></button>
+      <button onclick="trigger(), startTimer(), trigger2(), startTimer2()"  class="glide__arrow glide__arrow--right" data-glide-dir=">"><i class="lnr lnr-chevron-right" id="slider-next"></i></button>
+    </div>
 
-  <i class="fas fa-bars"></i>
-   <script src="js/glider.min.js"></script>
+    <div class="glide__bullets" data-glide-el="controls[nav]">
+      <button class="glide__bullet" data-glide-dir="=0"></button>
+      <button class="glide__bullet" data-glide-dir="=1"></button>
+      <button class="glide__bullet" data-glide-dir="=2"></button>
+      <button class="glide__bullet" data-glide-dir="=3"></button>
+      <button class="glide__bullet" data-glide-dir="=4"></button>
+    </div>
+</div>
+
+
+    <div class="home">
+      <div class="section-features">
+        <div class="row row__1">
+            <div class="featurebox">
+               <img src="img/globe.svg" alt="" class="featurebox--icon featurebox--icon__1">
+            <p class="featurebox--header u-margin-bottom">Worldwide <br>delivery</p>
+            <p class="black-text featurebox--text">Lorem ipsum dolor sit amet, consectetur adipiscingelit, sed do eiusmod. Lorem ipsum dolor sit amet, consectetur adipiscingelit, sed do eiusmod.</p>
+            </div>
+            <div class="featurebox">
+              <img src="img/shield.svg" alt="" class="featurebox--icon featurebox--icon__2">
+           <p class="featurebox--header u-margin-bottom">Safe<br>payment</p>
+           <p class="black-text featurebox--text">Lorem ipsum dolor sit amet, consectetur adipiscingelit, sed do eiusmod. Lorem ipsum dolor sit amet, consectetur adipiscingelit, sed do eiusmod.</p>
+           </div>
+           <div class="featurebox">
+            <img src="img/moneyback.svg" alt="" class="featurebox--icon featurebox--icon__3">
+         <p class="featurebox--header u-margin-bottom">Money back <br>guarantee</p>
+         <p class="black-text featurebox--text">Lorem ipsum dolor sit amet, consectetur adipiscingelit, sed do eiusmod. Lorem ipsum dolor sit amet, consectetur adipiscingelit, sed do eiusmod.</p>
+         </div>
+        </div>
+      </div>
+
+      <div class="section-about">
+        <div class="about">
+          <p class="about--header u-margin-bottom">about us</p>
+          <p class ="about--text "> Lorem ipsum dolor sit
+            amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+          <br>
+          <p class ="about--text "> Lorem ipsum dolor sit
+            amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+
+        </div>
+      </div>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iusto sit debitis numquam tempore incidunt, laboriosam quaerat ducimus cumque in aspernatur perferendis doloribus minima harum labore dignissimos laudantium quidem velit.
+
+
+
+
+    </div>
+
+
    <script src="js/index.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+   <script>
+       new Glide('.glide',{
+          type: 'carousel',
+          startAt: 0,
+          perView: 1,
+      }).mount();
+       
+     </script>
+   <script src="node_modules/@glidejs/glide/dist/glide.min.js"></script>
 </body>
 
 
 </html>
+<!-- <div class="home">
+  <div class="row row1">
+    <div class="feature__box">
+     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda magni dolore perferendis veritatis, in saepe cum laborum vel sit nulla odit placeat iusto, eos ipsam voluptates dicta velit dolorem deserunt.
+    </div>
+
+  </div>
+</div> -->

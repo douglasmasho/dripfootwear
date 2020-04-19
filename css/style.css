@@ -74,11 +74,44 @@
   box-sizing: inherit; }
 
 html {
-  font-family: "Montserrat", sans-serif; }
+  font-family: "Montserrat", sans-serif;
+  font-size: 10px; }
+
+.about {
+  background-color: white;
+  border-radius: 1rem;
+  width: 80%;
+  padding: 3rem;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%);
+  background-image: url(../img/chuttersnap-dWSTB1_WoyA-unsplash.jpg);
+  background-size: cover;
+  background-position-y: 90%;
+  background-position-x: 50%;
+  -webkit-box-shadow: 13px 10px 18px -3px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 13px 10px 18px -3px rgba(0, 0, 0, 0.5);
+  box-shadow: 13px 10px 18px -3px rgba(0, 0, 0, 0.5); }
+  .about--header {
+    font-size: 5rem;
+    text-transform: uppercase; }
+  .about--text {
+    font-size: 1.6rem;
+    width: 30%; }
 
 .white-text {
   color: white;
   margin: 0; }
+
+.red-text {
+  color: red; }
+
+.black-text {
+  color: black; }
+
+.u-margin-bottom {
+  margin-bottom: 2.5rem; }
 
 /* buttons(component) */
 #nikebtn,
@@ -118,7 +151,9 @@ html {
   font-size: 20px;
   letter-spacing: 2px;
   text-transform: uppercase;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0px 18px 46px -7px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 18px 46px -7px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 18px 46px -7px rgba(0, 0, 0, 0.75);
   text-decoration: none;
   overflow: hidden;
   z-index: 300;
@@ -202,6 +237,34 @@ html {
   color: black; }
 
 /* pricebox(components) */
+.featurebox {
+  width: 20%;
+  padding: 30px;
+  text-align: center;
+  background-color: white;
+  border-radius: 1rem;
+  -webkit-box-shadow: 13px 10px 18px -3px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 13px 10px 18px -3px rgba(0, 0, 0, 0.75);
+  box-shadow: 13px 10px 18px -3px rgba(0, 0, 0, 0.75); }
+  .featurebox--icon {
+    margin-bottom: 1rem; }
+    .featurebox--icon__1 {
+      width: 7rem; }
+    .featurebox--icon__2 {
+      width: 7rem; }
+    .featurebox--icon__3 {
+      width: 10rem; }
+  .featurebox--header {
+    font-size: 2rem;
+    text-transform: uppercase; }
+  .featurebox--text {
+    font-size: 1.5rem; }
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem; }
+
 .nav {
   height: 100%;
   width: 0;
@@ -220,7 +283,8 @@ html {
     top: 5px;
     right: 5px;
     /* top: 1px; */
-    font-size: 40px; }
+    font-size: 40px;
+    color: white; }
   .nav--back {
     position: absolute;
     z-index: 2000;
@@ -264,11 +328,21 @@ html {
   .arrow:hover {
     color: white; }
 
-#slider-prev {
-  left: 0; }
-
+#slider-prev,
 #slider-next {
-  right: 0; }
+  font-size: 30px; }
+
+.rect {
+  width: 590px;
+  height: 410px;
+  border: white solid 8px;
+  position: absolute;
+  z-index: 1000;
+  border-radius: 10px; }
+  .rect__1, .rect__2 {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
 
 .dots-container {
   position: absolute;
@@ -283,7 +357,7 @@ html {
   padding: 0;
   position: relative;
   width: 100vw;
-  height: 100%; }
+  height: 100vh; }
 
 .logo {
   position: fixed;
@@ -295,46 +369,52 @@ html {
 
 /* slide1 */
 #slideblock1 {
-  background-image: linear-gradient(to left top, #ff0606, #fa8b23); }
+  background: linear-gradient(to right bottom, rgba(0, 0, 0, 0.849), rgba(0, 0, 0, 0.856)), url(../img/tim-mossholder-5vh4crJBztg-unsplash.jpg);
+  height: 100vh;
+  background-size: cover;
+  background-position-y: 80%; }
+  #slideblock1::after {
+    content: "";
+    display: table;
+    clear: both; }
 
 #pic1 {
-  width: 65%;
+  width: 0%;
   animation: popup .8s ease-in; }
 
 #pic2 {
-  width: 57%;
+  width: 550px;
   position: absolute;
-  top: 18%;
-  left: 23%;
-  transform: translate(-50%, -50%);
+  top: 8%;
+  left: 15%;
   transform: rotate(-17deg);
-  z-index: 1000;
+  z-index: 2000;
   animation: slideleft .8s ease-in-out; }
 
-#nike {
+.corner {
   position: absolute;
-  top: 25%;
-  left: 13%;
   animation: popup 1s ease-in;
   font-weight: bold;
   font-style: italic;
-  font-size: 40px; }
+  font-size: 40px;
+  top: 0; }
 
-#airjordan {
-  font-size: 5rem;
+.name {
+  font-size: 6rem;
   position: absolute;
-  left: 9%;
-  top: 30%;
+  left: -16%;
+  top: 16%;
   margin: 0;
   animation: popup .8s ease-in;
   text-transform: uppercase;
-  font-weight: 100; }
+  font-weight: 100;
+  z-index: 3000; }
 
 #v-bred {
   position: absolute;
-  left: 19%;
-  top: 40%;
-  font-size: 5rem;
+  left: -22%;
+  top: 55%;
+  font-size: 6rem;
   animation: popup 1s ease-in;
   text-transform: uppercase;
   font-style: italic; }
@@ -343,6 +423,10 @@ html {
 #slideblock2 {
   background-color: #3354FB;
   position: relative; }
+  #slideblock2::after {
+    content: "";
+    display: table;
+    clear: both; }
 
 #shoe2 {
   width: 55%;
@@ -352,57 +436,16 @@ html {
   animation: slideleft 0.8s ease-in-out;
   z-index: 2; }
 
-#slide2div {
-  position: absolute;
-  display: inline-block;
-  top: 20%;
-  right: 20%;
-  animation: slideleft 0.7s ease-in; }
-
-#hyper {
-  font-size: 25px;
-  text-transform: uppercase;
-  font-weight: bold;
-  transform: rotate(90deg);
-  position: absolute;
-  left: -52%;
-  top: 41%;
-  color: black; }
-
-#nike2 {
-  font-style: italic;
-  font-size: 50px;
-  /* position: absolute; */
-  top: 10%;
-  left: 70%; }
-
-#air {
-  /* position: absolute; */
-  top: 15%;
-  left: 70.2%;
-  font-size: 50px;
-  text-transform: uppercase; }
-
-#jordan {
-  /* position: absolute; */
-  top: 23%;
-  left: 70.2%;
-  font-size: 50px;
-  text-transform: uppercase; }
-
 #nine {
   font-size: 150px;
   position: absolute;
-  top: -15%;
-  right: 0%;
-  color: #09033f;
-  animation: slideleft 0.8s ease-in; }
+  bottom: 0; }
 
 .shoej9 {
-  width: 55%;
+  width: 550px;
   position: absolute;
   top: 10%;
-  left: 8%;
+  left: 20%;
   animation: slideleft 0.8s ease-in-out;
   z-index: 2; }
 
@@ -490,3 +533,19 @@ html {
   margin-left: 10px;
   position: absolute;
   top: 10%; }
+
+.home {
+  padding: 2rem;
+  background-image: linear-gradient(150deg, #3A00FF, #00FCAF); }
+
+.section-features {
+  margin: 6rem 3rem; }
+
+.section-about {
+  position: relative;
+  height: 100vh;
+  margin-top: 8rem; }
+  .section-about::after {
+    content: "";
+    display: table;
+    clear: both; }

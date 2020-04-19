@@ -16,13 +16,26 @@
  }
  
 
- #slider-prev{
-     left: 0;
- }
- 
+ #slider-prev,
  #slider-next{
-     right: 0;
+     font-size: 30px;
  }
+
+ .rect{
+    width: 590px;
+    height: 410px;
+    border: white solid 8px;
+    position: absolute;
+    z-index: 1000;
+    border-radius: 10px;
+    &__1,
+    &__2{
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
  
  .dots-container{
      position: absolute;
@@ -38,7 +51,8 @@
     padding: 0;
     position: relative;
     width: 100vw;
-    height: 100%;
+
+    height: 100vh;
 }
 .logo{
     position: fixed;
@@ -52,54 +66,58 @@
 /* slide1 */
 
 #slideblock1{
-    background-image: linear-gradient(to left top, rgb(255, 6, 6), rgb(250, 139, 35));
+    background: linear-gradient(to right bottom ,rgba(0, 0, 0, 0.849), rgba(0, 0, 0, 0.856)),url(../img/tim-mossholder-5vh4crJBztg-unsplash.jpg);
+    @include clearfix;
+    height: 100vh;
+    background-size: cover;
+    background-position-y: 80%;
 }
 
 
 #pic1{
-    width: 65%;
+    width: 0%;
     animation: popup .8s ease-in;
 }
 
+
+
+
 #pic2{
-    width: 57%;
+    width: 550px;
     position: absolute;
-    top: 18%;
-    left: 23%;
-    transform: translate(-50%, -50%);
+    top: 8%;
+    left: 15%;
     transform: rotate(-17deg);
-    z-index: 1000;
+    z-index: 2000;
     animation: slideleft .8s ease-in-out;
 }
 
-
-
-#nike{
+.corner{
     position: absolute;
-    top: 25%;
-    left: 13%;
     animation: popup 1s ease-in;
     font-weight: bold;
     font-style: italic;
     font-size: 40px;
+    top: 0;
 }
 
-#airjordan{
-    font-size: 5rem;
+.name{
+    font-size: 6rem;
     position: absolute;
-    left: 9%;
-    top: 30%;
+    left: -16%;
+    top: 16%;
     margin: 0;
     animation: popup .8s ease-in;
     text-transform: uppercase;
     font-weight: 100;
+    z-index: 3000;
 }
 
 #v-bred{
     position: absolute;
-    left: 19%;
-    top: 40%;
-    font-size: 5rem;
+    left: -22%;
+    top: 55%;
+    font-size: 6rem;
     animation: popup 1s ease-in;
     text-transform: uppercase;
     font-style: italic;
@@ -109,6 +127,7 @@
 #slideblock2{
     background-color:#3354FB;
     position: relative;
+    @include clearfix;
 }
 
 #shoe2{
@@ -120,66 +139,20 @@
     z-index: 2;
 }
 
-#slide2div{
-    position: absolute;
-    display: inline-block;
-    top: 20%;
-    right: 20%;
-    animation: slideleft 0.7s ease-in;
-}
-
-#hyper{
- font-size: 25px;
- text-transform: uppercase;
- font-weight: bold;
- transform: rotate(90deg);
- position: absolute;
- left: -52%;
- top: 41%;
- color: black;
-}
-
-#nike2{
-    font-style: italic;
-    font-size: 50px;
-    /* position: absolute; */
-    top: 10%;
-    left: 70%;
-}
-
-#air{
-    /* position: absolute; */
-    top: 15%;
-    left: 70.2%;
-    font-size: 50px;
-    text-transform: uppercase;
-}
-
-#jordan{
-    /* position: absolute; */
-    top: 23%;
-    left: 70.2%;
-    font-size: 50px;
-    text-transform: uppercase;
-}
-
 #nine{
     font-size: 150px;
     position: absolute;
-    top: -15%;
-    right: 0%;
-    color: rgb(9, 3, 63);
-    animation: slideleft 0.8s ease-in;
+    bottom: 0;
 }
 
+
 .shoej9{
-    width: 55%;
+    width: 550px;
     position: absolute;
     top: 10%;
-    left: 8%;
+    left: 20%;
     animation: slideleft 0.8s ease-in-out;
     z-index: 2;
-
 }
 
 
@@ -286,3 +259,4 @@
     position: absolute;
     top: 10%;
 }
+
