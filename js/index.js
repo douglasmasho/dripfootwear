@@ -142,4 +142,16 @@ document.querySelector("#dc-block").addEventListener("click", function(event){
     })
 })
 
+let glideBullets = document.querySelectorAll(".glide__bullets");
+
+
+glideBullets.forEach(i =>{
+    i.addEventListener("click", () =>{
+        trigger();
+        startTimer();
+        trigger2();
+        startTimer2();
+    } )
+
+} )
 
