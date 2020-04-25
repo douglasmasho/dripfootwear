@@ -2,7 +2,7 @@
 
 .glide__arrow{position:absolute;display:block;top:50%;
     z-index:2;
-    color:rgb(255, 0, 0);
+    color:white;
     text-transform:uppercase;
     padding:9px 12px;
     background-color:transparent;
@@ -51,7 +51,4 @@
     }
     .glide--dragging{
         cursor:grabbing;cursor:-moz-grabbing;cursor:-webkit-grabbing
-    }
-    .glide2{
-        position: relative;
     }

@@ -16,8 +16,10 @@ html{
     border-radius: 1rem;
     width: 80%;
     padding: 3rem;
-    margin-top: 5rem;
-    padding: 2rem 2rem;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%);
     background-image: url(../img/chuttersnap-dWSTB1_WoyA-unsplash.jpg);
     background-size: cover;
     background-position-y: 90%;
@@ -34,76 +36,4 @@ html{
         width: 30%;
     }
 }
-
-.category{
-    &--box{
-        background-size: cover;
-        background-position: center;
-        position: relative;
-        -webkit-box-shadow: 18px 21px 25px -2px rgba(0,0,0,0.32);
-        -moz-box-shadow: 18px 21px 25px -2px rgba(0,0,0,0.32);
-        box-shadow: 18px 21px 25px -2px rgba(0,0,0,0.32);
-        transition: all .5s;
-        &:hover{
-            transform: scale(1.1);
-        }
-        &:hover .category--text{
-            transform: translateX(-1rem) scale(1.1);
-        }
-    }
-    &--text{
-        text-transform: uppercase;
-        color: transparent;
-        -webkit-background-clip: text;
-        background-clip: text;
-        font-size: 4rem;
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        font-weight: bolder;
-        transition: all .5s;
-
-        &--light{
-            background-image: linear-gradient(102deg,rgb(255, 255, 255) 0%, rgb(0, 255, 183) 30%, rgb(0, 255, 195) 30%, rgb(0, 162, 255) 100%);
-        }
-        &--dark{
-            background-image: linear-gradient(102deg,rgb(119, 0, 255) 0%, rgb(0, 110, 255) 30%, rgb(0, 89, 255) 30%, rgb(0, 0, 255) 100%);
-        }
-    }
-
-}
-
-// .test{
-//     width: 100%;
-//     padding: 10px;
-//     display: grid;
-//     grid-template-columns: repeat(2,1fr);
-//     &--details{
-//         font-size: 20px;
-//         color: white;
-//         background-color: rgb(34, 34, 34);
-//         padding: 10px;
-//     }
-//     &--pic{
-//         background-color: white;
-//         height: 100%;
-//         position: relative;
-//         overflow: hidden;
-//         &--1{
-//             width: 100%;
-//             position: absolute;
-//             top: 50%;
-//             left: 50%;
-//             transform: translate(-50%, -50%) rotate(24deg);
-
-//         }
-//         &--2{
-//             width: 70%;
-//             position: absolute;
-//             top: 50%;
-//             left: 50%;
-//             transform: translate(-50%, -50%);
-//         }
-//     }
-// }
 
