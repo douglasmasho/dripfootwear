@@ -2,15 +2,12 @@
     display: grid;
     padding: 5rem;
 
-    &-6{
+    &-3{
         grid-template-columns: repeat(3, 1fr);
-        // grid-gap: 10rem;
-        grid-auto-rows: 50rem;
+        // grid-gap: 10rem
         &--child{
-            background-color: white;
             margin: 4rem;
             border-radius: 15px;
-
         }
     }
 }

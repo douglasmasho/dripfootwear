@@ -77,7 +77,7 @@ function changemen(){
  document.querySelector("#girls").style.animation = "fadeout 0.8s forwards";
  document.querySelector("#boys").style.animation = "fadeout 0.8s forwards";
  document.querySelector("#brands").style.animation = "fadeout 0.8s forwards";
-
+ document.querySelector("#specials").style.animation = "fadeout 0.8s forwards";
 }
 
 function changewomen(){
@@ -86,6 +86,7 @@ function changewomen(){
     document.querySelector("#girls").style.animation = "fadeout 0.8s forwards";
     document.querySelector("#boys").style.animation = "fadeout 0.8s forwards";
     document.querySelector("#brands").style.animation = "fadeout 0.8s forwards";
+    document.querySelector("#specials").style.animation = "fadeout 0.8s forwards";
 }
 
 function changegirls(){
@@ -94,6 +95,7 @@ function changegirls(){
     document.querySelector("#men").style.animation = "fadeout 0.8s forwards";
     document.querySelector("#boys").style.animation = "fadeout 0.8s forwards";
     document.querySelector("#brands").style.animation = "fadeout 0.8s forwards";
+    document.querySelector("#specials").style.animation = "fadeout 0.8s forwards";
 }
 
 function changeboys(){
@@ -102,6 +104,8 @@ function changeboys(){
     document.querySelector("#women").style.animation = "fadeout 0.8s forwards";
     document.querySelector("#men").style.animation = "fadeout 0.8s forwards";
     document.querySelector("#brands").style.animation = "fadeout 0.8s forwards";
+   document.querySelector("#specials").style.animation = "fadeout 0.8s forwards";
+
 }
 
 
@@ -111,7 +115,20 @@ function changebrands(){
     document.querySelector("#girls").style.animation = "fadeout 0.8s forwards";
     document.querySelector("#women").style.animation = "fadeout 0.8s forwards";
     document.querySelector("#men").style.animation = "fadeout 0.8s forwards";
+    document.querySelector("#specials").style.animation = "fadeout 0.8s forwards";
+
 }
+
+function changespecials(){
+    document.querySelector("#specials").style.animation = "fadein 0.8s forwards";
+    document.querySelector("#brands").style.animation = "fadeout 0.8s forwards";
+    document.querySelector("#boys").style.animation = "fadeout 0.8s forwards";
+    document.querySelector("#girls").style.animation = "fadeout 0.8s forwards";
+    document.querySelector("#women").style.animation = "fadeout 0.8s forwards";
+    document.querySelector("#men").style.animation = "fadeout 0.8s forwards";
+}
+
+
 
 //airjordan9 color change
 document.querySelector("#j9-block").addEventListener("click", function(event){
@@ -142,4 +159,44 @@ document.querySelector("#dc-block").addEventListener("click", function(event){
     })
 })
 
+let glideBullets = document.querySelectorAll(".glide__bullets");
 
+
+glideBullets.forEach(i =>{
+    i.addEventListener("click", () =>{
+        trigger();
+        startTimer();
+        trigger2();
+        startTimer2();
+    } )
+
+} )
+
+
+//regex patterns///////////////////////////////////////////////////////////////////////
+const patterns = {
+    email: /^([a-z\d\.-]+)@([a-z\d-]+)\.([a-z]{2,8})(\.[a-z]{2,8})?$/
+}
+
+//testing function
+function regTest(field, regex){
+    if(regex.test(field.value)){
+      field.classList.contains("valid") ? field: field.classList.add("valid");
+      field.classList.contains("invalid") ? field.classList.remove("invalid") : input;
+    }
+    else{
+        field.classList.contains("invalid") ? field : field.classList.add("invalid");
+        field.classList.contains("valid") ? field.classList.remove("valid") : field;
+    }
+}
+
+//get inputs
+inputs = document.querySelectorAll("input");
+//initialize test
+inputs.forEach(input => {
+    input.addEventListener("keyup", (event)=>{
+        regTest(event.currentTarget, patterns[event.currentTarget.attributes.name.value])
+    })
+})
+
+////////////////////////////////////////////////////////////

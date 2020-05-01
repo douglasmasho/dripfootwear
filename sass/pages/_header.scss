@@ -24,15 +24,23 @@
  .rect{
     width: 590px;
     height: 410px;
-    border: white solid 8px;
     position: absolute;
     z-index: 1000;
     border-radius: 10px;
     &__1,
-    &__2{
+    &__2,
+    &__3{
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+    }
+    &__1,
+    &__2{
+    border: white solid 8px;
+    }
+
+    &__3{
+        border: #161830 solid 8px;
     }
 }
 
@@ -79,11 +87,8 @@
     animation: popup .8s ease-in;
 }
 
-
-
-
 #pic2{
-    width: 550px;
+    width: 55rem;
     position: absolute;
     top: 8%;
     left: 15%;
@@ -97,7 +102,7 @@
     animation: popup 1s ease-in;
     font-weight: bold;
     font-style: italic;
-    font-size: 40px;
+    font-size: 4rem;
     top: 0;
 }
 
@@ -111,6 +116,10 @@
     text-transform: uppercase;
     font-weight: 100;
     z-index: 3000;
+
+    &__adidas{
+        font-size: 9rem !important;
+    }
 }
 
 #v-bred{
@@ -130,24 +139,15 @@
     @include clearfix;
 }
 
-#shoe2{
-    width: 55%;
-    position: absolute;
-    top: 10%;
-    left: 8%;
-    animation: slideleft 0.8s ease-in-out;
-    z-index: 2;
-}
-
 #nine{
-    font-size: 150px;
+    font-size: 15rem;
     position: absolute;
     bottom: 0;
 }
 
 
 .shoej9{
-    width: 550px;
+    width: 55rem;
     position: absolute;
     top: 10%;
     left: 20%;
@@ -165,20 +165,20 @@
 
 
 #guyonstairs{
-    width: 35%;
+    width: 35rem;
     position: absolute;
     bottom: 0;
-    left: 10%;
+    left: 0;
     animation: slideleft 1s ease-in-out;
     
 }
 
 #shoe3{
-    width: 38%;
-    transform: rotate(-32deg) rotateY(180deg);
+    width: 64rem;
     position: absolute;
-    right: 5%;
-    top: 30%;
+    transform: rotateY(180deg);
+    right: -24%;
+    top: 18%;
     animation: popup 2s;
 
 }
@@ -207,25 +207,13 @@
 
 /* slide 4 */
 #slideblock4{
-   background-image: linear-gradient(to bottom right, rgb(0, 225, 255) 10%, rgb(0, 2, 8));
-    
-}
-#slide4bg{
-    width: 80%;
-    position: absolute;
-    right: 0;
+    background: linear-gradient(to right bottom ,rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(../img/jan.jpg);
+    @include clearfix;
+    height: 100vh;
+    background-size: cover;
+    background-position-y: 80%;
 }
 
-
-#slide4div{
-    font-size: 80px;
-    position: absolute;
-    top: 50%;
-    margin: 15px;
-    transform: translateY(-50%);
-    text-transform: uppercase;
-    /* animation: slideleft 1s ease-in-out; */
-}
 
 #dc{
     color: white;
@@ -238,9 +226,9 @@
 }
 
 .shoe-dc{
-    width: 50%;
+    width: 58rem;
     position: absolute;
-    left: 50%;
+    right: -67%;
     top: 50%;
     transform: translate(-50%, -50%) rotate(20deg);
 }

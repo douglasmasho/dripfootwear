@@ -27,7 +27,7 @@
     </ul>
   </header> -->
 <span class="nav--icon lnr lnr-menu"></span>
-<img src="img/navlogodrip.png" alt="drip-logo" class="logo">    
+<a href="productpage.html"><img src="img/dripftwr.svg" alt="drip-logo" class="logo"></a>    
     <div class="nav">
         <!-- <span id="slider-prev" class="menu--back"><i class="lnr lnr-chevron-left" >back</i></span>     -->
        <a href="#" class="nav--back">
@@ -39,12 +39,14 @@
          <li class="nav__item"><a href="#" class="nav__link" onmouseover="changegirls()">girls</a></li>
          <li class="nav__item"><a href="#" class="nav__link" onmouseover="changeboys()">boys</a></li>
          <li class="nav__item"><a href="#" class="nav__link" onmouseover="changebrands()">brands</a></li>
+         <li class="nav__item"><a href="#" class="nav__link" onmouseover="changespecials()">specials</a></li>
       </ul>
        <img src="img/men.jpg" alt="backdrop-men" class="nav--backdrop" id="men">
        <img src="img/women.jpg" alt="backdrop-women" class="nav--backdrop" id="women">
        <img src="img/girls.jpg" alt="backdrop-girls" class="nav--backdrop" id="girls">
        <img src="img/boys1.jpg" alt="backdrop-boys" class="nav--backdrop" id="boys">
        <img src="img/brands.jpg" alt="backdrop-brands" class="nav--backdrop" id="brands">
+       <img src="img/specials.jpg" alt="backdrop-specials" class="nav--backdrop" id="specials">
     </div>
 
 <div class="glide" style="position: relative;">
@@ -130,17 +132,12 @@
         <li class="glide__slide">
           <div class="slideblock" id="slideblock3">
             <img src="img/larqnobg.png.jpg.png" id="guyonstairs" class="animate2">
-            <img src="img/adidasenergy.png" alt="shoe3" id="shoe3" class="animate1">
-            <div id="slide3div" class="animate1">
-              <p>ready</p>
-              <p>to</p>
-              <p>go</p>
-            </div>
-            <div id="slide3div2" class="animate2">
-              <h1>adidas</h1>
-              <h1>energy</h1>
-            </div>
-
+            <div class="rect rect__3">&nbsp;
+              <p class="blue-text animate1 corner" style="color: #121637">Adidas</p>
+              <p class="white-text animate1 name name__adidas" >Energy</p>  
+              <img src="img/adidasenergy.png" alt="shoe" id="shoe3" class="animate1">
+             </div>
+    
             <a href="#" class="btn animate1" id="adidasbtn">
               <span></span>
               <span></span>
@@ -148,7 +145,7 @@
               <span></span>
               let's go
           </a>
-
+    
           <div class="pncbox animate2">
             <div class="pncbox--pricetag" id="pt2">
                $85                 
@@ -162,22 +159,19 @@
            </div>   
          </div>
        </div>
+
         </li>
 
         <li class="glide__slide">
           <div class="slideblock" id="slideblock4">
-            <img src="img/jan.jpg" alt="man on bike" id="slide4bg" class="animate1">
-
-            <img src="img/dc-red.png" alt="dc-shoe" id="shoedc-4" class="shoe-dc animate2" style="opacity:0;">
-            <img src="img/dc-black.png" alt="dc-shoe" id="shoedc-3" class="shoe-dc animate2" style="opacity:0;">
-            <img src="img/dc-cyan.png" alt="dc-shoe" id="shoedc-2" class="shoe-dc animate2" style="opacity:0;">
-            <img src="img/dcwhite.png" alt="dc-shoe" id="shoedc-1" class="shoe-dc animate2">
-
-            <div id="slide4div" class="animate2">
-              <p id="dc">dc</p>
-              <p id="pure">pure</p>
-            </div>
-
+            <div class="rect rect__1">&nbsp;
+              <p class="white-text animate1 corner" >DC</p>
+              <p id="pure" class="name">pure</p>
+              <img src="img/dc-red.png" alt="dc-shoe" id="shoedc-4" class="shoe-dc animate2" style="opacity:0;">
+              <img src="img/dc-black.png" alt="dc-shoe" id="shoedc-3" class="shoe-dc animate2" style="opacity:0;">
+              <img src="img/dc-cyan.png" alt="dc-shoe" id="shoedc-2" class="shoe-dc animate2" style="opacity:0;">
+              <img src="img/dcwhite.png" alt="dc-shoe" id="shoedc-1" class="shoe-dc animate2">
+             </div>
             <a href="#" class="btn animate1" id="dcbtn">
               <span></span>
               <span></span>
@@ -185,7 +179,7 @@
               <span></span>
               shop now
            </a>
-
+    
            <div class="pncbox animate2">
             <div class="pncbox--pricetag" id="pt3">
                $60                
@@ -199,6 +193,8 @@
            </div>   
          </div>
           </div>
+
+          
         </li>
         <li class="glide__slide">
           
@@ -277,13 +273,13 @@
       </div>
 
       <div class="section-arrivals">
-        <p class="header u-margin-bottom blue-text">New arrivals</p>
+        <p class="header u-margin-bottom white-text">New arrivals</p>
         <div class="glide2">
           <div class="glide__track" data-glide-el="track">
             <ul class="glide__slides">
               <li class="glide__slide">
                    <div class="card">
-                          <img src="img/dclogo.png" class="card--logo" alt="logo">
+                          <img src="img/dclogo.svg" class="card--logo" alt="logo">
                           <img src="img/dchi.png" class="card--shoe" alt="shoe">
                          <div class="card--name u-margin-top">
                             <p class="card--name--brand">DC</p>
@@ -308,16 +304,16 @@
    
                         <div class="card--colorblock">
                           <div class="card--color" style="background-color: blue">&nbsp;</div>
-                          <div class="card--color" style="background-color: green">&nbsp;</div>
-                          <div class="card--color" style="background-color: red">&nbsp;</div>
-                          <div class="card--color" style="background-color: pink">&nbsp;</div>
+                          <div class="card--color" style="background-color: rgb(0, 247, 0)">&nbsp;</div>
+                          <div class="card--color" style="background-color: rgb(255, 30, 30)">&nbsp;</div>
+                          <div class="card--color" style="background-color: rgb(255, 136, 0)">&nbsp;</div>
                         </div>
                    </div>
               </li>
               <li class="glide__slide">
 
                      <div class="card">
-                       <img src="img/pumalogo.png" class="card--logo" alt="logo">
+                       <img src="img/pumalogo.svg" class="card--logo" alt="logo">
                        <img src="img/pumasuede.png" class="card--shoe" alt="shoe">
                        <div class="card--name u-margin-top">
                          <p class="card--name--brand">PUMA</p>
@@ -350,7 +346,7 @@
               </li>
               <li class="glide__slide">
                   <div class="card">
-                      <img src="img/adidaslogo.png" class="card--logo" alt="logo">
+                      <img src="img/adidaslogo.svg" class="card--logo" alt="logo">
                       <img src="img/adhi.png" class="card--shoe" alt="shoe">
                       <div class="card--name u-margin-top">
                         <p class="card--name--brand">Adidas</p>
@@ -384,7 +380,7 @@
               </li>
               <li class="glide__slide">
                     <div class="card">
-                        <img src="img/nikelogo.png" class="card--logo" alt="logo">
+                        <img src="img/nikelogo.svg" class="card--logo" alt="logo">
                         <img src="img/airmax.png" class="card--shoe" alt="shoe">
                         <div class="card--name u-margin-top">
                           <p class="card--name--brand">Nike</p>
@@ -418,7 +414,7 @@
               </li>
               <li class="glide__slide">
                   <div class="card">
-                      <img src="img/nikelogo.png" class="card--logo" alt="logo">
+                      <img src="img/nikelogo.svg" class="card--logo" alt="logo">
                       <img src="img/jordanhr.png" class="card--shoe" alt="shoe">
                       <div class="card--name u-margin-top">
                         <p class="card--name--brand">Nike</p>
@@ -443,9 +439,9 @@
        
                       <div class="card--colorblock">
                         <div class="card--color" style="background-color: blue">&nbsp;</div>
-                        <div class="card--color" style="background-color: green">&nbsp;</div>
+                        <div class="card--color" style="background-color: rgb(0, 219, 0)">&nbsp;</div>
                         <div class="card--color" style="background-color: red">&nbsp;</div>
-                        <div class="card--color" style="background-color: pink">&nbsp;</div>
+                        <div class="card--color" style="background-color: rgb(0, 0, 0)">&nbsp;</div>
                       </div>
                  </div>
               </li>
@@ -472,24 +468,56 @@
 
       <div class="section-categories">
         <p class="header u-margin-top u-margin-bottom blue-text">Shop by category</p>
-
-        <div class="grid grid-6">
-          <div class="grid-6--child category--box" style="background-image: url(img/catman.jpg);"><p class="category--text category--text--light">Men</p></div>
-          <div class="grid-6--child category--box" style="background-image: url(img/catwoman.jpg);"><p class="category--text category--text--light">Women</p></div>
-          <div class="grid-6--child category--box" style="background-image: url(img/catgirl.jpg);"><p class="category--text category--text--light">Girls</p></div>
-          <div class="grid-6--child category--box" style="background-image: url(img/catboy.jpg);"><p class="category--text category--text--dark">Boys</p></div>
-          <div class="grid-6--child category--box" style="background-image: url(img/catbrand.jpg);"><p class="category--text category--text--dark">Brands</p></div>
-          <div class="grid-6--child category--box" style="background-image: url(img/catspecial.jpg);"><p class="category--text category--text--dark">Specials</p></div>
-          
+        <div class="grid grid-3" style="grid-auto-rows: 50rem;">
+          <div class="grid-3--child category--box" style="background-image: url(img/catman.jpg);"><p class="category--text category--text--light">Men</p></div>
+          <div class="grid-3--child category--box" style="background-image: url(img/catwoman.jpg);"><p class="category--text category--text--light">Women</p></div>
+          <div class="grid-3--child category--box" style="background-image: url(img/catgirl.jpg);"><p class="category--text category--text--light">Girls</p></div>
+          <div class="grid-3--child category--box" style="background-image: url(img/catboy.jpg);"><p class="category--text category--text--dark">Boys</p></div>
+          <div class="grid-3--child category--box" style="background-image: url(img/catbrand.jpg);"><p class="category--text category--text--dark">Brands</p></div>
+          <div class="grid-3--child category--box" style="background-image: url(img/catspecial.jpg);"><p class="category--text category--text--dark">Specials</p></div>      
         </div>
-
       </div>
+
+      <footer class="section-footer">
+        <div class ="footer--logodiv">
+          <img class ="footer--logo" src="img/dripftwr.svg" alt="footer-logo">
+        </div>
+        <div class="grid grid-3">
+          <div class="footer--div">
+            <h3 class="footer--header u-margin-bottom u-margin-bottom">Address</h3>
+            <p class="footer--details">500 Terry Francois Street<br>
+               San Francisco, CA 94158<br>   
+               info@mysite.com<br>
+               Tel: 123-456-7890
+              </p>
+          </div>
+          <div class="footer--div">
+            <h3 class="footer--header u-margin-bottom">Contact Us</h3>
+            <p class="footer--details">info@dripftwr.com</p>
+          </div>
+          <div class="footer--div">
+            <h3 class="footer--header u-margin-bottom">Keep Up</h3>
+            <p class="footer--details u-margin-bottom">Subscribe to our daily mail</p>
+            <input type="text" class="input-textbox footer--textbox" placeholder="enter your email here" name="email">
+          </div>
+        </div>
+        <div class="footer--icondiv">
+          <img class="footer--icon" src="img/twitter.svg" alt="twitter link">
+          <img class="footer--icon" src="img/facebook.svg" alt="twitter link">
+          <img class="footer--icon" src="img/insta.svg" alt="twitter link">
+          <img class="footer--icon" src="img/youtube.svg" alt="twitter link">
+        </div>
+      </footer>
+
+
+
 
 </div>
 
 
    <script src="js/index.js"></script>
    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+   <script src="node_modules/@glidejs/glide/dist/glide.min.js"></script>
    <script>
        new Glide('.glide',{
           type: 'carousel',
@@ -510,7 +538,6 @@
       }).mount();
        
      </script>
-   <script src="node_modules/@glidejs/glide/dist/glide.min.js"></script>
 </body>
 
 
@@ -526,22 +553,4 @@
 
 
 
-    <!-- </div>
-
-    <div class="test">
-      <div class="test--details">
-       Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis in quos quisquam. Maiores ab consectetur expedita id molestiae in nam obcaecati quam labore nesciunt vel modi commodi eligendi, quaerat quo.
-       Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis in quos quisquam. Maiores ab consectetur expedita id molestiae in nam obcaecati quam labore nesciunt vel modi commodi eligendi, quaerat quo.
-       Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis in quos quisquam. Maiores ab consectetur expedita id molestiae in nam obcaecati quam labore nesciunt vel modi commodi eligendi, quaerat quo.
-       Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis in quos quisquam. Maiores ab consectetur expedita id molestiae in nam obcaecati quam labore nesciunt vel modi commodi eligendi, quaerat quo.
-       Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis in quos quisquam. Maiores ab consectetur expedita id molestiae in nam obcaecati quam labore nesciunt vel modi commodi eligendi, quaerat quo.
-
-
-      </div>
-      <div class="test--pic">
-        <img class="test--pic--1" src="img/dclogo.png" alt="">
-        <img class="test--pic--2" src="img/dchi.png" alt="">
-      </div>
-    </div>
-
- -->
+    

@@ -1,0 +1,13 @@
+.valid{
+    border: green 2px solid !important;
+}
+.invalid{
+    border: red 2px solid !important;
+}
+
+.input-textbox{
+    border-radius: 30px;
+    border: none;
+    padding: 5px 20px;
+    transition: all .2s;
+}
