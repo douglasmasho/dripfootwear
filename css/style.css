@@ -531,8 +531,7 @@ html {
     clear: both; }
 
 #pic1 {
-  width: 0%;
-  animation: popup .8s ease-in; }
+  width: 0%; }
 
 #pic2 {
   width: 55rem;
@@ -540,12 +539,10 @@ html {
   top: 8%;
   left: 15%;
   transform: rotate(-17deg);
-  z-index: 2000;
-  animation: slideleft .8s ease-in-out; }
+  z-index: 2000; }
 
 .corner {
   position: absolute;
-  animation: popup 1s ease-in;
   font-weight: bold;
   font-style: italic;
   font-size: 4rem;
@@ -557,7 +554,6 @@ html {
   left: -16%;
   top: 16%;
   margin: 0;
-  animation: popup .8s ease-in;
   text-transform: uppercase;
   font-weight: 100;
   z-index: 3000; }
@@ -569,7 +565,6 @@ html {
   left: -22%;
   top: 55%;
   font-size: 6rem;
-  animation: popup 1s ease-in;
   text-transform: uppercase;
   font-style: italic; }
 
@@ -587,12 +582,11 @@ html {
   position: absolute;
   bottom: 0; }
 
-.shoej9 {
+.shoe-j9 {
   width: 55rem;
   position: absolute;
   top: 10%;
   left: 20%;
-  animation: slideleft 0.8s ease-in-out;
   z-index: 2; }
 
 /* slide 3 */
@@ -603,16 +597,14 @@ html {
   width: 35rem;
   position: absolute;
   bottom: 0;
-  left: 0;
-  animation: slideleft 1s ease-in-out; }
+  left: 0; }
 
 #shoe3 {
   width: 64rem;
   position: absolute;
   transform: rotateY(180deg);
   right: -24%;
-  top: 18%;
-  animation: popup 2s; }
+  top: 18%; }
 
 #slide3div {
   font-size: 80px;
@@ -620,8 +612,7 @@ html {
   position: absolute;
   top: 8%;
   margin: 10px;
-  color: #121637;
-  animation: popup 2s; }
+  color: #121637; }
 
 #slide3div2 {
   font-size: 25px;
@@ -631,8 +622,7 @@ html {
   margin: 10px;
   right: 25%;
   color: #121637;
-  font-style: italic;
-  animation: slideleft 1s ease-in-out; }
+  font-style: italic; }
 
 /* slide 4 */
 #slideblock4 {
@@ -869,16 +859,24 @@ html {
     -webkit-box-shadow: -2px 4px 19px -3px white;
     -moz-box-shadow: -2px 4px 19px -3px white;
     box-shadow: -2px 4px 19px -3px white; }
+    .product--pic:hover .product--pic--2 {
+      transform: translate(-50%, -50%) rotateY(180deg) rotate(0deg); }
+    .product--pic:hover .product--pic--1 {
+      top: 0;
+      left: 0;
+      transform: translate(0%, 0%) rotate(0deg) scale(0.3); }
     .product--pic--1 {
       width: 100%;
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%) rotate(0deg);
-      opacity: 0.7; }
+      opacity: 0.7;
+      transition: all .5s; }
     .product--pic--2 {
       width: 100%;
       position: absolute;
       top: 50%;
       left: 50%;
-      transform: translate(-55%, -50%) rotateY(180deg) rotate(24deg); }
+      transform: translate(-55%, -50%) rotateY(180deg) rotate(24deg);
+      transition: all .5s; }

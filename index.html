@@ -14,7 +14,7 @@
 <link href="img/drip logo-2.png" rel="shortcut icon" >
 <script src="https://kit.fontawesome.com/7acd91a7cc.js" crossorigin="anonymous"></script>
 </head>
-<body onload="startTimer(), startTimer2()">
+<body >
   <!-- <header class="header">
     <div class="logo-container">
       <img src="img/navlogodrip.png" alt="logo" class="logo-header">
@@ -34,12 +34,12 @@
         <span><i class="lnr lnr-cross" ></i></span>    
        </a> 
       <ul class="nav--list">
-         <li class="nav__item"><a href="#" class="nav__link" onmouseover="changemen()">Men</a></li>
-         <li class="nav__item"><a href="#" class="nav__link" onmouseover="changewomen()">women</a></li>
-         <li class="nav__item"><a href="#" class="nav__link" onmouseover="changegirls()">girls</a></li>
-         <li class="nav__item"><a href="#" class="nav__link" onmouseover="changeboys()">boys</a></li>
-         <li class="nav__item"><a href="#" class="nav__link" onmouseover="changebrands()">brands</a></li>
-         <li class="nav__item"><a href="#" class="nav__link" onmouseover="changespecials()">specials</a></li>
+         <li class="nav__item"><a href="#" class="nav__link" id="navmen">Men</a></li>
+         <li class="nav__item"><a href="#" class="nav__link" id="navwomen">women</a></li>
+         <li class="nav__item"><a href="#" class="nav__link"  id="navgirls">girls</a></li>
+         <li class="nav__item"><a href="#" class="nav__link"  id="navboys">boys</a></li>
+         <li class="nav__item"><a href="#" class="nav__link" id="navbrands">brands</a></li>
+         <li class="nav__item"><a href="#" class="nav__link" id="navspecials">specials</a></li>
       </ul>
        <img src="img/men.jpg" alt="backdrop-men" class="nav--backdrop" id="men">
        <img src="img/women.jpg" alt="backdrop-women" class="nav--backdrop" id="women">
@@ -93,10 +93,10 @@
 
             <div class="rect rect__2">
               <div id="shoe2container">
-                <img src="img/j9-green.png" alt="shoe2" id="shoej9-4" class="shoej9 animate2">
-                <img src="img/j9-red.png" alt="shoe2" id="shoej9-3" class="shoej9 animate2">
-                <img src="img/j9-black.png" alt="shoe2" id="shoej9-2" class="shoej9 animate2">
-                <img src="img/hyper.png" alt="shoe2" id="shoej9-1" class="shoej9 animate2">
+                <img src="img/j9-green.png" alt="shoe2" id="shoe-j9-4" class="shoe-j9 animate2">
+                <img src="img/j9-red.png" alt="shoe2" id="shoe-j9-3" class="shoe-j9 animate2">
+                <img src="img/j9-black.png" alt="shoe2" id="shoe-j9-2" class="shoe-j9 animate2">
+                <img src="img/hyper.png" alt="shoe2" id="shoe-j9-1" class="shoe-j9 animate2">
               </div>  
              <p class="white-text corner animate1">Nike</p>
              <p class="white-text animate1 name">Air <br> Jordan</p>
@@ -167,10 +167,10 @@
             <div class="rect rect__1">&nbsp;
               <p class="white-text animate1 corner" >DC</p>
               <p id="pure" class="name">pure</p>
-              <img src="img/dc-red.png" alt="dc-shoe" id="shoedc-4" class="shoe-dc animate2" style="opacity:0;">
-              <img src="img/dc-black.png" alt="dc-shoe" id="shoedc-3" class="shoe-dc animate2" style="opacity:0;">
-              <img src="img/dc-cyan.png" alt="dc-shoe" id="shoedc-2" class="shoe-dc animate2" style="opacity:0;">
-              <img src="img/dcwhite.png" alt="dc-shoe" id="shoedc-1" class="shoe-dc animate2">
+              <img src="img/dc-red.png" alt="dc-shoe" id="shoe-dc-4" class="shoe-dc animate2" style="opacity:0;">
+              <img src="img/dc-black.png" alt="dc-shoe" id="shoe-dc-3" class="shoe-dc animate2" style="opacity:0;">
+              <img src="img/dc-cyan.png" alt="dc-shoe" id="shoe-dc-2" class="shoe-dc animate2" style="opacity:0;">
+              <img src="img/dcwhite.png" alt="dc-shoe" id="shoe-dc-1" class="shoe-dc animate2">
              </div>
             <a href="#" class="btn animate1" id="dcbtn">
               <span></span>
@@ -223,8 +223,8 @@
     </div>
 
     <div class="glide__arrows" data-glide-el="controls">
-      <button onclick="trigger(), startTimer(), trigger2(), startTimer2()"  class="glide__arrow glide__arrow--left" data-glide-dir="<"><i class="lnr lnr-chevron-left" id="slider-prev"></i></button>
-      <button onclick="trigger(), startTimer(), trigger2(), startTimer2()"  class="glide__arrow glide__arrow--right" data-glide-dir=">"><i class="lnr lnr-chevron-right" id="slider-next"></i></button>
+      <button  class="glide__arrow glide__arrow--left" data-glide-dir="<"><i class="lnr lnr-chevron-left" id="slider-prev"></i></button>
+      <button  class="glide__arrow glide__arrow--right" data-glide-dir=">"><i class="lnr lnr-chevron-right" id="slider-next"></i></button>
     </div>
 
     <div class="glide__bullets" data-glide-el="controls[nav]">
@@ -513,9 +513,9 @@
 
 
 </div>
-
-
-   <script src="js/index.js"></script>
+   <script src="js/index/data.js"></script>
+   <script src="js/index/ui.js"></script>
+   <script src="js/index/index.js"></script>
    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
    <script src="node_modules/@glidejs/glide/dist/glide.min.js"></script>
    <script>

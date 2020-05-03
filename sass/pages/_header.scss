@@ -84,7 +84,7 @@
 
 #pic1{
     width: 0%;
-    animation: popup .8s ease-in;
+    // animation: popup .8s ease-in;
 }
 
 #pic2{
@@ -94,12 +94,12 @@
     left: 15%;
     transform: rotate(-17deg);
     z-index: 2000;
-    animation: slideleft .8s ease-in-out;
+    // animation: slideleft .8s ease-in-out;
 }
 
 .corner{
     position: absolute;
-    animation: popup 1s ease-in;
+    // animation: popup 1s ease-in;
     font-weight: bold;
     font-style: italic;
     font-size: 4rem;
@@ -112,7 +112,7 @@
     left: -16%;
     top: 16%;
     margin: 0;
-    animation: popup .8s ease-in;
+    // animation: popup .8s ease-in;
     text-transform: uppercase;
     font-weight: 100;
     z-index: 3000;
@@ -127,7 +127,7 @@
     left: -22%;
     top: 55%;
     font-size: 6rem;
-    animation: popup 1s ease-in;
+    // animation: popup 1s ease-in;
     text-transform: uppercase;
     font-style: italic;
 }
@@ -146,12 +146,12 @@
 }
 
 
-.shoej9{
+.shoe-j9{
     width: 55rem;
     position: absolute;
     top: 10%;
     left: 20%;
-    animation: slideleft 0.8s ease-in-out;
+    // animation: slideleft 0.8s ease-in-out;
     z-index: 2;
 }
 
@@ -169,7 +169,7 @@
     position: absolute;
     bottom: 0;
     left: 0;
-    animation: slideleft 1s ease-in-out;
+    // animation: slideleft 1s ease-in-out;
     
 }
 
@@ -179,7 +179,7 @@
     transform: rotateY(180deg);
     right: -24%;
     top: 18%;
-    animation: popup 2s;
+    // animation: popup 2s;
 
 }
 
@@ -190,7 +190,7 @@
     top: 8%;
     margin: 10px;
     color: #121637;
-    animation: popup 2s;
+    // animation: popup 2s;
 }
 
 #slide3div2{
@@ -202,7 +202,7 @@
     right: 25%;
     color: #121637;
     font-style: italic;  
-    animation: slideleft 1s ease-in-out;
+    // animation: slideleft 1s ease-in-out;
 }
 
 /* slide 4 */
