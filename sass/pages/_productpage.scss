@@ -44,8 +44,20 @@
             font-size: 2rem;
             padding: 15px 0;
         }
+
+        &--quantity{
+            &--input{
+                height: 2rem;
+                padding: 1rem;
+                width: 5rem;
+                border-radius: 20px;
+                border-color: transparent;
+            }
+        }
+
         &--sizes,
-        &--colors{
+        &--colors,
+        &--quantity{
             display: flex;
             &--options{
                 display: flex;
@@ -109,7 +121,9 @@
        &:hover &--1{
            top: 0;
            left: 0;
-           transform: translate(0%, 0%) rotate(0deg) scale(0.3);
+           transform: translate(0%, 0%) rotate(0deg);
+           width: 20%;
+           margin: 1rem 0 0 1rem;
        }
 
         &--1{
@@ -130,6 +144,54 @@
             transition: all .5s;
         }
 
+    }
+}
+
+.tab-description{
+    &--name{
+        text-align: center;
+        font-size: 4rem;
+        color: #0136B4;
+        font-weight: lighter;
+    }
+}
+
+.tab-reviews{
+    &--number{
+        text-align: center;
+        font-size: 4rem;
+        color: #0136B4;     
+        font-weight: lighter;
+    }
+    &--stars{
+        text-align: center;
+    }
+
+    &--box{
+        display: flex;
+
+        // &--user{
+
+        // }
+        &--text{
+            margin-left: 3rem;
+        }
+
+        &--pic{
+            background: linear-gradient(120deg, #008FFC, #3A00FF);
+            border-radius: 50%;
+            padding: 2rem;
+            text-align: center;
+            margin-bottom: 1rem;
+            &--icon{
+                font-size: 5rem;
+            }
+        }
+
+        &--name{
+            display: block;
+            text-align: center;
+        }
     }
 }
 

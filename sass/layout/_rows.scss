@@ -1,0 +1,11 @@
+.row{
+    display: flex;
+    padding: 1rem;
+
+    &-3{
+        &--child{
+            width: 20%;
+            margin: 2rem;
+        }
+    }
+}

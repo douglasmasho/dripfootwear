@@ -2,8 +2,8 @@ class Data{
     constructor(){
         this.patterns = {
             email: /^([a-z\d\.-]+)@([a-z\d-]+)\.([a-z]{2,8})(\.[a-z]{2,8})?$/,
-            quantity: /^\d{3}$/
-        }
+            quantity: /^\d{1,3}$/
+        }    
         this.inputs = document.querySelectorAll("input");
     }
 
@@ -25,6 +25,4 @@ class Data{
             })
         })
     }
-
-
 }

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css">
     <link href = "css/style.css" type= "text/css" rel ="stylesheet">
     <link href = "css/icon-font.css" type= "text/css" rel ="stylesheet">
     <link rel="stylesheet" href="css/glide.core.min.css">
@@ -17,77 +18,309 @@
 <body >
 
   <div id="product-bg"> 
-   <div class="center-hrz">  
-    <div class="product u-margin-top">
-      <div class="product--details">
-          <h3 class="product--details--brand">Nike</h3>
-          <h4 class="product--details--model">Jordan 9</h4>
-          <div class="product--details--price u-margin-top u-margin-bottom"> 
-              USD 100
-          </div>
 
-           <div class="product--details--sizes u-margin-top">
-                  <p class="white-text product--details--text">select size</p>
-              <div class="product--details--sizes--options" >
-                  <input type="radio" name="size" id="size-5" class="size-options radio-btn" value="5">
-                  <label for="size-5" class="radio-label">5</label>
+        <div class="center-hrz u-margin-bottom-big" id="productDiv">  
 
-                  <input type="radio" name="size" id="size-6" class="sizeOptions radio-btn" value="6">
-                  <label for="size-6" class="radio-label">6</label>
+         <!-- <div class="product u-margin-top">
+           <div class="product--details">
+               <h3 class="product--details--brand">Nike</h3>
+               <h4 class="product--details--model">Jordan 9</h4>
+               <div class="product--details--price u-margin-top u-margin-bottom"> 
+                   USD 100
+               </div>
 
-                  <input type="radio" name="size" id="size-7" class="sizeOptions radio-btn" value="7">
-                  <label for="size-7" class="radio-label">7</label>
+                <div class="product--details--sizes u-margin-top">
+                       <p class="white-text product--details--text">select size</p>
+                   <div class="product--details--sizes--options" >
+                       <input type="radio" name="size" id="size-5" class="size-options radio-btn" value="5">
+                       <label for="size-5" class="radio-label">5</label>
 
-                  <input type="radio" name="size" id="size-8" class="sizeOptions radio-btn" value="8">
-                  <label for="size-8" class="radio-label">8</label>
+                       <input type="radio" name="size" id="size-6" class="sizeOptions radio-btn" value="6">
+                       <label for="size-6" class="radio-label">6</label>
 
-                  <input type="radio" name="size" id="size-9" class="sizeOptions radio-btn" value="9">
-                  <label for="size-9" class="radio-label">9</label>   
+                       <input type="radio" name="size" id="size-7" class="sizeOptions radio-btn" value="7">
+                       <label for="size-7" class="radio-label">7</label>
+
+                       <input type="radio" name="size" id="size-8" class="sizeOptions radio-btn" value="8">
+                       <label for="size-8" class="radio-label">8</label>
+
+                       <input type="radio" name="size" id="size-9" class="sizeOptions radio-btn" value="9">
+                       <label for="size-9" class="radio-label">9</label>   
+                   </div>
+               </div>
+
+                <div class="product--details--colors u-margin-top u-margin-bottom">
+                  <p class="white-text product--details--text">select color</p>
+                     <div class="product--details--colors--options" >
+                         <input type="radio" name="color" id="color-1" class="color-options radio-btn" value="1">
+                         <label for="color-1" class="radio-label" style="background-color: red;">1</label>
+             
+                         <input type="radio" name="color" id="color-2" class="sizeOptions radio-btn" value="2">
+                         <label for="color-2" class="radio-label" style="background-color: blue;">2</label>
+             
+                         <input type="radio" name="color" id="color-3" class="sizeOptions radio-btn" value="3">
+                         <label for="color-3" class="radio-label" style="background-color: green;">3</label>
+             
+                         <input type="radio" name="color" id="color-4" class="sizeOptions radio-btn" value="4">
+                         <label for="color-4" class="radio-label" style="background-color: black;">4</label> 
+                     </div>
+              </div>
+
+              <div class="product--details--quantity">
+                <p class="white-text product--details--text">Quantity:</p>
+                <div class="center-vert u-margin-left-big">
+                  <input type="number" class="product--details--quantity--input" placeholder="qty" min="1" max="100" name="quantity">
+                </div>
+              </div>
+
+                     <a href="#" style="text-decoration: none;">
+                         
+                  <div class="product--details--cta u-margin-top">
+                      <p class="white-text product--details--cta--text">Add to cart</p>
+                      <img src="img/shopping-cart.svg" alt="cart-icon" class="product--details--cta--icon">
+                  </div>
+                </a>
+           </div>
+
+           <div class="product--pic">
+             <img class="product--pic--1" src="img/nikelogo.svg" alt="">
+             <img class="product--pic--2" src="img/jordanhr.png" alt="">
+           </div>
+         </div> -->
+
+
+
+       </div> 
+
+        <div class="center-hrz">
+
+           <div class="tab-container u-margin-top">
+              <ul class="tabs u-margin-top">
+                  <li data-tab-target="#description" class="active tab">Description</li>
+                  <li data-tab-target="#reviews" class="tab">Reviews</li>
+              </ul>
+              
+              <div class="tab-content" >
+              
+                  <div id="description"  data-tab-content class="active tab-space" data-simplebar data-simplebar-auto-hide ="false">
+                      <h3 class= "tab-description--name u-margin-bottom">Nike Air Jordan 9</h3>
+                      <p class="tab-description--paragraph normal-text u-margin-top">This shoe does look good tho, its got that Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet eos earum cum. Asperiores ipsum cum dolores vitae. Animi dolorem at necessitatibus consequuntur fugiat soluta quae similique mollitia! Ratione, nobis saepe.</p>
+                      <p class="tab-description--paragraph normal-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam ad doloribus, cum tempora repellendus earum laudantium unde beatae sit asperiores magnam eos ipsa delectus, in eum est labore quae eveniet.</p>
+                      <p class="tab-description--paragraph normal-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam ad doloribus, cum tempora repellendus earum laudantium unde beatae sit asperiores magnam eos ipsa delectus, in eum est labore quae eveniet.</p>
+                  </div>
+
+                  <div id="reviews"  data-tab-content class="tab-space" data-simplebar>
+                        <div class="u-margin-bottom">  
+                          <h3 class="tab-reviews--number">4 stars</h3>
+                          <div class="tab-reviews--stars">
+                            <i class="fas fa-star stars--icon"></i>
+                            <i class="fas fa-star stars--icon"></i>
+                            <i class="fas fa-star stars--icon"></i>
+                            <i class="fas fa-star stars--icon"></i>
+                            <i class="far fa-star stars--icon"></i>
+                          </div>
+                        </div>
+
+                        <div class="grid grid-2">
+                            <div class="tab-reviews--box grid-2--child ">
+
+                                <div>
+                                    <div class="tab-reviews--box--pic">
+                                        <i class="lnr lnr-user tab-reviews--box--pic--icon"></i>
+                                    </div>
+                                    <p class="tab-reviews--box--name normal-text">John Doe</p>
+                                </div>
+
+                                <div>
+                                  <div class="tab-reviews--stars">
+                                     <i class="fas fa-star stars--icon"></i>
+                                     <i class="fas fa-star stars--icon"></i>
+                                     <i class="fas fa-star stars--icon"></i>
+                                     <i class="fas fa-star stars--icon"></i>
+                                     <i class="far fa-star stars--icon"></i>
+                                   </div>
+                                 <p class="normal-text tab-reviews--box--text u-margin-top">I like the style, they're comfortable too. Lorem ipsum dolor sit amet consectetur adipisicing elit. these kicks rock, voluptatem nulla explicabo doloribus alias nesciunt quia similique eaque.</p>
+                                </div>
+
+                            </div>
+                            
+                            <div class="tab-reviews--box grid-2--child">
+
+                                <div>
+                                    <div class="tab-reviews--box--pic">
+                                        <i class="lnr lnr-user tab-reviews--box--pic--icon"></i>
+                                    </div>
+                                    <p class="tab-reviews--box--name normal-text">Jane Doe</p>
+                                </div>
+
+                                <div>
+                                  <div class="tab-reviews--stars">
+                                     <i class="fas fa-star stars--icon"></i>
+                                     <i class="fas fa-star stars--icon"></i>
+                                     <i class="fas fa-star stars--icon"></i>
+                                     <i class="far fa-star stars--icon"></i>
+                                     <i class="far fa-star stars--icon"></i>
+                                   </div>
+                                 <p class="normal-text tab-reviews--box--text u-margin-top">They're good, but at this price, these shoes should be able to make me fly.consectetur adipisicing elit. Voluptatibus numquam sunt, et laboriosam dolores cum suscipit animi deserunt ipsum. Odio obcaecati voluptatem nulla explicabo doloribu</p>
+                                </div>
+                                
+                            </div>
+
+                            <div class="tab-reviews--box grid-2--child">
+
+                              <div>
+                                  <div class="tab-reviews--box--pic">
+                                      <i class="lnr lnr-user tab-reviews--box--pic--icon"></i>
+                                  </div>
+                                  <p class="tab-reviews--box--name normal-text">Jacob Doe</p>
+                              </div>
+
+                              <div>
+                                <div class="tab-reviews--stars">
+                                   <i class="fas fa-star stars--icon"></i>
+                                   <i class="fas fa-star stars--icon"></i>
+                                   <i class="fas fa-star stars--icon"></i>
+                                   <i class="fas fa-star stars--icon"></i>
+                                   <i class="far fa-star stars--icon"></i>
+                                 </div>
+                               <p class="normal-text tab-reviews--box--text u-margin-top">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus numquam sunt, et laboriosam dolores cum suscipit animi deserunt ipsum. Odio obcaecati voluptatem nulla explicabo doloribus alias nesciunt quia similique eaque.</p>
+                              </div>
+                              
+                          </div>
+
+                          <div class="tab-reviews--box grid-2--child">
+
+                            <div>
+                                <div class="tab-reviews--box--pic">
+                                    <i class="lnr lnr-user tab-reviews--box--pic--icon"></i>
+                                </div>
+                                <p class="tab-reviews--box--name normal-text">Jose Doe</p>
+                            </div>
+
+                            <div>
+                              <div class="tab-reviews--stars">
+                                 <i class="fas fa-star stars--icon"></i>
+                                 <i class="fas fa-star stars--icon"></i>
+                                 <i class="fas fa-star stars--icon"></i>
+                                 <i class="fas fa-star stars--icon"></i>
+                                 <i class="fas fa-star stars--icon"></i>
+                               </div>
+                             <p class="normal-text tab-reviews--box--text u-margin-top">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus numquam sunt, et laboriosam dolores cum suscipit animi deserunt ipsum. Odio obcaecati voluptatem nulla explicabo doloribus alias nesciunt quia similique eaque.</p>
+                            </div>
+                            
+                        </div>
+                        </div>
+                  </div>
               </div>
           </div>
+      </div>
 
-           <div class="product--details--colors u-margin-top u-margin-bottom">
-             <p class="white-text product--details--text">select color</p>
-                <div class="product--details--colors--options" >
-                    <input type="radio" name="color" id="color-1" class="color-options radio-btn" value="1">
-                    <label for="color-1" class="radio-label" style="background-color: red;">1</label>
-        
-                    <input type="radio" name="color" id="color-2" class="sizeOptions radio-btn" value="2">
-                    <label for="color-2" class="radio-label" style="background-color: blue;">2</label>
-        
-                    <input type="radio" name="color" id="color-3" class="sizeOptions radio-btn" value="3">
-                    <label for="color-3" class="radio-label" style="background-color: green;">3</label>
-        
-                    <input type="radio" name="color" id="color-4" class="sizeOptions radio-btn" value="4">
-                    <label for="color-4" class="radio-label" style="background-color: black;">4</label> 
-                </div>
+      <p class="header u-margin-bottom white-text u-margin-top-big">More for you</p>
+
+      <div class="row row-3">
+          <div class="card row-3--child">
+                <img src="img/dclogo.svg" class="card--logo" alt="logo">
+                <img src="img/dchi.png" class="card--shoe" alt="shoe">
+                <div class="card--name u-margin-top">
+                   <p class="card--name--brand">DC</p>
+                   <p class="card--name--model">super high</p>
+               </div>
+               <div class="card--price">
+                 <p>US$100</p>
+               </div>
+               <div class="stars">
+                 <div class="stars--icondiv">
+                   <i class="fas fa-star stars--icon"></i>
+                   <i class="fas fa-star stars--icon"></i>
+                   <i class="fas fa-star stars--icon"></i>
+                   <i class="fas fa-star stars--icon"></i>
+                   <i class="far fa-star stars--icon"></i>
+                 </div>
+                 <p class="stars--number">4 stars</p>
+               </div>
+               <div class="card--ctadiv u-margin-top u-margin-bottom">
+                 <img src="img/eye-svgrepo-com.svg" class="card--cta" alt="viewbtn">
+               </div>
+
+               <div class="card--colorblock">
+                 <div class="card--color" style="background-color: blue">&nbsp;</div>
+                 <div class="card--color" style="background-color: rgb(0, 247, 0)">&nbsp;</div>
+                 <div class="card--color" style="background-color: rgb(255, 30, 30)">&nbsp;</div>
+                 <div class="card--color" style="background-color: rgb(255, 136, 0)">&nbsp;</div>
+               </div>
          </div>
 
-                <a href="#" style="text-decoration: none;">
-                    
-             <div class="product--details--cta u-margin-top">
-                 <p class="white-text product--details--cta--text">Add to cart</p>
-                 <img src="img/shopping-cart.svg" alt="cart-icon" class="product--details--cta--icon">
-             </div>
-           </a>
-      </div>
+         <div class="card row-3--child">
+            <img src="img/pumalogo.svg" class="card--logo" alt="logo">
+            <img src="img/pumasuede.png" class="card--shoe" alt="shoe">
+            <div class="card--name u-margin-top">
+              <p class="card--name--brand">PUMA</p>
+              <p class="card--name--model">suede</p>
+            </div>
+            <div class="card--price">
+              <p>US$100</p>
+            </div>
+            <div class="stars">
+              <div class="stars--icondiv">
+                <i class="fas fa-star stars--icon"></i>
+                <i class="fas fa-star stars--icon"></i>
+                <i class="fas fa-star stars--icon"></i>
+                <i class="fas fa-star stars--icon"></i>
+                <i class="far fa-star stars--icon"></i>
+              </div>
+              <p class="stars--number">4 stars</p>
+            </div>
+            <div class="card--ctadiv u-margin-top u-margin-bottom">
+              <img src="img/eye-svgrepo-com.svg" class="card--cta" alt="viewbtn">
+            </div>
 
-      <div class="product--pic">
-        <img class="product--pic--1" src="img/nikelogo.svg" alt="">
-        <img class="product--pic--2" src="img/jordanhr.png" alt="">
-      </div>
+            <div class="card--colorblock">
+              <div class="card--color" style="background-color: blue">&nbsp;</div>
+              <div class="card--color" style="background-color: green">&nbsp;</div>
+              <div class="card--color" style="background-color: red">&nbsp;</div>
+              <div class="card--color" style="background-color: pink">&nbsp;</div>
+            </div>
+         </div> 
+
+         <div class="card row-3--child">
+            <img src="img/adidaslogo.svg" class="card--logo" alt="logo">
+            <img src="img/adhi.png" class="card--shoe" alt="shoe">
+            <div class="card--name u-margin-top">
+              <p class="card--name--brand">Adidas</p>
+              <p class="card--name--model">high top</p>
+            </div>
+            <div class="card--price">
+              <p>US$100</p>
+            </div>
+            <div class="stars">
+              <div class="stars--icondiv">
+                <i class="fas fa-star stars--icon"></i>
+                <i class="fas fa-star stars--icon"></i>
+                <i class="fas fa-star stars--icon"></i>
+                <i class="fas fa-star stars--icon"></i>
+                <i class="far fa-star stars--icon"></i>
+              </div>
+              <p class="stars--number">4 stars</p>
+            </div>
+            <div class="card--ctadiv u-margin-top u-margin-bottom">
+              <img src="img/eye-svgrepo-com.svg" class="card--cta" alt="viewbtn">
+            </div>
+   
+            <div class="card--colorblock">
+              <div class="card--color" style="background-color: blue">&nbsp;</div>
+              <div class="card--color" style="background-color: green">&nbsp;</div>
+              <div class="card--color" style="background-color: red">&nbsp;</div>
+              <div class="card--color" style="background-color: pink">&nbsp;</div>
+            </div>
+       </div>
+
+     
     </div>
-  </div>  
+  
  </div>
- <script>
-    //  const radios = document.querySelectorAll(".radio-btn");
-
-    //  radios.forEach(el =>{
-    //      if(el.checked){
-    //          console.log(el.getAttribute("value"))
-    //      }
-    //  })
- </script>
-    
+ <script src="js/productpage/data.js"></script>
+ <script src="js/productpage/ui.js"></script>
+ <script src="js/productpage/script.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>
 </body>
 </html>

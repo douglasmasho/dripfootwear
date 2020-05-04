@@ -80,4 +80,8 @@ class UI{
         })
         // console.log(this.shoes[str])
     }
+
+    getChildren(parent){
+        return parent.children;
+    }
 }
