@@ -9,6 +9,8 @@ class UI{
             j9:  document.querySelectorAll(".shoe-j9"),
             dc: document.querySelectorAll(".shoe-dc")
         }
+        this.starsParent = document.querySelectorAll(".stars");
+     
     }
 
     logThis(){
@@ -84,4 +86,24 @@ class UI{
     getChildren(parent){
         return parent.children;
     }
+
+    pushStars(){
+      this.starsParent.forEach(e=>{
+          let children =  e.children;
+          let starsNum = children[1].textContent.slice(0,1);
+
+          let starsDiv = children[0];
+          
+          for(let i = 0; i < starsNum; i++){
+              starsDiv.insertAdjacentHTML("beforeend", `<i class="fas fa-star stars--icon"></i>`)
+          }
+
+          for(let i = 0; i < (5 - starsNum); i++){
+            starsDiv.insertAdjacentHTML("beforeend", `<i class="far fa-star stars--icon"></i>`)
+          }
+      })
+    }
+
+
+    
 }

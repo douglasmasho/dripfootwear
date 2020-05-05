@@ -2,7 +2,11 @@
         constructor(){
             this.id = 1;
             this.tabs = document.querySelectorAll("[data-tab-target]");
-            this.tabContents = document.querySelectorAll("[data-tab-content]")
+            this.tabContents = document.querySelectorAll("[data-tab-content]");
+            this.descriptionName = document.querySelector(".tab-description--name");
+            this.starsNumber = document.querySelector(".tab-reviews--number");
+            this.starsDiv = document.querySelector(".tab-reviews--stars");
+            this.starsParent = document.querySelectorAll(".stars");
         }
 
         startTimer(){
@@ -105,10 +109,46 @@
         }
 
         pushName(shoeBrand, shoeModel,){
-            document.querySelector(".tab-description--name").textContent = `${shoeBrand} ${shoeModel}`
+            this.descriptionName.textContent = `${shoeBrand} ${shoeModel}`
         }
         pushStars(starsNumber){
-            document.querySelector(".tab-reviews--number").textContent = `${starsNumber}`
+            this.starsNumber.textContent = `${starsNumber}`;
+
+            for(let i = 0; i < starsNumber; i++){
+                this.starsDiv.insertAdjacentHTML("beforeend", `<i class="fas fa-star stars--icon"></i>`);
+            }
+
+            for(let i = 0; i < (5 - starsNumber); i++){
+                this.starsDiv.insertAdjacentHTML("beforeend", `<i class="far fa-star stars--icon"></i>`)
+            }
+        }
+
+        getChildren(parent){
+            return parent.children;
+        }
+
+        pushStars2(){
+            this.starsParent.forEach(e=>{
+                let children =  e.children;
+                let starsNum = children[1].textContent.slice(0,1);
+      
+                let starsDiv = children[0];
+                
+                for(let i = 0; i < starsNum; i++){
+                    starsDiv.insertAdjacentHTML("beforeend", `<i class="fas fa-star stars--icon"></i>`)
+                }
+      
+                for(let i = 0; i < (5 - starsNum); i++){
+                  starsDiv.insertAdjacentHTML("beforeend", `<i class="far fa-star stars--icon"></i>`)
+                }
+            })
+          }
+
+          gsap(){
+            let tl = gsap.timeline({defaults: {duration: 1.5}});
+    
+            tl.from(".product", {y: 100, ease: "expo.out", opacity: 0})
+    
         }
 
 

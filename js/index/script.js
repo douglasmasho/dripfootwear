@@ -4,6 +4,10 @@ const ui = new UI;
 const data = new Data;
 
 
+
+//push stars onto cards
+ui.pushStars();
+
 //trigger animations
 //on arrow click
 const arrows = document.querySelectorAll(".glide__arrow");
