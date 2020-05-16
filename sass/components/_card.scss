@@ -1,14 +1,11 @@
 .card{
     background-color: white;
-    width: 70%;
+    width: 60%;
     padding: 3rem 4rem;
     border-radius: 15px;
     margin: 5rem 1rem;
     position: relative;
     transition: all .5s;
-    -webkit-box-shadow: 18px 21px 27px -6px rgba(0,0,0,0.72);
-   -moz-box-shadow: 18px 21px 27px -6px rgba(0,0,0,0.72);
-   box-shadow: 18px 21px 27px -6px rgba(0,0,0,0.72);
 
     &--logo{
     //     width: 5rem;
@@ -95,6 +92,9 @@
 
     &:hover{
         transform: scale(1.05);
+        -webkit-box-shadow: 4px 21px 27px -6px rgba(0,0,0,0.72);
+        -moz-box-shadow: 4px 21px 27px -6px rgba(0,0,0,0.72);
+        box-shadow: 4px 21px 27px -6px rgba(0,0,0,0.72);
     }
 
     &:hover &--shoe{

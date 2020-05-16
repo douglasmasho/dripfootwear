@@ -7,6 +7,7 @@
             this.starsNumber = document.querySelector(".tab-reviews--number");
             this.starsDiv = document.querySelector(".tab-reviews--stars");
             this.starsParent = document.querySelectorAll(".stars");
+    
         }
 
         startTimer(){
@@ -51,7 +52,7 @@
                  <div class="product--details--sizes u-margin-top">
                         <p class="white-text product--details--text">select size</p>
                     <div class="product--details--sizes--options" >
-                        <input type="radio" name="size" id="size-5" class="size-options radio-btn" value="5">
+                        <input type="radio" name="size" id="size-5" class="sizeOptions radio-btn" value="5">
                         <label for="size-5" class="radio-label">5</label>
  
                         <input type="radio" name="size" id="size-6" class="sizeOptions radio-btn" value="6">
@@ -71,17 +72,17 @@
                  <div class="product--details--colors u-margin-top u-margin-bottom">
                    <p class="white-text product--details--text">select color</p>
                       <div class="product--details--colors--options" >
-                          <input type="radio" name="color" id="color-1" class="color-options radio-btn" value="1">
-                          <label for="color-1" class="radio-label" style="background-color: ${color0}">1</label>
+                          <input type="radio" name="color" id="color-1" class="radio-btn" value="1">
+                          <label for="color-1" class="color-options radio-label" style="background-color: ${color0}">1</label>
               
-                          <input type="radio" name="color" id="color-2" class="sizeOptions radio-btn" value="2">
-                          <label for="color-2" class="radio-label" style="background-color: ${color1};">2</label>
+                          <input type="radio" name="color" id="color-2" class="radio-btn" value="2">
+                          <label for="color-2" class="color-options radio-label" style="background-color: ${color1};">2</label>
               
-                          <input type="radio" name="color" id="color-3" class="sizeOptions radio-btn" value="3">
-                          <label for="color-3" class="radio-label" style="background-color: ${color2};">3</label>
+                          <input type="radio" name="color" id="color-3" class="radio-btn" value="3">
+                          <label for="color-3" class="color-options radio-label" style="background-color: ${color2};">3</label>
               
-                          <input type="radio" name="color" id="color-4" class="sizeOptions radio-btn" value="4">
-                          <label for="color-4" class="radio-label" style="background-color: ${color3};">4</label> 
+                          <input type="radio" name="color" id="color-4" class="radio-btn" value="4">
+                          <label for="color-4" class="color-options radio-label" style="background-color: ${color3};">4</label> 
                       </div>
                </div>
  
@@ -103,6 +104,7 @@
             <div class="product--pic">
               <img class="product--pic--1" src="${logoSrc}" alt="logo">
               <img class="product--pic--2" src="${shoeSrc}" alt="shoe">
+              <div class="color-div">&nbsp;</div>
             </div>
           </div>
  `
@@ -144,13 +146,17 @@
             })
           }
 
-          gsap(){
+        gsap(){
             let tl = gsap.timeline({defaults: {duration: 1.5}});
     
             tl.from(".product", {y: 100, ease: "expo.out", opacity: 0})
-    
         }
 
+        changeColor(color){
+            let colorDiv = document.querySelector(".color-div");
+            colorDiv.style.boxShadow = `0 0 0 3000px ${color}`
+            // console.log(colorDiv)
+        }
 
     }
     

@@ -5,9 +5,18 @@
     border: red 2px solid !important;
 }
 
-.input-textbox{
-    border-radius: 30px;
-    border: none;
-    padding: 5px 20px;
-    transition: all .2s;
+.input{
+    &-textbox{
+        border-radius: 30px;
+        border: none;
+        padding: 5px 20px;
+        transition: all .2s;
+    }
+    &-number{
+        width: 4rem;
+        border: gray 1px solid;
+        border-radius: 30px;
+        padding: 5px 20px;
+    }
+
 }

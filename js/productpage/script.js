@@ -68,13 +68,21 @@ document.querySelectorAll(".card--cta").forEach(element =>{
         localStorage.setItem("color2", `${colorsArr[2]}`);
         localStorage.setItem("color3", `${colorsArr[3]}`);
         localStorage.removeItem("colors")
-
-
-
         console.log(localStorage);
-
     })
 })
+//color change event
+let buttons = document.querySelectorAll(".color-options");
+
+buttons.forEach( e =>{
+    e.addEventListener("click", (event)=>{
+        let element = event.currentTarget;
+        let color = element.style.backgroundColor;
+        ui.changeColor(color);
+    })
+})
+
+
 
 
 

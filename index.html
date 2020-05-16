@@ -26,8 +26,13 @@
       <li class="navigation__item"><a class="navigation__link" href="#">brands</a></li>
     </ul>
   </header> -->
-<span class="nav--icon lnr lnr-menu"></span>
-<a href="productpage.html"><img src="img/dripftwr.svg" alt="drip-logo" class="logo"></a>    
+<div class="header">
+<a href="cart.html"><img src="img/dripftwr.svg" alt="drip-logo" class="header--logo"></a> 
+<div class="header--right">
+<span></span><a href="#" class="link"><span class="header--cart lnr lnr-cart"></span></a><p class="header--bubble">40</p></span>
+<span class="header--menu nav--icon lnr lnr-menu"></span>
+</div>
+</div>  
     <div class="nav">
         <!-- <span id="slider-prev" class="menu--back"><i class="lnr lnr-chevron-left" >back</i></span>     -->
        <a href="#" class="nav--back">
@@ -273,7 +278,7 @@
       </div>
 
       <div class="section-arrivals">
-        <p class="header u-margin-bottom white-text">New arrivals</p>
+        <p class="header-text u-margin-bottom white-text">New arrivals</p>
         <div class="glide2">
           <div class="glide__track" data-glide-el="track">
             <ul class="glide__slides">
@@ -287,7 +292,7 @@
                             <p class="card--name--model">super high</p>
                         </div>
                         <div class="card--price">
-                          <p>US$100</p>
+                          <p>US$50</p>
                         </div>
                         <div class="stars">
                           <div class="stars--icondiv">
@@ -318,7 +323,7 @@
                          <p class="card--name--model">suede</p>
                        </div>
                        <div class="card--price">
-                         <p>US$100</p>
+                         <p>US$25</p>
                        </div>
                        <div class="stars">
                          <div class="stars--icondiv">
@@ -382,7 +387,7 @@
                           <p class="card--name--model">Airmax</p>
                         </div>
                         <div class="card--price">
-                          <p>US$100</p>
+                          <p>US$150</p>
                         </div>
                         <div class="stars">
                           <div class="stars--icondiv">
@@ -414,7 +419,7 @@
                         <p class="card--name--model">Jordan 9</p>
                       </div>
                       <div class="card--price">
-                        <p>US$100</p>
+                        <p>US$200</p>
                       </div>
                       <div class="stars">
                         <div class="stars--icondiv">
@@ -431,11 +436,44 @@
                         <div class="card--color" style="background-color: blue">&nbsp;</div>
                         <div class="card--color" style="background-color: rgb(0, 219, 0)">&nbsp;</div>
                         <div class="card--color" style="background-color: red">&nbsp;</div>
-                        <div class="card--color" style="background-color: rgb(0, 0, 0)">&nbsp;</div>
+                        <div class="card--color" style="background-color: rgb(0, 195, 255)">&nbsp;</div>
                       </div>
                  </div>
                  
               </li>
+
+              <li class="glide__slide">
+               
+                <div class="card">
+                    <img src="img/nikelogo.svg" class="card--logo" alt="logo">
+                    <img src="img/nikehuarache.png" class="card--shoe" alt="shoe" style="filter: hue-rotate(290deg)">
+                    <div class="card--name u-margin-top">
+                      <p class="card--name--brand">Nike</p>
+                      <p class="card--name--model">Huarache</p>
+                    </div>
+                    <div class="card--price">
+                      <p>US$180</p>
+                    </div>
+                    <div class="stars">
+                      <div class="stars--icondiv">
+                      </div>
+                      <p class="stars--number">4 stars</p>
+                    </div>
+                    <div class="card--ctadiv u-margin-top u-margin-bottom">
+                       <a href="productpage.html" class="cardlink">
+                      <img src="img/eye-svgrepo-com.svg" class="card--cta" alt="viewbtn">
+                      </a>
+                    </div>
+     
+                    <div class="card--colorblock">
+                      <div class="card--color" style="background-color: rgb(98, 0, 255)">&nbsp;</div>
+                      <div class="card--color" style="background-color: rgb(0, 219, 0)">&nbsp;</div>
+                      <div class="card--color" style="background-color: red">&nbsp;</div>
+                      <div class="card--color" style="background-color: blue">&nbsp;</div>
+                    </div>
+               </div>
+               
+            </li>
             </ul>
           </div>
 
@@ -450,6 +488,7 @@
             <button class="glide__bullet" data-glide-dir="=2"></button>
             <button class="glide__bullet" data-glide-dir="=3"></button>
             <button class="glide__bullet" data-glide-dir="=4"></button>
+            <button class="glide__bullet" data-glide-dir="=5"></button>
 
           </div>
         </div>
@@ -457,14 +496,14 @@
       </div>
 
       <div class="section-categories">
-        <p class="header u-margin-top u-margin-bottom blue-text">Shop by category</p>
+        <p class="header-text u-margin-top u-margin-bottom blue-text">Shop by category</p>
         <div class="grid grid-3" style="grid-auto-rows: 50rem;">
-          <div class="grid-3--child category--box" style="background-image: url(img/catman.jpg);"><p class="category--text category--text--light">Men</p></div>
-          <div class="grid-3--child category--box" style="background-image: url(img/catwoman.jpg);"><p class="category--text category--text--light">Women</p></div>
-          <div class="grid-3--child category--box" style="background-image: url(img/catgirl.jpg);"><p class="category--text category--text--light">Girls</p></div>
-          <div class="grid-3--child category--box" style="background-image: url(img/catboy.jpg);"><p class="category--text category--text--dark">Boys</p></div>
-          <div class="grid-3--child category--box" style="background-image: url(img/catbrand.jpg);"><p class="category--text category--text--dark">Brands</p></div>
-          <div class="grid-3--child category--box" style="background-image: url(img/catspecial.jpg);"><p class="category--text category--text--dark">Specials</p></div>      
+          <div class="grid-3--child category--box"><p class="category--text category--text--light">Men</p><div class="category--child" style="background-image: url(img/catman.jpg);"></div></div>
+          <div class="grid-3--child category--box"><p class="category--text category--text--light">Women</p><div class="category--child" style="background-image: url(img/catwoman.jpg);"></div></div>
+          <div class="grid-3--child category--box"><p class="category--text category--text--light">Girls</p><div class="category--child" style="background-image: url(img/catgirl.jpg);"></div></div>
+          <div class="grid-3--child category--box"><p class="category--text category--text--dark">Boys</p><div class="category--child" style="background-image: url(img/catboy.jpg);"></div></div>
+          <div class="grid-3--child category--box"><p class="category--text category--text--dark">Brands</p><div class="category--child" style="background-image: url(img/catbrand.jpg);"></div></div>
+          <div class="grid-3--child category--box"><p class="category--text category--text--dark">Specials</p><div class="category--child" style="background-image: url(img/catspecial.jpg);"></div></div>      
         </div>
       </div>
 

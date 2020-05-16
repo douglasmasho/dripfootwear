@@ -18,7 +18,7 @@
 }
 
 .section-arrivals{
-    margin: 25rem 2rem 0rem 2rem;
+    margin: 25rem 0rem 0rem 0rem;
 }
 
 .section-categories{
@@ -74,20 +74,32 @@
 
 .category{
     &--box{
-        background-size: cover;
-        background-position: center;
+
         position: relative;
         -webkit-box-shadow: 18px 21px 25px -2px rgba(0,0,0,0.32);
         -moz-box-shadow: 18px 21px 25px -2px rgba(0,0,0,0.32);
         box-shadow: 18px 21px 25px -2px rgba(0,0,0,0.32);
         transition: all .5s;
+        overflow: hidden;
         
-        &:hover{
-            transform: scale(1.1);
+        &:hover .category--child{
+            transform: scale(1) translate(0);
+            filter: blur(0px);
         }
         &:hover .category--text{
-            transform: translateX(-1rem) scale(1.1);
+            transform: scale(1.05) translateX(-5%);
         }
+    }
+
+    &--child{
+        height: 100%;
+        width: 100%;
+        position: unset;
+        transition: all .5s;
+        background-size: cover;
+        background-position: center;
+        transform: scale(1.5) translate(-20px);
+        filter: grayscale(1);
     }
     &--text{
         text-transform: uppercase;
@@ -100,6 +112,7 @@
         right: 0;
         font-weight: bolder;
         transition: all .5s;
+        z-index: 1000;
 
         &--light{
             background-image: linear-gradient(102deg,rgb(255, 255, 255) 0%, rgb(0, 255, 183) 30%, rgb(0, 255, 195) 30%, rgb(0, 162, 255) 100%);
