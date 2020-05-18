@@ -18,7 +18,11 @@
 }
 
 #racebtn{
-    color: black;
+    color: #162376;
+}
+#dcbtn{
+    // position: relative;
+    z-index: 6000;
 }
 
 
@@ -36,10 +40,11 @@
 
 #dcbtn:hover span{
     background: linear-gradient(to right, #00c3ff, rgb(255, 255, 255));
+    // z-index: 6000;
 }
 
 #racebtn:hover span{
-    background: linear-gradient(to right, rgb(211, 61, 38), rgb(221, 21, 21));
+    background: linear-gradient(to right, #162376, cyan);
 }
 
 .btn{

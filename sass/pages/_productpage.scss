@@ -153,6 +153,7 @@
         font-size: 4rem;
         color: #0136B4;
         font-weight: lighter;
+        text-transform: uppercase;
     }
 }
 
@@ -200,6 +201,7 @@
     // background-color: red;
     mix-blend-mode: hue;
     // box-shadow: 0 0 0 3000px rgb(0, 219, 0);
+    transition: all .5s;
 }
 
 

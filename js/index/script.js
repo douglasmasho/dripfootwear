@@ -18,6 +18,7 @@ arrows.forEach(element =>{
         ui.trigger2();
         ui.startTimer();
         ui.startTimer2();
+        ui.colorReset();
     })
 })
 
@@ -29,6 +30,7 @@ dots.forEach(element =>{
         ui.trigger2();
         ui.startTimer();
         ui.startTimer2();  
+        ui.colorReset();
     })
 })
 
@@ -52,20 +54,34 @@ links.forEach( element => {
 })
 
 
-//airjordan9 color change
-document.querySelector("#j9-block").addEventListener("click", event =>{
-    let ButtonID = event.target.id;
 
-    ui.ColorChange("j9", ButtonID);
+//colorchange function
+let blocks = document.querySelectorAll(".pncbox--colorblock");
 
-    document.querySelector("#slideblock2").style.backgroundColor = event.target.classList[1].slice(3, 10); 
+blocks.forEach(e=>{
+    e.addEventListener("click", event =>{
+        let block = event.target; 
+        console.log(block);
+        let color = block.style.backgroundColor;
+        console.log(color);
+    
+        ui.colorChange(color);
+    })
 })
+
+
+
+
+
 
 //dc color change
-document.querySelector("#dc-block").addEventListener("click", event=>{
-    let ButtonID = event.target.id;
-    ui.ColorChange("dc", ButtonID);
-})
+// document.querySelector("#dc-block").addEventListener("click", event=>{
+//     let ButtonID = event.target.id;
+//     ui.colorChange("dc", ButtonID);
+// })
+
+
+
 
 //////read card details
 document.querySelectorAll(".card--cta").forEach(element =>{

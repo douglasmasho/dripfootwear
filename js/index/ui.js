@@ -71,16 +71,28 @@ class UI{
         })
     }
 
-    ColorChange(str, btnID){
-        console.log(str, btnID)
-        this.shoes[str].forEach(curr =>{
-            if(curr.id.slice(8,9) === btnID.slice(3,4)){
-                curr.style.animation = "fadein 0.3s forwards";
-            }else if(curr.id.slice(8,9) !== btnID.slice(3,4)){
-                curr.style.animation = "fadeout 0.3s forwards";
-            }
-        })
-        // console.log(this.shoes[str])
+    // colorChange(str, btnID){
+    //     console.log(str, btnID)
+    //     this.shoes[str].forEach(curr =>{
+    //         if(curr.id.slice(8,9) === btnID.slice(3,4)){
+    //             curr.style.animation = "fadein 0.3s forwards";
+    //         }else if(curr.id.slice(8,9) !== btnID.slice(3,4)){
+    //             curr.style.animation = "fadeout 0.3s forwards";
+    //         }
+    //     })
+    //     // console.log(this.shoes[str])
+    // }
+    colorChange(color){
+        let colorDivArr = document.querySelectorAll(".color-div");
+        colorDivArr.forEach(e =>{
+            e.style.boxShadow = `0 0 0 900rem ${color}` 
+        });
+    }
+    colorReset(){
+        let colorDivArr = document.querySelectorAll(".color-div");
+        colorDivArr.forEach(e =>{
+            e.style.boxShadow = "none"
+        })   
     }
 
     getChildren(parent){

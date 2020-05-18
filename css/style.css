@@ -145,7 +145,10 @@ html {
   text-shadow: 4px 4px 2px #969696; }
 
 #racebtn {
-  color: black; }
+  color: #162376; }
+
+#dcbtn {
+  z-index: 6000; }
 
 #adidasbtn:hover span {
   background: linear-gradient(to right, #0077ff, #121637); }
@@ -160,7 +163,7 @@ html {
   background: linear-gradient(to right, #00c3ff, white); }
 
 #racebtn:hover span {
-  background: linear-gradient(to right, #d33d26, #dd1515); }
+  background: linear-gradient(to right, #162376, cyan); }
 
 .btn {
   /* position: relative;     */
@@ -223,7 +226,8 @@ html {
   right: 0;
   transition: all .3s;
   margin: 5px 0px 5px 5px;
-  animation: slideleft 0.8s ease-in; }
+  animation: slideleft 0.8s ease-in;
+  z-index: 7000; }
   .pncbox--pricetag {
     padding: 16px 0px;
     font-weight: lighter;
@@ -248,7 +252,7 @@ html {
 
 #pt2,
 #pt2 p {
-  color: #121637; }
+  color: #ffffff; }
 
 #pt3,
 #pt3 p {
@@ -471,7 +475,7 @@ html {
 .header {
   position: fixed;
   width: 100%;
-  z-index: 3000;
+  z-index: 10000;
   display: flex;
   justify-content: space-between; }
   .header--right {
@@ -483,7 +487,9 @@ html {
     width: 15rem; }
   .header--menu {
     color: white;
-    margin: 0 0 0 2rem; }
+    margin: 0 0 0 2rem;
+    font-size: 3rem;
+    cursor: pointer; }
   .header--cart {
     color: white;
     font-size: 3rem;
@@ -500,7 +506,7 @@ html {
   height: 100%;
   width: 0;
   background-color: black;
-  z-index: 4000;
+  z-index: 15000;
   position: absolute;
   right: 100vw;
   overflow: hidden; }
@@ -623,19 +629,21 @@ html {
   font-size: 30px; }
 
 .rect {
-  width: 590px;
-  height: 410px;
+  width: 59rem;
+  height: 41rem;
   position: absolute;
-  z-index: 1000;
+  z-index: 5000;
   border-radius: 10px; }
-  .rect__1, .rect__2, .rect__3 {
+  .rect__1, .rect__2, .rect__3, .rect__4 {
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); }
+    left: 40%;
+    transform: translateY(-50%); }
   .rect__1, .rect__2 {
     border: white solid 8px; }
   .rect__3 {
     border: #161830 solid 8px; }
+  .rect__4 {
+    border: #3d3d3d solid 8px; }
 
 .dots-container {
   position: absolute;
@@ -650,18 +658,24 @@ html {
   padding: 0;
   position: relative;
   width: 100vw;
-  height: 100vh; }
+  height: 100vh;
+  transition: all .5s; }
 
 /* slide1 */
 #slideblock1 {
-  background: linear-gradient(to right bottom, rgba(0, 0, 0, 0.849), rgba(0, 0, 0, 0.856)), url(../img/tim-mossholder-5vh4crJBztg-unsplash.jpg);
-  height: 100vh;
-  background-size: cover;
-  background-position-y: 80%; }
+  background-color: #ff1414;
+  position: relative;
+  transition: all .5s; }
   #slideblock1::after {
     content: "";
     display: table;
     clear: both; }
+
+.jordan-png {
+  width: 50rem;
+  z-index: 6000;
+  position: relative;
+  transition: all .5s; }
 
 #pic1 {
   width: 0%; }
@@ -693,18 +707,19 @@ html {
   .name__adidas {
     font-size: 9rem !important; }
 
-#v-bred {
+#vi {
   position: absolute;
   left: -22%;
   top: 55%;
-  font-size: 6rem;
+  font-size: 5.5rem;
   text-transform: uppercase;
   font-style: italic; }
 
 /* slide2 */
 #slideblock2 {
   background-color: #3354FB;
-  position: relative; }
+  position: relative;
+  transition: all .5s; }
   #slideblock2::after {
     content: "";
     display: table;
@@ -724,20 +739,25 @@ html {
 
 /* slide 3 */
 #slideblock3 {
-  background-color: #F8D765; }
+  background-color: #F4CD4A;
+  position: relative; }
 
 #guyonstairs {
   width: 35rem;
   position: absolute;
   bottom: 0;
-  left: 0; }
+  left: 0;
+  animation: slideleft 1s ease-in-out; }
 
 #shoe3 {
   width: 64rem;
   position: absolute;
   transform: rotateY(180deg);
   right: -24%;
-  top: 18%; }
+  top: 18%;
+  animation: popup 2s;
+  position: relative;
+  z-index: 2000; }
 
 #slide3div {
   font-size: 80px;
@@ -759,7 +779,7 @@ html {
 
 /* slide 4 */
 #slideblock4 {
-  background: linear-gradient(to right bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/jan.jpg);
+  background-color: #EDF2F4;
   height: 100vh;
   background-size: cover;
   background-position-y: 80%; }
@@ -768,8 +788,9 @@ html {
     display: table;
     clear: both; }
 
-#dc {
-  color: white; }
+#guyonbike {
+  width: 60rem;
+  transition: all .5s; }
 
 #pure {
   background-image: linear-gradient(to left, cyan 40%, #0206ff);
@@ -786,15 +807,56 @@ html {
 
 /* slide 5 */
 #slideblock5 {
-  background-image: url(../img/steven-lelham-atSaEOeE8Nk-unsplash.jpg);
-  background-size: cover; }
+  background-color: #00C4DA; }
 
-#slide5div {
-  font-size: 100px;
-  text-transform: uppercase;
-  margin-left: 10px;
+#slide5 {
+  width: 80%;
+  height: 80%;
   position: absolute;
-  top: 10%; }
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 10rem;
+  text-transform: uppercase;
+  color: #162376; }
+  #slide5-img1 {
+    position: absolute;
+    right: 15%;
+    width: 40%;
+    bottom: 0; }
+  #slide5-img2 {
+    position: absolute;
+    left: 15%;
+    width: 42%;
+    bottom: 0; }
+  #slide5--the {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%); }
+  #slide5--sprint {
+    position: absolute;
+    left: -4%;
+    top: 50%;
+    transform: translateY(-50%); }
+  #slide5--kit {
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%); }
+
+.img-div {
+  overflow: hidden;
+  position: absolute;
+  left: 10rem;
+  top: 3rem; }
+
+.color-div {
+  mix-blend-mode: hue;
+  background-color: transparent;
+  position: absolute;
+  top: -2rem;
+  z-index: 7000; }
 
 .home {
   padding: 2rem 0rem 0rem 0rem;
@@ -1037,7 +1099,8 @@ html {
   text-align: center;
   font-size: 4rem;
   color: #0136B4;
-  font-weight: lighter; }
+  font-weight: lighter;
+  text-transform: uppercase; }
 
 .tab-reviews--number {
   text-align: center;
@@ -1065,7 +1128,8 @@ html {
     text-align: center; }
 
 .color-div {
-  mix-blend-mode: hue; }
+  mix-blend-mode: hue;
+  transition: all .5s; }
 
 .cart--header {
   height: 20rem;

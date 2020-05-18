@@ -22,17 +22,18 @@
  }
 
  .rect{
-    width: 590px;
-    height: 410px;
+    width: 59rem;
+    height: 41rem;
     position: absolute;
-    z-index: 1000;
+    z-index: 5000;
     border-radius: 10px;
     &__1,
     &__2,
-    &__3{
+    &__3,
+    &__4{
         top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        left: 40%;
+        transform: translateY(-50%);
     }
     &__1,
     &__2{
@@ -41,6 +42,9 @@
 
     &__3{
         border: #161830 solid 8px;
+    }
+    &__4{
+        border: #3d3d3d solid 8px
     }
 }
 
@@ -59,20 +63,26 @@
     padding: 0;
     position: relative;
     width: 100vw;
-
     height: 100vh;
+    transition: all .5s;
 }
 
 /* slide1 */
 
 #slideblock1{
-    background: linear-gradient(to right bottom ,rgba(0, 0, 0, 0.849), rgba(0, 0, 0, 0.856)),url(../img/tim-mossholder-5vh4crJBztg-unsplash.jpg);
+    // background-color: rgb(253, 19, 19);
+    // @include clearfix;
+    background-color:rgb(255, 20, 20);
+    position: relative;
     @include clearfix;
-    height: 100vh;
-    background-size: cover;
-    background-position-y: 80%;
+    transition: all .5s;
 }
-
+.jordan-png{
+    width: 50rem;
+    z-index: 6000;
+    position: relative;
+    transition: all .5s;
+}
 
 #pic1{
     width: 0%;
@@ -114,11 +124,11 @@
     }
 }
 
-#v-bred{
+#vi{
     position: absolute;
     left: -22%;
     top: 55%;
-    font-size: 6rem;
+    font-size: 5.5rem;
     // animation: popup 1s ease-in;
     text-transform: uppercase;
     font-style: italic;
@@ -129,7 +139,9 @@
     background-color:#3354FB;
     position: relative;
     @include clearfix;
+    transition: all .5s;
 }
+
 
 #nine{
     font-size: 15rem;
@@ -152,7 +164,8 @@
 /* slide 3 */
 
 #slideblock3{
-    background-color: #F8D765;
+    background-color: #F4CD4A;
+    position: relative;
 }
 
 
@@ -161,9 +174,9 @@
     position: absolute;
     bottom: 0;
     left: 0;
-    // animation: slideleft 1s ease-in-out;
-    
+    animation: slideleft 1s ease-in-out;
 }
+
 
 #shoe3{
     width: 64rem;
@@ -171,7 +184,9 @@
     transform: rotateY(180deg);
     right: -24%;
     top: 18%;
-    // animation: popup 2s;
+    animation: popup 2s;
+    position: relative;
+    z-index: 2000;
 
 }
 
@@ -199,17 +214,18 @@
 
 /* slide 4 */
 #slideblock4{
-    background: linear-gradient(to right bottom ,rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(../img/jan.jpg);
+    background-color: #EDF2F4;
     @include clearfix;
     height: 100vh;
     background-size: cover;
     background-position-y: 80%;
 }
-
-
-#dc{
-    color: white;
+#guyonbike{
+    width: 60rem;
+    transition: all .5s;
 }
+
+
 #pure{
     background-image: linear-gradient(to left, cyan 40%, rgb(2, 6, 255));
     -webkit-background-clip: text;
@@ -228,15 +244,70 @@
 /* slide 5 */
 
 #slideblock5{
-    background-image: url(../img/steven-lelham-atSaEOeE8Nk-unsplash.jpg);
-    background-size: cover;
+    background-color: #00C4DA
 }
 
-#slide5div{
-    font-size:100px;
-    text-transform: uppercase;
-    margin-left: 10px;
+#slide5{
+    width: 80%;
+    height: 80%;
     position: absolute;
-    top: 10%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 10rem;
+    text-transform: uppercase;
+    color: #162376;
+
+    &-img1{
+        position: absolute;
+        right: 15%;
+        width: 40%;
+        bottom: 0;
+    }
+    &-img2{
+        position: absolute;
+        left: 15%;
+        width: 42%;
+        bottom: 0;
+    }
+    &--the{
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    &--sprint{
+        position: absolute;
+        left: -4%;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    &--kit{
+        position: absolute;
+        right: 5%;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    
+
 }
 
+
+
+
+.img-div{
+    overflow:hidden;
+    position: absolute;
+    left: 10rem;
+    top: 3rem;
+}
+
+
+.color-div{
+    mix-blend-mode: hue;
+    background-color: transparent;
+    position: absolute;
+    top: -2rem;
+    z-index: 7000;
+}
