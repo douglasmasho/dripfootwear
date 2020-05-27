@@ -111,5 +111,16 @@
     }
 }
 
+@keyframes removed{
+    0%{
+        transform: translate(0);
+        opacity: 1;
+    }
+    100%{
+        transform: translateX(5rem);
+        opacity: 0;
+    }
+}
+
 
  

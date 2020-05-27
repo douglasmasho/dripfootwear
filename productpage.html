@@ -209,7 +209,7 @@
 
       <p class="header-text u-margin-bottom white-text u-margin-top-big">More for you</p>
 
-      <div class="row row-3">
+      <div class="row" style="justify-content: space-evenly;">
           <div class="card row-3--child">
                 <img src="img/dclogo.svg" class="card--logo" alt="logo">
                 <img src="img/dchi.png" class="card--shoe" alt="shoe">
@@ -296,9 +296,22 @@
               <div class="card--color" style="background-color: #ff00bf">&nbsp;</div>
             </div>
        </div>
+       
 
-     
     </div>
+
+    <div class="modal" id="modal">
+      <button data-close-button class="close-button">&times;</button>
+      <div class="modal-header">
+        <h2 class="modal-title blue-text normal-text">Your Item has been added to the cart</h2>
+      </div>
+      <div class="modal-body u-margin-bottom row">
+        <a href="cart.html" class="button row-3--child center-vert normal-text">Go to cart</a>
+        <a href="#" class="button row-3--child normal-text">Go to checkout</a>
+        <a href="index.html#categories" class="button row-3--child normal-text">continue shopping</a>
+      </div>
+    </div>
+    <div id="overlay"></div>
   
  </div>
  <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>

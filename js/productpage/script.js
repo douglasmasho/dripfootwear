@@ -11,6 +11,9 @@
 //init
 const ui = new UI;
 const data = new Data;
+if(localStorage.getItem("cart") === null){
+  localStorage.setItem("cart", "[]");
+}
 
 //tabs
 ui.tabInit()
@@ -32,7 +35,7 @@ ui.pushName(localStorage.getItem("shoeBrand"), localStorage.getItem("shoeModel")
 ui.pushStars(localStorage.getItem("shoeStarsNum"));
 
 //animation
-ui.gsap();
+// ui.gsap();
 
 //////read card details
 document.querySelectorAll(".card--cta").forEach(element =>{
@@ -80,7 +83,12 @@ buttons.forEach( e =>{
         let color = element.style.backgroundColor;
         ui.changeColor(color);
     })
+});
+
+document.querySelector(".product--details--cta").addEventListener("click", ()=>{
+    ui.getData();
 })
+
 
 
 

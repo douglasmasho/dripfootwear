@@ -7,7 +7,8 @@
             this.starsNumber = document.querySelector(".tab-reviews--number");
             this.starsDiv = document.querySelector(".tab-reviews--stars");
             this.starsParent = document.querySelectorAll(".stars");
-    
+            //product details
+
         }
 
         startTimer(){
@@ -45,12 +46,10 @@
             <div class="product--details">
                 <h3 class="product--details--brand">${shoeBrand}</h3>
                 <h4 class="product--details--model">${shoeModel}</h4>
-                <div class="product--details--price u-margin-top u-margin-bottom"> 
-                    ${shoePrice}
-                </div>
+                <div class="product--details--price u-margin-top u-margin-bottom">${shoePrice}</div>
  
                  <div class="product--details--sizes u-margin-top">
-                        <p class="white-text product--details--text">select size</p>
+                        <p class=" product--details--text" id="errorsize">select size</p>
                     <div class="product--details--sizes--options" >
                         <input type="radio" name="size" id="size-5" class="sizeOptions radio-btn" value="5">
                         <label for="size-5" class="radio-label">5</label>
@@ -70,35 +69,36 @@
                 </div>
  
                  <div class="product--details--colors u-margin-top u-margin-bottom">
-                   <p class="white-text product--details--text">select color</p>
+                   <p class=" product--details--text" id="errorcolor">select color</p>
                       <div class="product--details--colors--options" >
-                          <input type="radio" name="color" id="color-1" class="radio-btn" value="1">
+                          <input type="radio" name="color" id="color-1" class="radio-btn colorOptions" value="${color0}">
                           <label for="color-1" class="color-options radio-label" style="background-color: ${color0}">1</label>
               
-                          <input type="radio" name="color" id="color-2" class="radio-btn" value="2">
+                          <input type="radio" name="color" id="color-2" class="radio-btn colorOptions" value="${color1}">
                           <label for="color-2" class="color-options radio-label" style="background-color: ${color1};">2</label>
               
-                          <input type="radio" name="color" id="color-3" class="radio-btn" value="3">
+                          <input type="radio" name="color" id="color-3" class="radio-btn colorOptions" value="${color2}">
                           <label for="color-3" class="color-options radio-label" style="background-color: ${color2};">3</label>
               
-                          <input type="radio" name="color" id="color-4" class="radio-btn" value="4">
+                          <input type="radio" name="color" id="color-4" class="radio-btn colorOptions" value="${color3}">
                           <label for="color-4" class="color-options radio-label" style="background-color: ${color3};">4</label> 
                       </div>
                </div>
  
                <div class="product--details--quantity">
-                 <p class="white-text product--details--text">Quantity:</p>
+                 <p class=" product--details--text" id="errorquantity">Quantity:</p>
                  <div class="center-vert u-margin-left-big">
                    <input type="number" class="product--details--quantity--input" placeholder="qty" min="1" max="100" name="quantity">
                  </div>
                </div>
  
-               <a href="#" style="text-decoration: none;">            
+               <a href="#" style="text-decoration: none;" data-modal-target="#modal">            
                    <div class="product--details--cta u-margin-top">
                        <p class="white-text product--details--cta--text">Add to cart</p>
                        <img src="img/shopping-cart.svg" alt="cart-icon" class="product--details--cta--icon">
                    </div>
                  </a>
+                 <p class="error u-margin-top" style="display: none">P</p>
             </div>
  
             <div class="product--pic">
@@ -154,8 +154,126 @@
 
         changeColor(color){
             let colorDiv = document.querySelector(".color-div");
-            colorDiv.style.boxShadow = `0 0 0 3000px ${color}`
+            colorDiv.style.boxShadow = `0 0 0 3000px ${color}`;
             // console.log(colorDiv)
+        }
+
+        showError(str){
+            // console.log("oopsies")
+            let errormsg = document.querySelector(".error");
+            errormsg.style.display = "block";
+            errormsg.textContent = `please fill in the required fields`;
+            let errorText = document.querySelector(`#error${str}`);
+            errorText.style.color = "red";
+
+            setTimeout(()=>{
+                errormsg.style.display = "none",
+                errorText.style.color = "#6B6B6B";
+            }, 2000)
+        }
+
+        openModal(modal){
+            if(modal === null) return;
+            modal.classList.add("active");
+            overlay.classList.add("active");
+        }
+        
+        closeModal(modal){
+            if(modal === null) return;
+            modal.classList.remove("active");
+            overlay.classList.remove("active");
+        }  
+
+
+        showModal(){
+            const openModalButton = document.querySelector("[data-modal-target]");
+            const closeModalButton = document.querySelector("[data-close-button]");
+            const overlay = document.getElementById("overlay");
+            
+            overlay.addEventListener("click", ()=>{
+                const modal = document.querySelector(".modal.active");
+                this.closeModal(modal);
+            })
+            
+            openModalButton.addEventListener("click", ()=>{
+                const modal = document.querySelector(openModalButton.dataset.modalTarget);
+                this.openModal(modal);
+            });
+            
+            closeModalButton.addEventListener("click", ()=>{
+                const modal = closeModalButton.closest(".modal")
+                this.closeModal(modal);
+            });          
+        }
+
+        readRadioVal(arr){
+            let value;
+            arr.forEach(e=>{
+                if(e.checked){
+                    value = e.value;
+                }
+            })
+            return value;
+        }
+
+        getData(){
+            let sizeBtns = document.querySelectorAll(".sizeOptions");
+            let colorBtns = document.querySelectorAll(".colorOptions");
+            let qty = document.querySelector(".product--details--quantity--input").value;
+            let productBrand = document.querySelector(".product--details--brand").textContent;
+            let productModel = document.querySelector(".product--details--model").textContent;
+            let price = document.querySelector(".product--details--price").textContent;
+
+            //check if a sizeBtn is checked
+            {
+                let arr = [];
+                sizeBtns.forEach( e=>{
+                    arr.push(e.checked);
+                });
+                if(arr.includes(true) === false){
+                    this.showError("size")
+                    return;
+                }
+            }
+
+            // check if a colorBtn is checked
+            {
+                let arr = [];
+                colorBtns.forEach( e=>{
+                    arr.push(e.checked);
+                });
+                if(arr.includes(true) === false){
+                    this.showError("color")
+                    return;
+                }
+            }
+
+        
+            // check if the qty is filled
+            if(qty === ""){
+                this.showError("quantity");
+                return;
+            }
+
+            // collect the data
+
+            let cartItem = new Object();
+            cartItem.brand = productBrand;
+            cartItem.model = productModel;
+            cartItem.price = price;
+            cartItem.size =  this.readRadioVal(sizeBtns);
+            cartItem.color = this.readRadioVal(colorBtns);
+            cartItem.avColors = [localStorage.getItem("color0"), localStorage.getItem("color1"), localStorage.getItem("color2"), localStorage.getItem("color3")];
+            cartItem.qty = qty;
+            cartItem.src = localStorage.getItem("shoeSrc")
+            //get the array from LS
+            let cartArrStr = localStorage.getItem("cart");
+            let cartArr = JSON.parse(cartArrStr);
+            cartArr.push(cartItem);
+            let lsCart = JSON.stringify(cartArr);
+            console.log(cartArr)
+            localStorage.setItem("cart",lsCart);
+            this.showModal();
         }
 
     }

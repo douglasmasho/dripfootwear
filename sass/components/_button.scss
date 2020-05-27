@@ -112,3 +112,30 @@
     }    
 }
 
+.button,
+.button:visited,
+.button:active{
+    text-align: center;
+    text-decoration: none;
+    color: #1e1e1e;
+    display: inline;
+    text-transform: uppercase;
+    background-color: white;
+    -webkit-box-shadow: 9px 7px 26px -11px rgba(0,0,0,0.75);
+    -moz-box-shadow: 9px 7px 26px -11px rgba(0,0,0,0.75);
+    box-shadow: 9px 7px 26px -11px rgba(0,0,0,0.75);
+    padding: 5px 10px;
+    border-radius: 30px;
+    transition: all 0.5s;
+    backface-visibility: hidden;
+    &:hover{
+        -webkit-box-shadow: 16px 21px 41px -11px rgba(0,0,0,0.75);
+        -moz-box-shadow: 16px 21px 41px -11px rgba(0,0,0,0.75);
+        box-shadow: 16px 21px 41px -11px rgba(0,0,0,0.75);
+        transform: scale(1.1);
+        padding: 5px 20px;
+        background-color: #1e1e1e;
+        color: #00C2FF;
+    }
+}
+
