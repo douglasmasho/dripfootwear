@@ -74,6 +74,17 @@
     transform: translateX(5rem);
     opacity: 0; } }
 
+@keyframes open {
+  0% { }
+  100% {
+    width: 100%; } }
+
+@keyframes close {
+  0% {
+    width: 100%; }
+  100% {
+    width: 0%; } }
+
 *,
 *::after,
 *::before {
@@ -602,11 +613,11 @@ html {
 .nav {
   height: 100%;
   width: 0;
-  background-color: black;
+  background-color: #0a0a0a;
   z-index: 15000;
   position: absolute;
   right: 100vw;
-  overflow: hidden; }
+  overflow: scroll; }
   .nav--backdrop {
     /* height: 100%; */
     width: 100%;
@@ -619,27 +630,76 @@ html {
     text-decoration: none;
     color: white; }
   .nav--list {
-    position: absolute;
-    bottom: 10%;
-    z-index: 2000; }
-  .nav__item {
+    margin-top: 240px;
+    margin-left: 100px;
+    margin-bottom: 200px;
+    z-index: 2000;
+    list-style: none;
+    position: absolute; }
+  .nav--item {
     display: block;
-    margin: 20px;
-    background-image: linear-gradient(102deg, white 0%, #00ffb7 30%, #00ffc3 30%, blue 100%);
-    background-size: 350%;
-    background-clip: text;
-    -webkit-background-clip: text;
-    transition: all 0.5s; }
-    .nav__item:hover {
-      background-position: 100%;
-      transform: translateX(7px);
-      font-weight: bold; }
-  .nav__link {
+    margin: 120px 0; }
+  .nav--link {
     font-size: 50px;
     text-decoration: none;
     text-transform: uppercase;
-    color: white;
     color: transparent; }
+    .nav--link span {
+      position: relative;
+      display: block;
+      color: white; }
+      .nav--link span::before {
+        width: 0;
+        color: blue;
+        overflow: hidden;
+        position: absolute;
+        content: attr(data-text);
+        transition: all 1s cubic-bezier(0.84, 0, 0.08, 0.99); }
+      .nav--link span:hover::before {
+        width: 100%; }
+
+.progressbar {
+  position: fixed;
+  top: 0;
+  left: 85%;
+  background: rgba(255, 255, 255, 0.4);
+  width: 1px;
+  z-index: 20000; }
+
+.project-preview-wrapper {
+  width: 100%;
+  position: fixed;
+  display: flex;
+  justify-content: center; }
+
+.project-preview {
+  position: fixed;
+  top: 12%;
+  left: 50%;
+  width: 0;
+  height: 400px;
+  background: url(../img/men.jpg) no-repeat 50% 50%;
+  z-index: 20000;
+  background-size: cover;
+  overflow: hidden; }
+
+.abstract {
+  font-size: 350px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  color: transparent;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  background-image: linear-gradient(120deg, transparent 0%, transparent 50%, rgba(0, 204, 255, 0.4) 50%);
+  background-size: 250%;
+  transition: all 0.9s; }
+
+@media (max-width: 900px) {
+  .progressbar,
+  .project-preview-wrapper {
+    display: none; } }
 
 .grid {
   display: grid;

@@ -13,6 +13,7 @@
 <link href="https://fonts.googleapis.com/css?family=Montserrat|Montserrat+Subrayada&display=swap" rel="stylesheet">
 <link href="img/drip logo-2.png" rel="shortcut icon" >
 <script src="https://kit.fontawesome.com/7acd91a7cc.js" crossorigin="anonymous"></script>
+
 </head>
 <body >
   <!-- <header class="header">
@@ -34,24 +35,65 @@
 </div>
 </div>  
     <div class="nav">
-        <!-- <span id="slider-prev" class="menu--back"><i class="lnr lnr-chevron-left" >back</i></span>     -->
        <a href="#" class="nav--back">
         <span><i class="lnr lnr-cross" ></i></span>    
        </a> 
+    <div> 
+      <div class="project-preview-wrapper">
+        <div class="project-preview"><p class="abstract">Men</p></div>
+      </div>
+     
       <ul class="nav--list">
-         <li class="nav__item"><a href="#" class="nav__link" id="navmen">Men</a></li>
-         <li class="nav__item"><a href="#" class="nav__link" id="navwomen">women</a></li>
-         <li class="nav__item"><a href="#" class="nav__link"  id="navgirls">girls</a></li>
-         <li class="nav__item"><a href="#" class="nav__link"  id="navboys">boys</a></li>
-         <li class="nav__item"><a href="#" class="nav__link" id="navbrands">brands</a></li>
-         <li class="nav__item"><a href="#" class="nav__link" id="navspecials">specials</a></li>
+         <li class="nav--item">
+           <a href="#" class="nav--link nav--link__1">
+            <span data-text="Men" class="link-span">Men</span>
+           </a>
+        </li>
+
+        <li class="nav--item">
+          <a href="#" class="nav--link nav--link__2">
+           <span data-text="women" class="link-span">Women</span>
+          </a>
+       </li>
+
+       <li class="nav--item">
+        <a href="#" class="nav--link nav--link__3">
+         <span data-text="girls" class="link-span">Girls</span>
+        </a>
+       </li>
+
+       <li class="nav--item">
+        <a href="#" class="nav--link nav--link__4">
+         <span data-text="boys" class="link-span">Boys</span>
+        </a>
+      </li>
+
+      <li class="nav--item">
+        <a href="#" class="nav--link nav--link__5">
+         <span data-text="brands" class="link-span">Brands</span>
+        </a>
+      </li>
+
+      <li class="nav--item">
+        <a href="#" class="nav--link nav--link__6">
+         <span data-text="specials" class="link-span">Specials</span>
+        </a>
+      </li>
+
+      <li class="nav--item">
+        <a href="#" class="nav--link nav--link__7">
+         <span data-text="home" class="link-span">Home</span>
+        </a>
+      </li>
       </ul>
-       <img src="img/men.jpg" alt="backdrop-men" class="nav--backdrop" id="men">
+    </div>
+    <div class="progressbar"></div>     
+       <!-- <img src="img/men.jpg" alt="backdrop-men" class="nav--backdrop" id="men">
        <img src="img/women.jpg" alt="backdrop-women" class="nav--backdrop" id="women">
        <img src="img/girls.jpg" alt="backdrop-girls" class="nav--backdrop" id="girls">
        <img src="img/boys1.jpg" alt="backdrop-boys" class="nav--backdrop" id="boys">
        <img src="img/brands.jpg" alt="backdrop-brands" class="nav--backdrop" id="brands">
-       <img src="img/specials.jpg" alt="backdrop-specials" class="nav--backdrop" id="specials">
+       <img src="img/specials.jpg" alt="backdrop-specials" class="nav--backdrop" id="specials"> -->
     </div>
 
 <div class="glide" style="position: relative;">
@@ -555,12 +597,20 @@
       </footer>
 
 </div>
+<!-- <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TimelineLite.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenLite.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.4/TweenMax.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TimelineMax.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script> -->
 
+<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
+<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/CSSRulePlugin3.min.js"></script>
    <script src="js/index/data.js"></script>
    <script src="js/index/ui.js"></script>
    <script src="js/index/script.js"></script>
    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
    <!-- <script src="node_modules/@glidejs/glide/dist/glide.min.js"></script> -->
+
    <script>
        new Glide('.glide',{
           type: 'carousel',

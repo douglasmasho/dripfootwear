@@ -42,7 +42,7 @@ class UI{
                 <div class="center-vert z3500" style="position: relative;">
                     <div class="center-hrz">
                         <p class="cartItem--text">Size:</p>
-                        <input type="number" placeholder="5" class="input-number" min="6" max="9" value="${item.size}">
+                        <input type="number" placeholder="5" class="input-number input-size" min="6" max="9" value="${item.size}">
                     </div>
                 </div>
 
@@ -125,6 +125,13 @@ class UI{
 
 
 }
+
+
+
+
+
+
+
 
 // avColors: Array(4) [ "blue", "green", "red", … ]
 // ​​
