@@ -1,43 +1,52 @@
-//reload once
+class UI{
+    constructor(){
+        this.starsParent = document.querySelectorAll(".stars");
+    }
 
-// window.onload = function() {
-//     if(!window.location.hash) {
-//         window.location = window.location + '#loaded';
-//         window.location.reload();
-//     }
-// }
+    pushStars2(){
+        this.starsParent.forEach(e=>{
+            let children =  e.children;
+            let starsNum = children[1].textContent.slice(0,1);
+            // console.log(starsNum);
+  
+            let starsDiv = children[0];
+            console.log(starsDiv)
+            
+            for(let i = 0; i < starsNum; i++){
+                starsDiv.insertAdjacentHTML("beforeend", `<i class="fas fa-star stars--icon"></i>`)
+            }
+  
+            for(let i = 0; i < (5 - starsNum); i++){
+              starsDiv.insertAdjacentHTML("beforeend", `<i class="far fa-star stars--icon"></i>`)
+            }
+        })
+      }
 
-
-//init
-const ui = new UI;
-const data = new Data;
-if(localStorage.getItem("cart") === null){
-  localStorage.setItem("cart", "[]");
+      getChildren(parent){
+        return parent.children;
+    }
 }
 
-//tabs
-ui.tabInit()
+const ui = new UI;
 
-//regex 
-
-data.regEx();
-
-//push stars onto cards
 ui.pushStars2();
 
-console.log(localStorage);
+// brand animation
+function initBrand(){
+    let logo = document.querySelector(".brands--logo");
+        let div = document.querySelector(".brands--div");
+        let spans = document.querySelectorAll(".brands--span");
 
-//generate product
-ui.pushProduct(localStorage.getItem("logoSrc"), localStorage.getItem("shoeSrc"), localStorage.getItem("shoeBrand"), localStorage.getItem("shoeModel"), localStorage.getItem("shoePrice"), localStorage.getItem("color0"), localStorage.getItem("color1"), localStorage.getItem("color2"), localStorage.getItem("color3"));
+        
+        spans.forEach(span=>{
+            span.style.backgroundPosition = "100%";
+        })
+        let tl = gsap.timeline({defaults: {duration: 1.5}});
+        tl.staggerTo(".brands--span", 0.1, {top: "0%", opacity: 1}, 0.1)
+}
 
-ui.pushName(localStorage.getItem("shoeBrand"), localStorage.getItem("shoeModel"));
 
-ui.pushStars(localStorage.getItem("shoeStarsNum"));
-
-//animation
-// ui.gsap();
-
-//////read card details
+//read card details
 document.querySelectorAll(".card--cta").forEach(element =>{
     element.addEventListener("click", event=>{
         let parent = event.currentTarget.parentElement.parentElement.parentElement
@@ -75,62 +84,3 @@ document.querySelectorAll(".card--cta").forEach(element =>{
     })
 })
 
-
-//color change event
-let buttons = document.querySelectorAll(".color-options");
-
-buttons.forEach( e =>{
-    e.addEventListener("click", (event)=>{
-        let element = event.currentTarget;
-        let color = element.style.backgroundColor;
-        ui.changeColor(color);
-    })
-});
-
-document.querySelector(".product--details--cta").addEventListener("click", ()=>{
-    ui.getData();
-})
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    //  const radios = document.querySelectorAll(".radio-btn");
-
-    //  radios.forEach(el =>{
-    //      if(el.checked){
-    //          console.log(el.getAttribute("value"))
-    //      }
-    //  })

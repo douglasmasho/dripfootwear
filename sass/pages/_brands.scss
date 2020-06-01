@@ -1,0 +1,63 @@
+.brands{
+    background-color: #3609FE;
+
+    &--container{
+        margin-top: 20rem;
+    }
+
+    &--div{
+        margin-bottom: 15rem;
+    }
+    &--logo{
+        cursor: pointer;
+        width: 30rem;
+        transition: all .4s;
+        transition-delay: 0.3s;
+        transition-timing-function: cubic-bezier(1,-0.37,.34,.63);
+        &:hover{
+            transform: scale(1.2);
+            fill: black
+        }
+    }
+    &--text{
+        font-size: 8rem;
+        text-transform: uppercase;
+        display: block;
+        text-align: center;
+        font-weight: lighter;
+        margin: 0;
+        overflow: hidden;
+        // width: 0;
+    }
+    &--span{
+        position: relative;
+        z-index: 20000;
+        padding: 0;
+        top: 100%;
+        // opacity: 0;
+        color: transparent;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+        background-image: linear-gradient(120deg, transparent 0%, transparent 50%, rgb(255, 255, 255) 50%);
+        background-size: 250%;
+        transition: all 0.5s;
+    }
+}
+
+.adidas-bg{
+    background-color: #00F900;
+}
+.dc-bg{
+    background-color: #ff0000;
+}
+.nike-bg{
+    background-color: #ff3d00;
+}
+.puma-bg{
+    background-color: #5D00FF;
+}
+
+.animateBrand{
+    animation: slideleft 1s;
+}

@@ -128,6 +128,13 @@ html {
   display: block;
   text-align: center; }
 
+.header-text-big {
+  font-size: 10rem;
+  text-transform: uppercase;
+  display: block;
+  text-align: center;
+  font-weight: lighter; }
+
 .blue-text {
   color: #0136B4; }
 
@@ -707,7 +714,7 @@ html {
   .grid-2 {
     grid-template-columns: repeat(2, 1fr); }
     .grid-2--child {
-      margin: 4rem;
+      margin: 3rem;
       border-radius: 15px; }
   .grid-3 {
     grid-template-columns: repeat(3, 1fr); }
@@ -758,10 +765,16 @@ html {
   display: flex;
   flex-direction: column;
   justify-content: center; }
+  .center-vert--row {
+    flex-direction: row;
+    align-items: center; }
 
 .row {
   display: flex;
   padding: 1rem; }
+  .row-2--child {
+    width: 40%;
+    margin: 2rem; }
   .row-3--child {
     width: 20%;
     margin: 2rem; }
@@ -1381,3 +1394,54 @@ html {
   padding: 5px 20px;
   border-radius: 30px;
   transition: all .5s; }
+
+.brands {
+  background-color: #3609FE; }
+  .brands--container {
+    margin-top: 20rem; }
+  .brands--div {
+    margin-bottom: 15rem; }
+  .brands--logo {
+    cursor: pointer;
+    width: 30rem;
+    transition: all .4s;
+    transition-delay: 0.3s;
+    transition-timing-function: cubic-bezier(1, -0.37, 0.34, 0.63); }
+    .brands--logo:hover {
+      transform: scale(1.2);
+      fill: black; }
+  .brands--text {
+    font-size: 8rem;
+    text-transform: uppercase;
+    display: block;
+    text-align: center;
+    font-weight: lighter;
+    margin: 0;
+    overflow: hidden; }
+  .brands--span {
+    position: relative;
+    z-index: 20000;
+    padding: 0;
+    top: 100%;
+    color: transparent;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    background-image: linear-gradient(120deg, transparent 0%, transparent 50%, white 50%);
+    background-size: 250%;
+    transition: all 0.5s; }
+
+.adidas-bg {
+  background-color: #00F900; }
+
+.dc-bg {
+  background-color: #ff0000; }
+
+.nike-bg {
+  background-color: #ff3d00; }
+
+.puma-bg {
+  background-color: #5D00FF; }
+
+.animateBrand {
+  animation: slideleft 1s; }

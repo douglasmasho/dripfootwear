@@ -46,65 +46,29 @@ document.querySelector(".nav--back").addEventListener("click", function(){
 //backgroundchange
 let navItems = document.querySelectorAll(".nav--item");
 let navSpan = document.querySelectorAll(".link-span");
-let projectPreview = document.querySelector(".project-preview");
-let abstract = document.querySelector(".abstract");
+
 
 //event listeners
 navItems.forEach(item=>{
     item.addEventListener("mouseover", event=>{
-        let tl = gsap.timeline({defaults: {duration: 0.7}});
-        tl.to(".project-preview", {width: "600px", x:-100,ease: "Circ.easeInOut"});
+        ui.gsapItems(event.type);
     })
 
     item.addEventListener("mouseout", event=>{
-        let tl = gsap.timeline({defaults: {duration: 0.7}});
-        tl.to(".project-preview", {width: "0px", x:100,ease: "Circ.easeInOut"});
+        ui.gsapItems(event.type);
     })
 })
 
 navSpan.forEach(span=>{
     span.addEventListener("mouseover", event=>{
-        let imgSrc = span.dataset.text;
-        projectPreview.style.background = `url(./img/${imgSrc}.jpg)`;
-        projectPreview.style.backgroundSize = "cover";
-        projectPreview.style.overflow = "visible";
-        abstract.textContent = imgSrc;
-        abstract.style.backgroundPosition = "100%"
-
+        ui.gsapSpan(event.type, span);
     })
 
     span.addEventListener("mouseout", event=>{
-        projectPreview.style.overflow = "hidden";
-        abstract.style.backgroundPosition = "unset"
+        ui.gsapSpan(event.type, span);
     })
 
 })
-
-
-
-
-
-// $(document).ready(function(){
-//     TweenMax.set("project-preview", {width: 0});
-
-//     var t1 = new TimeLineLite();
-
-//     $(document).on("mouseover", "navigation-item", function(evt){
-//         t1 = new TimeLineLite();
-//         t1.to($(".project-preview"), 1, {
-//             width: "600px",
-//             ease: Expo.easeInOut
-//         });
-//     }).on("mouseout", ".navigation-item", function(evt){
-//         t1 = new TimeLineLite();
-//         t1.to($(".project-preview"), 0.5, {
-//             width: 0,
-//             ease: Expo.easeInOut
-//         });
-//     });
-// });
-
-
 
 
 
@@ -143,35 +107,6 @@ navSpan.forEach(span=>{
 //         ui.changeNavBg(idString);
 //     })
 // })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

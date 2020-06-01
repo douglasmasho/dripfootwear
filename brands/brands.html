@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brands</title>
+    <link href = "../css/style.css" type= "text/css" rel ="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Montserrat+Subrayada&display=swap" rel="stylesheet">
+    <link href="../img/ftwr.svg" rel="shortcut icon" >
+    <script src="https://kit.fontawesome.com/7acd91a7cc.js" crossorigin="anonymous"></script>
+</head>
+<body class="brands">
+    <h1 class="header-text-big white-text u-margin-top u-margin-bottom">Brands</h1>
+
+    <div class="center-vert brands--container">
+
+        <div class="center-hrz u-margin-bottom brands--div" >
+            <div class="center-hrz center-hrz--col">
+                <img onclick="location.href='./adidas.html'" src="../img/adidaslogoW.svg" alt="adidas logo" class="brands--logo" id="adidas">
+                <p class="brands--text text-adidas white-text">
+                    <span class="brands--span span-adidas">A</span>
+                    <span class="brands--span span-adidas">D</span>
+                    <span class="brands--span span-adidas">I</span>
+                    <span class="brands--span span-adidas">D</span>
+                    <span class="brands--span span-adidas">A</span>
+                    <span class="brands--span span-adidas">S</span>
+                </p>
+            </div>            
+        </div>
+
+        
+        <div class="center-hrz u-margin-bottom brands--div" >
+            <div class="center-hrz center-hrz--col">
+                <img onclick="location.href='./dc.html'" src="../img/dclogoW.svg" alt="adidas logo" class="brands--logo" id="dc">
+                <p class="brands--text text-dc white-text">
+                    <span class="brands--span span-dc">D</span>
+                    <span class="brands--span span-dc">C</span>
+                </p>
+            </div>            
+        </div>
+
+        
+        <div class="center-hrz u-margin-bottom brands--div">
+            <div class="center-hrz center-hrz--col">
+                <img onclick="location.href='./nike.html'" src="../img/nikelogoW.svg" alt="adidas logo" class="brands--logo" id="nike">
+                <p class="brands--text text-nike white-text">
+                    <span class="brands--span span-nike">N</span>
+                    <span class="brands--span span-nike">I</span>
+                    <span class="brands--span span-nike">K</span>
+                    <span class="brands--span span-nike">E</span>
+                </p>
+            </div>            
+        </div>
+
+        
+        <div class="center-hrz u-margin-bottom brands--div">
+            <div class="center-hrz center-hrz--col">
+                <img onclick="location.href='./puma.html'" src="../img/pumalogoW.svg" alt="adidas logo" class="brands--logo"  id="puma">
+                <p class="brands--text text-puma white-text">
+                    <span class="brands--span span-puma">P</span>
+                    <span class="brands--span span-puma">U</span>
+                    <span class="brands--span span-puma">M</span>
+                    <span class="brands--span span-puma">A</span>
+                </p>
+            </div>            
+        </div>
+
+    </div>
+
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/CSSRulePlugin3.min.js"></script>
+    <script>
+        let logos = document.querySelectorAll(".brands--logo");
+        let divs = document.querySelectorAll(".brands--div");
+
+        // divs.forEach(div=>{
+        //     div.addEventListener("mouseover", event=>{
+        //         let id = event.currentTarget.id;
+        //         console.log(id);
+        //                         let tl = gsap.timeline({defaults: {duration: 1.5}});
+        //         tl.staggerTo(`.span-${id}`, 0.5, {right: "0%", opacity: 1}, 0.1)
+        //         tl.to(`.text-${id}`, 0.5, {width: "80%"}, 0.1);
+
+        //     })
+
+        //     div.addEventListener("mouseout", event=>{
+        //         let id = event.currentTarget.id;
+        //         let tl = gsap.timeline({defaults: {duration: 1.5}});
+        //         tl.staggerTo(`.span-${id}`, 0.5, {right: "100%", opacity: 1}, 0.1)
+        //         // tl.to(`.text-${id}`, 0.5, {width: "0"}, 0.1);
+        //     })
+        // })
+
+
+        logos.forEach(logo=>{
+            logo.addEventListener("mouseover", event=>{
+                let id = event.currentTarget.id;
+                let spans = document.querySelectorAll(`.span-${id}`);
+
+                spans.forEach(span=>{
+                    span.style.backgroundPosition = "100%"
+                })
+                let tl = gsap.timeline({defaults: {duration: 1.5}});
+                tl.staggerTo(`.span-${id}`, 0.1, {top: "0%", opacity: 1}, 0.1)
+                // tl.to(`.text-${id}`, 0.5, {width: "80%"}, 0.1);
+            })
+
+
+            logo.addEventListener("mouseout", event=>{
+                let id = event.currentTarget.id;
+                let spans = document.querySelectorAll(`.span-${id}`);
+
+                spans.forEach(span=>{
+                    span.style.backgroundPosition = "0%"
+                })             
+                let tl = gsap.timeline({defaults: {duration: 1.5}});
+                tl.staggerTo(`.span-${id}`, 0.1, {top: "100%", opacity: 1}, 0.1)
+                // tl.to(`.text-${id}`, 0.5, {width: "0%"}, 0.1);
+            })
+        })
+
+    </script>
+    
+</body>
+</html>
