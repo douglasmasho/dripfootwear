@@ -1445,3 +1445,52 @@ html {
 
 .animateBrand {
   animation: slideleft 1s; }
+
+.categories--div {
+  margin-bottom: 5rem; }
+
+.categories--pic {
+  cursor: pointer;
+  width: 20rem;
+  transition: all .4s;
+  transition-delay: 0.3s; }
+
+.categories--text {
+  font-size: 8rem;
+  text-transform: uppercase;
+  display: block;
+  font-weight: lighter;
+  margin: 0;
+  overflow: hidden; }
+
+.categories--span {
+  position: relative;
+  z-index: 20000;
+  padding: 0;
+  top: 100%;
+  opacity: 0;
+  color: transparent;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  background-image: linear-gradient(120deg, transparent 0%, transparent 50%, white 50%);
+  background-size: 250%;
+  transition: all 0.5s; }
+
+.specials-bg {
+  background-color: #00BEDA; }
+
+.men-bg {
+  background-color: #1558FD; }
+
+.women-bg {
+  background-color: #3609FE; }
+
+.girls-bg {
+  background-color: #DD09FE; }
+
+.boys-bg {
+  background-color: #FF0A0A; }
+
+.animatePic {
+  animation: slideleft 1s; }

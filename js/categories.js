@@ -10,7 +10,6 @@ class UI{
             // console.log(starsNum);
   
             let starsDiv = children[0];
-            console.log(starsDiv)
             
             for(let i = 0; i < starsNum; i++){
                 starsDiv.insertAdjacentHTML("beforeend", `<i class="fas fa-star stars--icon"></i>`)
@@ -31,16 +30,16 @@ const ui = new UI;
 
 ui.pushStars2();
 
-// brand animation
-function initBrand(){
-        let spans = document.querySelectorAll(".brands--span");
+//animation
+function initCategory(){
+        let spans = document.querySelectorAll(".categories--span");
 
-        
         spans.forEach(span=>{
+            console.log(span)
             span.style.backgroundPosition = "100%";
         })
         let tl = gsap.timeline({defaults: {duration: 1.5}});
-        tl.staggerTo(".brands--span", 0.1, {top: "0%", opacity: 1}, 0.1)
+        tl.staggerTo(".categories--span", 0.1, {top: "0%", opacity: 1}, 0.1)
 }
 
 
@@ -81,4 +80,3 @@ document.querySelectorAll(".card--cta").forEach(element =>{
         console.log(localStorage);
     })
 })
-
