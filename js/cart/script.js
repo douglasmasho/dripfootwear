@@ -109,13 +109,12 @@ qtyInput.forEach((inp, index)=>{
         let cartStr = JSON.stringify(cartArr);
         localStorage.setItem("cart", cartStr);
         console.log(localStorage);
+
+        //run the totalize function
+        ui.totalize();
+
     })
 })
 
-
-
-
-
-
-
-
+//run the totalize function
+ui.totalize();

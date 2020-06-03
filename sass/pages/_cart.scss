@@ -29,10 +29,13 @@
     margin: 3rem; 
     width: 95%;
     background-color: white;
-    padding: 0rem 3rem;
-    border-radius: 200px;
+    padding: 3rem;
+    border-radius: 25px;
     overflow: hidden;
     justify-content: space-evenly;
+    -webkit-box-shadow: 10px 13px 56px -21px rgba(0,0,0,1);
+    -moz-box-shadow: 10px 13px 56px -21px rgba(0,0,0,1);
+    box-shadow: 10px 13px 56px -21px rgba(0,0,0,1);
     &--pic{
         position: relative;
 
@@ -44,7 +47,7 @@
         }
         &--logo{
             width: 130%;
-            opacity: 0.5;
+            opacity: 0.2;
             position: absolute;
             left: 0;
             top: 50%;
@@ -61,6 +64,7 @@
         width: 6rem;
         height: 6rem;
         border-radius: 50%;
+        cursor: pointer;
     }
     &--text{
         font-size: 2rem;
@@ -99,6 +103,7 @@
             border-radius: 50%;
             display: inline-block;
             margin: 5px;
+            cursor: pointer;
         }
     }
 }
@@ -112,3 +117,22 @@
     border-radius: 30px;
     transition: all .5s;  
 }
+
+.totalsDiv{
+    background-color: white;
+    border-radius: 25px;
+    width: 50%;
+}
+
+.total{
+
+    &--head{
+        font-size: 3rem;
+    }
+
+    &--data{
+        font-size: 2rem;
+    }
+}
+
+

@@ -27,10 +27,11 @@ class UI{
                     <p class="blue-text cartItem--name">${item.brand}<br>${item.model}</p>
                 </div>
  
-                <div class="row-7--child center-vert z4000" style="width: 10%">
+                <div class="row-7--child center-vert z4000 center-hrz--col" style="width: 10%">
                     <div class="cartItem--color" style="background-color: ${item.color};" id="${index}">
                         &nbsp;
                     </div>
+                    <p class="normal-text">Change color<p>
                     <div class="cartItem--avColors z5000" id="popup${index}">
                         <div class="cartItem--avColors--color" style="background-color: ${item.avColors[0]}">&nbsp;</div>
                         <div class="cartItem--avColors--color" style="background-color: ${item.avColors[1]}">&nbsp;</div>
@@ -123,7 +124,28 @@ class UI{
         price.textContent = `US$${num * ppu}`;
     }
 
-
+    totalize(){
+        let prices = document.querySelectorAll(".cartItem--price");
+        let subtotal = document.querySelector(".subTotalAmount");
+        let accumulator = 0;
+        let total = document.querySelector(".totalAmount");
+        let totalsDiv = document.querySelector(".totalsDiv");
+        let checkoutBtn = document.querySelector(".checkoutBtn");
+        if(prices.length !== 0){
+          prices.forEach(price=>{
+          //add all the prices to find the subtotal
+          accumulator += parseInt(price.textContent.slice(3,7));
+          })
+          //show the subtotal
+          subtotal.textContent = `$${accumulator}`;
+          //show the total
+          total.textContent = `$${accumulator + 80}`;
+          localStorage.setItem("orderTotal", `${accumulator + 80}`);
+        }else{
+            totalsDiv.style.display = "none";
+            checkoutBtn.style.display = "none";
+        }
+    }
 }
 
 

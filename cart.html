@@ -9,14 +9,14 @@
 <link href = "css/icon-font.css" type= "text/css" rel ="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet"> 
 <link href="https://fonts.googleapis.com/css?family=Montserrat|Montserrat+Subrayada&display=swap" rel="stylesheet">
-<link href="img/drip logo-2.png" rel="shortcut icon" >
+<link href="../img/ftwr.svg" rel="shortcut icon">
 <script src="https://kit.fontawesome.com/7acd91a7cc.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="cart--header">
         <h1 class="cart--header--text header-text">cart</h1>
     </div>
-    <div class="cart--background">
+    <div class="cart--background center-hrz--col">
           <ul class="cart">
               <!-- <li class="cartli">
                 <div class="cartItem row">
@@ -101,8 +101,23 @@
                 </div>
               </li> -->
           </ul>
+        <div class="totalsDiv center-hrz--col u-margin-top-big">
+            <p class="normal-text total--head">Cart totals</p>
+            <div class="row total--row" style="justify-content: space-between; width: 100%">
+                <p class="row-2--child total--data align-left">Subtotal</p>
+                <p class="row-2--child total--data subTotalAmount align-right">$-</p>
+            </div>
+            <div class="row total--row" style="justify-content: space-between; width: 100%">
+                <p class="row-2--child total--data align-left">Shipping(flat rate)</p>
+                <p class="row-2--child total--data shippingAmount align-right">$80</p>
+            </div>
+            <div class="row total--row" style="justify-content: space-between; width: 100%">
+                <p class="row-2--child total--data align-left bold">Total</p>
+                <p class="row-2--child total--data totalAmount align-right bold">$-</p>
+            </div>
+        </div>
         <div class="center-hrz">
-            <a href="#" class="button medium-text u-margin-bottom u-margin-top">Go to checkout ></a>
+            <a href="checkout.html" class="button medium-text u-margin-bottom u-margin-top checkoutBtn">Go to checkout ></a>
         </div>
         <div class="center-hrz">
             <a href="index.html#categories" class="button medium-text u-margin-bottom u-margin-top">Continue shopping</a>

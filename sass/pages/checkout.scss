@@ -1,0 +1,26 @@
+.checkout{
+    list-style: none;
+    &--header{
+        height: 20rem;
+        background: linear-gradient( to right bottom,
+        rgba(rgb(0, 0, 0), 0.4), 
+        rgba(blue, 0.4) ) 
+          ,url(../img/checkout.jpg);
+          background-size: cover;
+          background-position: center;
+          position: relative;
+          &--text{
+              position: absolute;
+              bottom: 0;
+              left: 50%;
+              transform: translateX(-50%); 
+              color: white;
+          }
+    }
+    &--background{
+        background: linear-gradient(180deg,#1E004B, #008FFC);
+        background-size: cover;
+        min-height: 100vh;
+        padding: 2rem;
+    }
+}
