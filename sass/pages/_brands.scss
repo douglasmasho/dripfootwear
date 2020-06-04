@@ -13,7 +13,6 @@
         width: 30rem;
         transition: all .4s;
         transition-delay: 0.3s;
-        transition-timing-function: cubic-bezier(1,-0.37,.34,.63);
         &:hover{
             transform: scale(1.2);
             fill: black
@@ -31,7 +30,7 @@
     }
     &--span{
         position: relative;
-        z-index: 20000;
+        z-index: 2000;
         padding: 0;
         top: 100%;
         // opacity: 0;

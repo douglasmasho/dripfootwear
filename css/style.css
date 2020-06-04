@@ -501,7 +501,9 @@ html {
   border-radius: 30px;
   transition: all 0.5s;
   backface-visibility: hidden;
-  align-items: center; }
+  align-items: center;
+  justify-content: center;
+  text-align: center; }
   .radio-label:hover {
     -webkit-box-shadow: 16px 21px 41px -11px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 16px 21px 41px -11px rgba(0, 0, 0, 0.75);
@@ -629,30 +631,48 @@ html {
   width: 100%;
   z-index: 10000;
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+  top: 0; }
   .header--right {
     display: flex;
     justify-content: flex-end;
     width: 60%;
-    align-items: center; }
+    align-items: center;
+    margin-right: 2rem; }
   .header--logo {
-    width: 15rem; }
+    width: 15rem;
+    margin-left: 2rem; }
   .header--menu {
     color: white;
     margin: 0 0 0 2rem;
     font-size: 3rem;
     cursor: pointer; }
-  .header--cart {
-    color: white;
-    font-size: 3rem;
-    margin: 0 0.5rem 0 2rem; }
-  .header--bubble {
+  .header--cartContainer {
+    width: 4rem;
+    height: 4rem;
     background-color: white;
-    font-size: 1.5rem;
-    width: 2rem;
-    height: 2rem;
     border-radius: 50%;
-    padding: 0.5rem; }
+    position: relative;
+    cursor: pointer; }
+  .header--cart {
+    color: black;
+    font-size: 3rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+  .header--bubble {
+    background-color: red;
+    color: white;
+    font-size: 1rem;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    padding: 0.5rem;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    right: -1rem; }
 
 .nav {
   height: 100%;
@@ -1459,8 +1479,7 @@ html {
     cursor: pointer;
     width: 30rem;
     transition: all .4s;
-    transition-delay: 0.3s;
-    transition-timing-function: cubic-bezier(1, -0.37, 0.34, 0.63); }
+    transition-delay: 0.3s; }
     .brands--logo:hover {
       transform: scale(1.2);
       fill: black; }
@@ -1474,7 +1493,7 @@ html {
     overflow: hidden; }
   .brands--span {
     position: relative;
-    z-index: 20000;
+    z-index: 2000;
     padding: 0;
     top: 100%;
     color: transparent;
@@ -1519,7 +1538,7 @@ html {
 
 .categories--span {
   position: relative;
-  z-index: 20000;
+  z-index: 2000;
   padding: 0;
   top: 100%;
   opacity: 0;

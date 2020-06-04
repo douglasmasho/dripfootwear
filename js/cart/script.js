@@ -35,7 +35,7 @@ deleteBtns.forEach((btn, index)=>{
         let cartStr = JSON.stringify(cartArr);
         localStorage.setItem("cart", cartStr);
         console.log(localStorage);  
-
+        //cartCount
     })
 
 })
@@ -109,10 +109,10 @@ qtyInput.forEach((inp, index)=>{
         let cartStr = JSON.stringify(cartArr);
         localStorage.setItem("cart", cartStr);
         console.log(localStorage);
-
+        //cartTotal
+        cartCount();
         //run the totalize function
         ui.totalize();
-
     })
 })
 

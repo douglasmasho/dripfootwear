@@ -4,14 +4,17 @@
     z-index: 10000;
     display: flex;
     justify-content: space-between;
+    top: 0;
     &--right{
         display: flex;
         justify-content: flex-end;
         width: 60%;
         align-items: center;
+        margin-right: 2rem;
     }
     &--logo{
         width: 15rem;
+        margin-left:2rem;
     }
     &--menu{
         color: white;
@@ -19,18 +22,36 @@
         font-size: 3rem;
         cursor: pointer;
     }
+    &--cartContainer{
+        width: 4rem;
+        height: 4rem;
+        background-color: white;
+        border-radius: 50%;
+        position: relative;
+        cursor: pointer;
+    }
     &--cart{
-        color: white;
+        color: rgb(0, 0, 0);
         font-size: 3rem;
-        margin: 0 0.5rem 0 2rem
+        // margin: 0 0.5rem 0 2rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
     &--bubble{
-        background-color: white;
-        font-size: 1.5rem;
-        width: 2rem;
-        height: 2rem;
+        background-color: rgb(255, 0, 0);
+        color: white;
+        font-size: 1rem;
+        width: 1rem;
+        height: 1rem;
         border-radius: 50%;
         padding: 0.5rem;
+        position: absolute;
+        text-align: center;
+        top: 0;
+        right: -1rem;
+
     }
 }
 

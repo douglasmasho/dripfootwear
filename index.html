@@ -11,11 +11,10 @@
 <link href="css/glider.min.css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet"> 
 <link href="https://fonts.googleapis.com/css?family=Montserrat|Montserrat+Subrayada&display=swap" rel="stylesheet">
-<link href="img/drip logo-2.png" rel="shortcut icon" >
+<link href="img/ftwr.svg" rel="shortcut icon">
 <script src="https://kit.fontawesome.com/7acd91a7cc.js" crossorigin="anonymous"></script>
-
 </head>
-<body >
+<body>
   <!-- <header class="header">
     <div class="logo-container">
       <img src="img/navlogodrip.png" alt="logo" class="logo-header">
@@ -28,9 +27,13 @@
     </ul>
   </header> -->
 <div class="header">
-<a href="cart.html"><img src="img/dripftwr.svg" alt="drip-logo" class="header--logo"></a> 
+<a href="index.html"><img src="img/dripftwr.svg" alt="drip-logo" class="header--logo"></a> 
 <div class="header--right">
-<span></span><a href="#" class="link"><span class="header--cart lnr lnr-cart"></span></a><p class="header--bubble">40</p></span>
+<!-- <span></span><a href="#" class="link"><span class="header--cart lnr lnr-cart"></span></a><p class="header--bubble">40</p></span> -->
+<div onclick="location.href='cart.html'" class="header--cartContainer">
+  <span class="header--cart lnr lnr-cart"></span>
+  <p class="header--bubble">40</p>
+</div>
 <span class="header--menu nav--icon lnr lnr-menu"></span>
 </div>
 </div>  
@@ -605,12 +608,12 @@
 
 <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
 <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/CSSRulePlugin3.min.js"></script>
+  <script src="nav.js"></script>
    <script src="js/index/data.js"></script>
    <script src="js/index/ui.js"></script>
    <script src="js/index/script.js"></script>
    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
    <!-- <script src="node_modules/@glidejs/glide/dist/glide.min.js"></script> -->
-
    <script>
        new Glide('.glide',{
           type: 'carousel',

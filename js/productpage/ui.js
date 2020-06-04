@@ -274,8 +274,8 @@
             console.log(cartArr)
             localStorage.setItem("cart",lsCart);
             this.showModal();
+            cartCount();
         }
-
     }
     
     

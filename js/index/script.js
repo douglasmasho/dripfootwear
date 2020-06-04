@@ -4,7 +4,6 @@ const ui = new UI;
 const data = new Data;
 
 
-
 //push stars onto cards
 ui.pushStars();
 
@@ -33,82 +32,6 @@ dots.forEach(element =>{
         ui.colorReset();
     })
 })
-
-//navigation open and close
-document.querySelector(".nav--icon").addEventListener("click", function(){
-    ui.navOpen();
-});
-document.querySelector(".nav--back").addEventListener("click", function(){
-    ui.navClose();
-});
-
-
-//backgroundchange
-let navItems = document.querySelectorAll(".nav--item");
-let navSpan = document.querySelectorAll(".link-span");
-
-
-//event listeners
-navItems.forEach(item=>{
-    item.addEventListener("mouseover", event=>{
-        ui.gsapItems(event.type);
-    })
-
-    item.addEventListener("mouseout", event=>{
-        ui.gsapItems(event.type);
-    })
-})
-
-navSpan.forEach(span=>{
-    span.addEventListener("mouseover", event=>{
-        ui.gsapSpan(event.type, span);
-    })
-
-    span.addEventListener("mouseout", event=>{
-        ui.gsapSpan(event.type, span);
-    })
-
-})
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// const links = document.querySelectorAll(".nav__link");
-
-// links.forEach( element => {
-//     element.addEventListener("mouseover", function(event){
-//         let ele = event.currentTarget;
-//         let idString = ele.id.slice(3, 11);
-//         ui.changeNavBg(idString);
-//     })
-// })
-
-
 
 //colorchange function
 let blocks = document.querySelectorAll(".pncbox--colorblock");
