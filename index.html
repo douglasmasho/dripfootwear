@@ -131,7 +131,6 @@
            <div class="pncbox animate2">
                <div class="pncbox--pricetag" id="pt1">
                   $100               
-                  <p>Colors</p>
                </div>
                <div class="pncbox--colorblock">
                  <div class="pncbox--colorblock__colors" style="background-color: #ff0000;">&nbsp;</div>
@@ -139,6 +138,7 @@
                  <div class="pncbox--colorblock__colors" style="background-color: #33ff00;">&nbsp;</div>
                  <div class="pncbox--colorblock__colors" style="background-color: #0000ff;">&nbsp;</div>
               </div>   
+              <p class="normal-text white-text">Preview Colors!</p>
            </div>
       </div>
 
@@ -270,6 +270,8 @@
               <span id="slide5--the" class="animate1">The</span>
               <span id="slide5--sprint" class="animate1">Sprint</span>
               <span id="slide5--kit" class="animate1">Kit</span>
+              <span id="slide5--all" class="animate1">The sprint Kit</span>
+
               <img src="img/womansprinitng.png" alt="womansprinting" class="slide5-image animate2" id="slide5-img1">
               <img src="img/mansprinting1.png" alt="man sprinting" class="slide5-image animate2" id="slide5-img2">
             </div>
@@ -608,31 +610,13 @@
 
 <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
 <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/CSSRulePlugin3.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+
   <script src="nav.js"></script>
    <script src="js/index/data.js"></script>
    <script src="js/index/ui.js"></script>
    <script src="js/index/script.js"></script>
-   <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
    <!-- <script src="node_modules/@glidejs/glide/dist/glide.min.js"></script> -->
-   <script>
-       new Glide('.glide',{
-          type: 'carousel',
-          startAt: 0,
-          perView: 1,
-          hoverpause: true,
-          animationTimingFunc: "ease-out",
-      }).mount();
-
-      new Glide('.glide2',{
-          type: 'carousel',
-          startAt: 0,
-          perView: 3,
-          autoplay: 3000,
-          hoverpause: true,
-          animationTimingFunc: "ease-out",
-      }).mount();
-       
-     </script>
 </body>
 
 

@@ -1,9 +1,9 @@
 .card{
     background-color: white;
-    width: 60%;
+    // width: 60%;
     padding: 3rem 4rem;
     border-radius: 15px;
-    margin: 5rem 1rem;
+    margin: 5rem;
     position: relative;
     transition: all .5s;
 
@@ -20,25 +20,44 @@
     }
     &--shoe{
         width: 100%;
+        @include respond(tab-port){  
+            width: 80%;
+          }  
+          @include respond(phone){  
+            width: 50%;
+            // position: relative;
+            left: 30%;
+            // right: 0%;
+          }
        transition: all .5s;  
        z-index: 200;
        position: relative;
 
     }
     &--name{
+        @include respond(phone){  
+            // font-size: 4rem;
+            text-align: center;
+          }
         &--brand{
             display: block;
             text-transform: uppercase;
             font-size: 2.5rem;
             color: #00C2FF;
             transition: all .5s;
-        
+            @include respond(phone){  
+                font-size: 4rem;
+                text-align: center;
+              }
         }
         &--model{
             font-size: 2.8rem;
             text-transform: uppercase;
             color: #0136B4;
             transition: all .5s;
+            @include respond(phone){  
+                font-size: 6rem;
+              }
         }
     }
     &--price{
@@ -64,6 +83,13 @@
         opacity: 0;
        transition: all .5s;
        cursor: pointer;  
+       @include respond(tab-land){  
+        width: 6rem;
+      }
+      @include respond(phone){  
+        width: 10rem;
+      }
+       
     }
     &--colorblock{
         position: absolute;
@@ -122,3 +148,11 @@
         opacity: 100%;
     }
 }
+
+
+// .cardlink,
+// .cardlink:visited,
+// .cardlink:active{
+//     text-decoration: none;
+//     border: none;
+// }

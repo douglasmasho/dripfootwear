@@ -4,7 +4,7 @@
       display: inline-block; 
       display: flex;
       flex-direction: column;
-      width: 150px;
+      width: 15rem;
       position: absolute;
       top: 50%;
       right: 0;  
@@ -12,11 +12,15 @@
       margin:  5px 0px 5px 5px;
       animation: slideleft 0.8s ease-in;
       z-index: 7000;
+
+      @include respond(tab-land){  
+          width: 25rem;
+      }
     
       &--pricetag{
         padding: 16px 0px;
         font-weight: lighter;
-        font-size: 60px;
+        font-size: 6rem;
         width: 90%;
         position: relative;
 
@@ -35,7 +39,11 @@
     
         &__colors{
             width: 25%;
+            height: 10%;
            cursor: pointer;
+           @include respond(tab-land){  
+            height: 5rem;
+          }
         }
     }
     

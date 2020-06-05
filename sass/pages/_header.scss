@@ -27,6 +27,7 @@
     position: absolute;
     z-index: 5000;
     border-radius: 10px;
+    
     &__1,
     &__2,
     &__3,
@@ -34,6 +35,11 @@
         top: 50%;
         left: 40%;
         transform: translateY(-50%);
+        @include respond(tab-land){  
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
     }
     &__1,
     &__2{
@@ -82,6 +88,10 @@
     z-index: 6000;
     position: relative;
     transition: all .5s;
+
+    @include respond(tab-land){  
+        width: 42rem;
+      }
 }
 
 #pic1{
@@ -175,6 +185,11 @@
     bottom: 0;
     left: 0;
     animation: slideleft 1s ease-in-out;
+        @include respond(tab-land){  
+        // left: 5rem;   
+        // top: 5rem;
+        display: none
+      }
 }
 
 
@@ -182,7 +197,7 @@
     width: 64rem;
     position: absolute;
     transform: rotateY(180deg);
-    right: -24%;
+    right: 0%;
     top: 18%;
     animation: popup 2s;
     position: relative;
@@ -223,6 +238,9 @@
 #guyonbike{
     width: 60rem;
     transition: all .5s;
+    @include respond(tab-land){  
+        width: 48rem;
+      }
 }
 
 
@@ -258,35 +276,62 @@
     text-transform: uppercase;
     color: #162376;
 
+
     &-img1{
         position: absolute;
         right: 15%;
         width: 40%;
         bottom: 0;
+        @include respond(tab-land){  
+            display: none;
+          }
     }
     &-img2{
         position: absolute;
         left: 15%;
         width: 42%;
         bottom: 0;
+        @include respond(tab-land){  
+            display: none;
+          }
     }
     &--the{
         position: absolute;
         top: 0;
         left: 50%;
         transform: translateX(-50%);
+        @include respond(tab-land){  
+            display: none;
+          }
     }
     &--sprint{
         position: absolute;
         left: -4%;
         top: 50%;
         transform: translateY(-50%);
+        @include respond(tab-land){  
+            display: none;
+          }
     }
     &--kit{
         position: absolute;
         right: 5%;
         top: 50%;
         transform: translateY(-50%);
+        @include respond(tab-land){  
+            display: none;
+          }
+    }
+    &--all{
+            display: none;
+            @include respond(tab-land){  
+                position: absolute;
+                display: inline-block;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-size: 15rem;
+              }
     }
 
     
@@ -301,6 +346,12 @@
     position: absolute;
     left: 10rem;
     top: 3rem;
+
+    @include respond(tab-land){  
+        // left: 5rem;   
+        // top: 5rem;
+        display: none
+      }
 }
 
 

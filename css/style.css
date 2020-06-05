@@ -93,17 +93,25 @@
   box-sizing: inherit; }
 
 html {
-  font-family: "Montserrat", sans-serif;
-  font-size: 10px; }
-
-.cardlink,
-.cardlink:visited,
-.cardlink:active {
-  text-decoration: none;
-  border: none; }
+  font-size: 62.5%; }
+  @media (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media (max-width: 37.5em) {
+    html {
+      font-size: 30%; } }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
 
 .removed {
   animation: removed 1s forwards; }
+
+body {
+  font-family: "Montserrat", sans-serif; }
 
 .normal-text {
   font-size: 1.6rem;
@@ -289,7 +297,7 @@ html {
   display: inline-block;
   display: flex;
   flex-direction: column;
-  width: 150px;
+  width: 15rem;
   position: absolute;
   top: 50%;
   right: 0;
@@ -297,10 +305,13 @@ html {
   margin: 5px 0px 5px 5px;
   animation: slideleft 0.8s ease-in;
   z-index: 7000; }
+  @media (max-width: 75em) {
+    .pncbox {
+      width: 25rem; } }
   .pncbox--pricetag {
     padding: 16px 0px;
     font-weight: lighter;
-    font-size: 60px;
+    font-size: 6rem;
     width: 90%;
     position: relative; }
     .pncbox--pricetag p {
@@ -314,7 +325,11 @@ html {
     display: flex; }
     .pncbox--colorblock__colors {
       width: 25%;
+      height: 10%;
       cursor: pointer; }
+      @media (max-width: 75em) {
+        .pncbox--colorblock__colors {
+          height: 5rem; } }
 
 #pt1 {
   color: white; }
@@ -330,10 +345,9 @@ html {
 /* pricebox(components) */
 .card {
   background-color: white;
-  width: 60%;
   padding: 3rem 4rem;
   border-radius: 15px;
-  margin: 5rem 1rem;
+  margin: 5rem;
   position: relative;
   transition: all .5s; }
   .card--logo {
@@ -349,17 +363,34 @@ html {
     transition: all .5s;
     z-index: 200;
     position: relative; }
+    @media (max-width: 56.25em) {
+      .card--shoe {
+        width: 80%; } }
+    @media (max-width: 37.5em) {
+      .card--shoe {
+        width: 50%;
+        left: 30%; } }
+  @media (max-width: 37.5em) {
+    .card--name {
+      text-align: center; } }
   .card--name--brand {
     display: block;
     text-transform: uppercase;
     font-size: 2.5rem;
     color: #00C2FF;
     transition: all .5s; }
+    @media (max-width: 37.5em) {
+      .card--name--brand {
+        font-size: 4rem;
+        text-align: center; } }
   .card--name--model {
     font-size: 2.8rem;
     text-transform: uppercase;
     color: #0136B4;
     transition: all .5s; }
+    @media (max-width: 37.5em) {
+      .card--name--model {
+        font-size: 6rem; } }
   .card--price {
     font-size: 2.5rem;
     color: #00C2FF;
@@ -380,6 +411,12 @@ html {
     opacity: 0;
     transition: all .5s;
     cursor: pointer; }
+    @media (max-width: 75em) {
+      .card--cta {
+        width: 6rem; } }
+    @media (max-width: 37.5em) {
+      .card--cta {
+        width: 10rem; } }
   .card--colorblock {
     position: absolute;
     display: flex;
@@ -426,10 +463,19 @@ html {
 
 .stars {
   margin-top: 2rem; }
+  @media (max-width: 37.5em) {
+    .stars {
+      text-align: center; } }
   .stars--icon {
-    font-size: 15px; }
+    font-size: 1.5rem; }
+    @media (max-width: 37.5em) {
+      .stars--icon {
+        font-size: 3rem; } }
   .stars--number {
     font-size: 2rem; }
+    @media (max-width: 37.5em) {
+      .stars--number {
+        font-size: 4rem; } }
 
 .valid {
   border: green 2px solid !important; }
@@ -444,6 +490,9 @@ html {
   transition: all .2s;
   font-size: 1.5rem;
   width: 80%; }
+  @media (max-width: 37.5em) {
+    .input-textbox {
+      font-size: 3rem; } }
   .input-textbox:placeholder-shown + label {
     opacity: 0;
     visibility: hidden;
@@ -632,21 +681,31 @@ html {
   z-index: 10000;
   display: flex;
   justify-content: space-between;
-  top: 0; }
+  top: 0;
+  margin-top: 2rem; }
   .header--right {
     display: flex;
     justify-content: flex-end;
-    width: 60%;
+    width: 80%;
     align-items: center;
     margin-right: 2rem; }
   .header--logo {
     width: 15rem;
     margin-left: 2rem; }
+    @media (max-width: 75em) {
+      .header--logo {
+        width: 30rem; } }
   .header--menu {
     color: white;
     margin: 0 0 0 2rem;
     font-size: 3rem;
     cursor: pointer; }
+    @media (max-width: 75em) {
+      .header--menu {
+        font-size: 5rem; } }
+    @media (max-width: 37.5em) {
+      .header--menu {
+        font-size: 6rem; } }
   .header--cartContainer {
     width: 4rem;
     height: 4rem;
@@ -654,6 +713,18 @@ html {
     border-radius: 50%;
     position: relative;
     cursor: pointer; }
+    @media (max-width: 75em) {
+      .header--cartContainer {
+        width: 6rem;
+        height: 6rem; } }
+    @media (max-width: 56.25em) {
+      .header--cartContainer {
+        width: 7rem;
+        height: 7rem; } }
+    @media (max-width: 37.5em) {
+      .header--cartContainer {
+        width: 9rem;
+        height: 9rem; } }
   .header--cart {
     color: black;
     font-size: 3rem;
@@ -661,6 +732,15 @@ html {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); }
+    @media (max-width: 75em) {
+      .header--cart {
+        font-size: 5rem; } }
+    @media (max-width: 56.25em) {
+      .header--cart {
+        font-size: 6rem; } }
+    @media (max-width: 37.5em) {
+      .header--cart {
+        font-size: 7rem; } }
   .header--bubble {
     background-color: red;
     color: white;
@@ -673,6 +753,16 @@ html {
     text-align: center;
     top: 0;
     right: -1rem; }
+    @media (max-width: 75em) {
+      .header--bubble {
+        font-size: 2rem;
+        width: 2rem;
+        height: 2rem; } }
+    @media (max-width: 56.25em) {
+      .header--bubble {
+        font-size: 3rem;
+        width: 3rem;
+        height: 3rem; } }
 
 .nav {
   height: 100%;
@@ -770,11 +860,20 @@ html {
   padding: 4rem; }
   .grid-2 {
     grid-template-columns: repeat(2, 1fr); }
+    @media (max-width: 37.5em) {
+      .grid-2 {
+        grid-template-columns: repeat(1, 1fr); } }
     .grid-2--child {
       margin: 3rem;
       border-radius: 15px; }
   .grid-3 {
     grid-template-columns: repeat(3, 1fr); }
+    @media (max-width: 56.25em) {
+      .grid-3 {
+        grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 37.5em) {
+      .grid-3 {
+        grid-template-columns: repeat(1, 1fr); } }
     .grid-3--child {
       margin: 4rem;
       border-radius: 15px; }
@@ -788,7 +887,8 @@ html {
   width: 60rem; }
 
 .footer--div {
-  text-align: center; }
+  text-align: center;
+  margin-bottom: 5rem; }
 
 .footer--header {
   color: white;
@@ -797,6 +897,9 @@ html {
 .footer--details {
   color: white;
   font-size: 1.5rem; }
+  @media (max-width: 37.5em) {
+    .footer--details {
+      font-size: 3rem; } }
 
 .footer--icondiv {
   display: flex;
@@ -830,14 +933,31 @@ html {
 .row {
   display: flex;
   padding: 1rem; }
+  @media (max-width: 56.25em) {
+    .row {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; } }
   .row-2--child {
     width: 40%;
     margin: 2rem; }
+    @media (max-width: 56.25em) {
+      .row-2--child {
+        width: 90%; } }
   .row-3--child {
     width: 20%;
     margin: 2rem; }
+    @media (max-width: 56.25em) {
+      .row-3--child {
+        width: 90%; } }
   .row-7--child {
     width: 13%; }
+    @media (max-width: 56.25em) {
+      .row-7--child {
+        width: 90%; } }
+    @media (max-width: 37.5em) {
+      .row-7--child {
+        width: 90%; } }
 
 /* slider styles */
 /* .glider{
@@ -866,6 +986,11 @@ html {
     top: 50%;
     left: 40%;
     transform: translateY(-50%); }
+    @media (max-width: 75em) {
+      .rect__1, .rect__2, .rect__3, .rect__4 {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); } }
   .rect__1, .rect__2 {
     border: white solid 8px; }
   .rect__3 {
@@ -904,6 +1029,9 @@ html {
   z-index: 6000;
   position: relative;
   transition: all .5s; }
+  @media (max-width: 75em) {
+    .jordan-png {
+      width: 42rem; } }
 
 #pic1 {
   width: 0%; }
@@ -976,12 +1104,15 @@ html {
   bottom: 0;
   left: 0;
   animation: slideleft 1s ease-in-out; }
+  @media (max-width: 75em) {
+    #guyonstairs {
+      display: none; } }
 
 #shoe3 {
   width: 64rem;
   position: absolute;
   transform: rotateY(180deg);
-  right: -24%;
+  right: 0%;
   top: 18%;
   animation: popup 2s;
   position: relative;
@@ -1019,6 +1150,9 @@ html {
 #guyonbike {
   width: 60rem;
   transition: all .5s; }
+  @media (max-width: 75em) {
+    #guyonbike {
+      width: 48rem; } }
 
 #pure {
   background-image: linear-gradient(to left, cyan 40%, #0206ff);
@@ -1052,32 +1186,60 @@ html {
     right: 15%;
     width: 40%;
     bottom: 0; }
+    @media (max-width: 75em) {
+      #slide5-img1 {
+        display: none; } }
   #slide5-img2 {
     position: absolute;
     left: 15%;
     width: 42%;
     bottom: 0; }
+    @media (max-width: 75em) {
+      #slide5-img2 {
+        display: none; } }
   #slide5--the {
     position: absolute;
     top: 0;
     left: 50%;
     transform: translateX(-50%); }
+    @media (max-width: 75em) {
+      #slide5--the {
+        display: none; } }
   #slide5--sprint {
     position: absolute;
     left: -4%;
     top: 50%;
     transform: translateY(-50%); }
+    @media (max-width: 75em) {
+      #slide5--sprint {
+        display: none; } }
   #slide5--kit {
     position: absolute;
     right: 5%;
     top: 50%;
     transform: translateY(-50%); }
+    @media (max-width: 75em) {
+      #slide5--kit {
+        display: none; } }
+  #slide5--all {
+    display: none; }
+    @media (max-width: 75em) {
+      #slide5--all {
+        position: absolute;
+        display: inline-block;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 15rem; } }
 
 .img-div {
   overflow: hidden;
   position: absolute;
   left: 10rem;
   top: 3rem; }
+  @media (max-width: 75em) {
+    .img-div {
+      display: none; } }
 
 .color-div {
   mix-blend-mode: hue;
@@ -1146,8 +1308,13 @@ html {
   .about--text {
     font-size: 1.6rem;
     width: 30%;
-    color: white;
-    text-shadow: 4px 4px 2px #969696; }
+    color: black; }
+    @media (max-width: 56.25em) {
+      .about--text {
+        width: 90%; } }
+    @media (max-width: 37.5em) {
+      .about--text {
+        font-size: 3rem; } }
 
 .category--box {
   position: relative;
@@ -1198,6 +1365,9 @@ html {
   -webkit-box-shadow: 13px 10px 18px -3px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 13px 10px 18px -3px rgba(0, 0, 0, 0.75);
   box-shadow: 13px 10px 18px -3px rgba(0, 0, 0, 0.75); }
+  @media (max-width: 56.25em) {
+    .featurebox {
+      width: 90%; } }
   .featurebox--icon {
     margin-bottom: 1rem; }
     .featurebox--icon__1 {
@@ -1211,11 +1381,20 @@ html {
     text-transform: uppercase; }
   .featurebox--text {
     font-size: 1.5rem; }
+    @media (max-width: 56.25em) {
+      .featurebox--text {
+        font-size: 2rem; } }
+    @media (max-width: 37.5em) {
+      .featurebox--text {
+        font-size: 3rem; } }
 
 #product-bg {
   background: linear-gradient(180deg, #8B069A, #1E004B);
   background-size: cover;
   padding: 2rem 1rem; }
+  @media (max-width: 37.5em) {
+    #product-bg {
+      padding-top: 15rem; } }
 
 .product {
   width: 80%;
@@ -1226,6 +1405,9 @@ html {
   -webkit-box-shadow: 13px 13px 18px -10px rgba(0, 0, 0, 0.62);
   -moz-box-shadow: 13px 13px 18px -10px rgba(0, 0, 0, 0.62);
   box-shadow: 13px 13px 18px -10px rgba(0, 0, 0, 0.62); }
+  @media (max-width: 37.5em) {
+    .product {
+      grid-template-columns: repeat(1, 1fr); } }
   .product--details {
     padding: 10px; }
     .product--details--brand {
@@ -1250,6 +1432,9 @@ html {
       color: #6B6B6B;
       font-size: 2rem;
       padding: 15px 0; }
+      @media (max-width: 37.5em) {
+        .product--details--text {
+          font-size: 4rem; } }
     .product--details--quantity--input {
       height: 2rem;
       padding: 1rem;
@@ -1301,6 +1486,9 @@ html {
     -webkit-box-shadow: -2px 4px 19px -3px white;
     -moz-box-shadow: -2px 4px 19px -3px white;
     box-shadow: -2px 4px 19px -3px white; }
+    @media (max-width: 37.5em) {
+      .product--pic {
+        height: 55rem; } }
     .product--pic:hover .product--pic--2 {
       transform: translate(-50%, -50%) rotateY(180deg) rotate(0deg); }
     .product--pic:hover .product--pic--1 {
@@ -1324,6 +1512,9 @@ html {
       left: 50%;
       transform: translate(-55%, -50%) rotateY(180deg) rotate(24deg);
       transition: all .5s; }
+      @media (max-width: 37.5em) {
+        .product--pic--2 {
+          width: 60%; } }
 
 .tab-description--name {
   text-align: center;
@@ -1360,6 +1551,9 @@ html {
 .error {
   color: red;
   font-size: 2em; }
+  @media (max-width: 37.5em) {
+    .error {
+      font-size: 4rem; } }
 
 .cart {
   list-style: none; }

@@ -1,12 +1,22 @@
 .stars{
     margin-top: 2rem;
+    @include respond(phone){  
+        // font-size: 4rem;
+        text-align: center;
+      }
     // &--icondiv{
 
     // }
     &--icon{
-        font-size: 15px;
+        font-size: 1.5rem;
+        @include respond(phone){  
+            font-size: 3rem;
+          }
     }
     &--number{
         font-size: 2rem;
+        @include respond(phone){  
+            font-size: 4rem;
+          }
     }
 }

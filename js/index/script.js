@@ -1,7 +1,43 @@
 //init 
-
 const ui = new UI;
 const data = new Data;
+
+
+function glideTransition(){
+    ui.trigger();
+    ui.trigger2();
+    ui.startTimer();
+    ui.startTimer2();
+    ui.colorReset();
+}
+
+
+new Glide('.glide',{
+    type: 'carousel',
+    startAt: 0,
+    perView: 1,
+    hoverpause: true,
+    animationTimingFunc: "ease-out"
+}).mount();
+
+new Glide('.glide2',{
+    type: 'carousel',
+    startAt: 0,
+    perView: 3,
+    autoplay: 3000,
+    hoverpause: true,
+    animationTimingFunc: "ease-out",
+    breakpoints: {
+      900:{
+      perView: 2,
+      },
+      600: {
+      perView: 1,
+      }
+    }
+}).mount();    
+
+
 
 
 //push stars onto cards
@@ -13,11 +49,7 @@ const arrows = document.querySelectorAll(".glide__arrow");
 
 arrows.forEach(element =>{
     element.addEventListener("click", function(){
-        ui.trigger();
-        ui.trigger2();
-        ui.startTimer();
-        ui.startTimer2();
-        ui.colorReset();
+        glideTransition()
     })
 })
 
@@ -25,11 +57,7 @@ arrows.forEach(element =>{
 const dots = document.querySelectorAll(".glide__bullet");
 dots.forEach(element =>{
     element.addEventListener("click", function(){
-        ui.trigger();
-        ui.trigger2();
-        ui.startTimer();
-        ui.startTimer2();  
-        ui.colorReset();
+        glideTransition()
     })
 })
 

@@ -1,22 +1,40 @@
 .row{
     display: flex;
     padding: 1rem;
+    @include respond(tab-port){  
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
     &-2{
         &--child{
             width: 40%;
             margin: 2rem;
+            @include respond(tab-port){  
+                width: 90%;
+            }
         }       
     }
     &-3{
         &--child{
             width: 20%;
             margin: 2rem;
+            @include respond(tab-port){  
+                width: 90%;
+            };
         }
     }
 
     &-7{
         &--child{
             width: 13%;
+            @include respond(tab-port){  
+                width: 90%;
+            };
+            @include respond(phone){  
+                width: 90%;
+              }
         }
     }
 }

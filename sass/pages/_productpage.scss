@@ -2,6 +2,9 @@
     background: linear-gradient(180deg, #8B069A, #1E004B);
     background-size: cover;
     padding: 2rem 1rem;
+    @include respond(phone){  
+        padding-top: 15rem;
+      }
 }
 
 
@@ -15,6 +18,9 @@
     -webkit-box-shadow: 13px 13px 18px -10px rgba(0,0,0,0.62);
     -moz-box-shadow: 13px 13px 18px -10px rgba(0,0,0,0.62);
     box-shadow: 13px 13px 18px -10px rgba(0,0,0,0.62);
+    @include respond(phone){  
+        grid-template-columns: repeat(1, 1fr);
+      }
     
     &--details{
         padding: 10px;
@@ -43,6 +49,9 @@
             color:#6B6B6B;
             font-size: 2rem;
             padding: 15px 0;
+            @include respond(phone){  
+               font-size: 4rem;
+              }
         }
 
         &--quantity{
@@ -107,6 +116,9 @@
     &--pic{
         background-color: white;
         height: 100%;
+        @include respond(phone){  
+            height: 55rem;
+          }
         position: relative;
         overflow: hidden;
        border-radius: 15px;
@@ -142,6 +154,9 @@
             left: 50%;
             transform: translate(-55%, -50%) rotateY(180deg) rotate(24deg);
             transition: all .5s;
+            @include respond(phone){  
+                width: 60%;
+               }
         }
 
     }
@@ -199,6 +214,9 @@
 .error{
     color: red;
     font-size: 2em;
+    @include respond(phone){  
+        font-size: 4rem;
+     }
 }
 
 
