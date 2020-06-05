@@ -72,6 +72,12 @@
         top: 80%;
         z-index: 1000;
        transition: all .5s;  
+       @include respond(tab-port){
+           font-size: 1.5rem;
+       }
+       @include respond(phone){
+        font-size: 2.5rem;
+    }
     }
     &--ctadiv{
         display: flex;

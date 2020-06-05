@@ -43,6 +43,7 @@ class Nav{
     }
 }
 
+
 //init 
 let nav = new Nav;
 
@@ -103,3 +104,18 @@ let cartCount = ()=>{
 
 
 cartCount();
+
+
+function scrollanimation(element, classname){
+    $(window).on('scroll', function(){
+        if ($(window).scrollTop()){
+            $(element).addClass(classname);
+        }
+        else 
+        {
+            $(element).removeClass(classname);   
+        }
+    })
+};
+
+scrollanimation(".header", "black");

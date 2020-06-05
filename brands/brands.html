@@ -139,30 +139,12 @@
 
     <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
     <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/CSSRulePlugin3.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+
     <script src="../nav.js"></script>
     <script>
         let logos = document.querySelectorAll(".brands--logo");
         let divs = document.querySelectorAll(".brands--div");
-
-        // divs.forEach(div=>{
-        //     div.addEventListener("mouseover", event=>{
-        //         let id = event.currentTarget.id;
-        //         console.log(id);
-        //                         let tl = gsap.timeline({defaults: {duration: 1.5}});
-        //         tl.staggerTo(`.span-${id}`, 0.5, {right: "0%", opacity: 1}, 0.1)
-        //         tl.to(`.text-${id}`, 0.5, {width: "80%"}, 0.1);
-
-        //     })
-
-        //     div.addEventListener("mouseout", event=>{
-        //         let id = event.currentTarget.id;
-        //         let tl = gsap.timeline({defaults: {duration: 1.5}});
-        //         tl.staggerTo(`.span-${id}`, 0.5, {right: "100%", opacity: 1}, 0.1)
-        //         // tl.to(`.text-${id}`, 0.5, {width: "0"}, 0.1);
-        //     })
-        // })
-
-
         logos.forEach(logo=>{
             logo.addEventListener("mouseover", event=>{
                 let id = event.currentTarget.id;

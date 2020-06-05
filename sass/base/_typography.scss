@@ -7,10 +7,16 @@ body{
 .normal-text{
     font-size: 1.6rem;
     margin-bottom: 1rem;
+    @include respond(tab-port){
+        font-size: 3rem;
+    }
 }
 
 .medium-text{
     font-size: 2rem;
+    @include respond(tab-port){
+        font-size: 5rem;
+    }
 }
 
 
@@ -52,6 +58,9 @@ body{
 
 .align-right{
     text-align: right;
+    @include respond(tab-port){
+        text-align: left;
+    }
 }
 
 .bold{

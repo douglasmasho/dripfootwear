@@ -28,7 +28,7 @@
 
     &-7{
         &--child{
-            width: 13%;
+            width: 15%;
             @include respond(tab-port){  
                 width: 90%;
             };
@@ -36,5 +36,16 @@
                 width: 90%;
               }
         }
+    }
+    &-8{
+        &--child{
+            width: 13%;
+            @include respond(tab-port){  
+                width: 90%;
+            };
+            @include respond(phone){  
+                width: 90%;
+              }
+        }   
     }
 }

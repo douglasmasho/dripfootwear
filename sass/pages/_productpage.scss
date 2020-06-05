@@ -59,8 +59,16 @@
                 height: 2rem;
                 padding: 1rem;
                 width: 5rem;
-                border-radius: 20px;
+                border-radius: 50px;
                 border-color: transparent;
+                @include respond(tab-port){
+                    width: 10rem;
+                    height: 5rem;
+                    font-size: 3rem;
+                }
+                @include respond(phone){
+                    font-size: 4rem;
+                }
             }
         }
 
@@ -104,6 +112,9 @@
                 font-size: 2rem;
                 color: #00C2FF;
                 display: inline-block;
+                @include respond(tab-port){
+                    font-size: 4rem;
+                }
             }
             &--icon{
                 width: 0;

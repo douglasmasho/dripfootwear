@@ -44,6 +44,9 @@
             z-index: 1000;
             position: relative;
             left: 30px;
+            @include respond(tab-port){
+                width: 90%;
+            }
         }
         &--logo{
             width: 130%;
@@ -65,10 +68,17 @@
         height: 6rem;
         border-radius: 50%;
         cursor: pointer;
+        @include respond(tab-port){
+            width: 10rem;
+            height: 10rem;
+        }
     }
     &--text{
         font-size: 2rem;
         margin-right: 1rem;
+        @include respond(tab-port){
+            font-size: 4rem;
+        }
     }
     &--price{
         font-size: 2.5rem;
@@ -78,9 +88,16 @@
         padding: 5px 20px;
         border-radius: 30px;
         transition: all .5s;  
+        @include respond(tab-port){
+            font-size: 4rem;
+        }
     }
     &--delete{
         font-size: 3.5rem;
+        @include respond(tab-port){
+            font-size: 8rem;
+            margin-top: 5rem;
+        }
     }
     &--avColors{
         background-color: #1e1e1e;
@@ -104,6 +121,10 @@
             display: inline-block;
             margin: 5px;
             cursor: pointer;
+            @include respond(tab-port){
+                width: 6rem;
+                height: 6rem;
+            }
         }
     }
 }
@@ -116,12 +137,16 @@
     padding: 5px 20px;
     border-radius: 30px;
     transition: all .5s;  
+    @include respond(tab-port){
+        font-size: 4rem;
+    }
 }
 
 .totalsDiv{
     background-color: white;
     border-radius: 25px;
     width: 50%;
+    margin-bottom: 3rem;
 }
 
 .total{
@@ -132,6 +157,19 @@
 
     &--data{
         font-size: 2rem;
+        @include respond(tab-port){
+            font-size: 3rem;
+        }
+        @include respond(phone){
+            font-size: 4rem;
+        }
+    }
+}
+
+
+.otherDiv{
+    @include respond(tab-port){
+        margin-bottom: 5rem;
     }
 }
 

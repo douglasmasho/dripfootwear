@@ -116,9 +116,15 @@ body {
 .normal-text {
   font-size: 1.6rem;
   margin-bottom: 1rem; }
+  @media (max-width: 56.25em) {
+    .normal-text {
+      font-size: 3rem; } }
 
 .medium-text {
   font-size: 2rem; }
+  @media (max-width: 56.25em) {
+    .medium-text {
+      font-size: 5rem; } }
 
 .white-text {
   color: white;
@@ -151,6 +157,9 @@ body {
 
 .align-right {
   text-align: right; }
+  @media (max-width: 56.25em) {
+    .align-right {
+      text-align: left; } }
 
 .bold {
   font-weight: bold; }
@@ -403,6 +412,12 @@ body {
     top: 80%;
     z-index: 1000;
     transition: all .5s; }
+    @media (max-width: 56.25em) {
+      .card--price {
+        font-size: 1.5rem; } }
+    @media (max-width: 37.5em) {
+      .card--price {
+        font-size: 2.5rem; } }
   .card--ctadiv {
     display: flex;
     justify-content: center; }
@@ -490,6 +505,9 @@ body {
   transition: all .2s;
   font-size: 1.5rem;
   width: 80%; }
+  @media (max-width: 75em) {
+    .input-textbox {
+      font-size: 5rem; } }
   @media (max-width: 37.5em) {
     .input-textbox {
       font-size: 3rem; } }
@@ -506,6 +524,10 @@ body {
   border-radius: 30px;
   padding: 5px 20px;
   font-family: Montserrat; }
+  @media (max-width: 56.25em) {
+    .input-number {
+      font-size: 4rem;
+      width: 8rem; } }
 
 .input-select {
   padding: 15px 20px;
@@ -682,7 +704,8 @@ body {
   display: flex;
   justify-content: space-between;
   top: 0;
-  margin-top: 2rem; }
+  transition: .5s;
+  padding-top: 2rem; }
   .header--right {
     display: flex;
     justify-content: flex-end;
@@ -693,6 +716,9 @@ body {
     width: 15rem;
     margin-left: 2rem; }
     @media (max-width: 75em) {
+      .header--logo {
+        width: 20rem; } }
+    @media (max-width: 37.5em) {
       .header--logo {
         width: 30rem; } }
   .header--menu {
@@ -717,10 +743,6 @@ body {
       .header--cartContainer {
         width: 6rem;
         height: 6rem; } }
-    @media (max-width: 56.25em) {
-      .header--cartContainer {
-        width: 7rem;
-        height: 7rem; } }
     @media (max-width: 37.5em) {
       .header--cartContainer {
         width: 9rem;
@@ -735,9 +757,6 @@ body {
     @media (max-width: 75em) {
       .header--cart {
         font-size: 5rem; } }
-    @media (max-width: 56.25em) {
-      .header--cart {
-        font-size: 6rem; } }
     @media (max-width: 37.5em) {
       .header--cart {
         font-size: 7rem; } }
@@ -758,11 +777,15 @@ body {
         font-size: 2rem;
         width: 2rem;
         height: 2rem; } }
-    @media (max-width: 56.25em) {
+    @media (max-width: 37.5em) {
       .header--bubble {
         font-size: 3rem;
         width: 3rem;
         height: 3rem; } }
+
+.header.black {
+  background-color: rgba(0, 0, 0, 0.747);
+  backdrop-filter: blur(5px); }
 
 .nav {
   height: 100%;
@@ -951,12 +974,20 @@ body {
       .row-3--child {
         width: 90%; } }
   .row-7--child {
-    width: 13%; }
+    width: 15%; }
     @media (max-width: 56.25em) {
       .row-7--child {
         width: 90%; } }
     @media (max-width: 37.5em) {
       .row-7--child {
+        width: 90%; } }
+  .row-8--child {
+    width: 13%; }
+    @media (max-width: 56.25em) {
+      .row-8--child {
+        width: 90%; } }
+    @media (max-width: 37.5em) {
+      .row-8--child {
         width: 90%; } }
 
 /* slider styles */
@@ -1439,8 +1470,16 @@ body {
       height: 2rem;
       padding: 1rem;
       width: 5rem;
-      border-radius: 20px;
+      border-radius: 50px;
       border-color: transparent; }
+      @media (max-width: 56.25em) {
+        .product--details--quantity--input {
+          width: 10rem;
+          height: 5rem;
+          font-size: 3rem; } }
+      @media (max-width: 37.5em) {
+        .product--details--quantity--input {
+          font-size: 4rem; } }
     .product--details--sizes, .product--details--colors, .product--details--quantity {
       display: flex; }
       .product--details--sizes--options, .product--details--colors--options, .product--details--quantity--options {
@@ -1473,6 +1512,9 @@ body {
         font-size: 2rem;
         color: #00C2FF;
         display: inline-block; }
+        @media (max-width: 56.25em) {
+          .product--details--cta--text {
+            font-size: 4rem; } }
       .product--details--cta--icon {
         width: 0;
         opacity: 0;
@@ -1593,6 +1635,9 @@ body {
       z-index: 1000;
       position: relative;
       left: 30px; }
+      @media (max-width: 56.25em) {
+        .cartItem--pic--shoe {
+          width: 90%; } }
     .cartItem--pic--logo {
       width: 130%;
       opacity: 0.2;
@@ -1609,9 +1654,16 @@ body {
     height: 6rem;
     border-radius: 50%;
     cursor: pointer; }
+    @media (max-width: 56.25em) {
+      .cartItem--color {
+        width: 10rem;
+        height: 10rem; } }
   .cartItem--text {
     font-size: 2rem;
     margin-right: 1rem; }
+    @media (max-width: 56.25em) {
+      .cartItem--text {
+        font-size: 4rem; } }
   .cartItem--price {
     font-size: 2.5rem;
     color: #00C2FF;
@@ -1620,8 +1672,15 @@ body {
     padding: 5px 20px;
     border-radius: 30px;
     transition: all .5s; }
+    @media (max-width: 56.25em) {
+      .cartItem--price {
+        font-size: 4rem; } }
   .cartItem--delete {
     font-size: 3.5rem; }
+    @media (max-width: 56.25em) {
+      .cartItem--delete {
+        font-size: 8rem;
+        margin-top: 5rem; } }
   .cartItem--avColors {
     background-color: #1e1e1e;
     padding: 2rem;
@@ -1642,6 +1701,10 @@ body {
       display: inline-block;
       margin: 5px;
       cursor: pointer; }
+      @media (max-width: 56.25em) {
+        .cartItem--avColors--color {
+          width: 6rem;
+          height: 6rem; } }
 
 .ppu {
   font-size: 2.5rem;
@@ -1651,17 +1714,31 @@ body {
   padding: 5px 20px;
   border-radius: 30px;
   transition: all .5s; }
+  @media (max-width: 56.25em) {
+    .ppu {
+      font-size: 4rem; } }
 
 .totalsDiv {
   background-color: white;
   border-radius: 25px;
-  width: 50%; }
+  width: 50%;
+  margin-bottom: 3rem; }
 
 .total--head {
   font-size: 3rem; }
 
 .total--data {
   font-size: 2rem; }
+  @media (max-width: 56.25em) {
+    .total--data {
+      font-size: 3rem; } }
+  @media (max-width: 37.5em) {
+    .total--data {
+      font-size: 4rem; } }
+
+@media (max-width: 56.25em) {
+  .otherDiv {
+    margin-bottom: 5rem; } }
 
 .brands {
   background-color: #3609FE; }

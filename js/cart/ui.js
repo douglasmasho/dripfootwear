@@ -40,28 +40,28 @@ class UI{
                     </div>
                 </div>
                 
-                <div class="center-vert z3500" style="position: relative;">
+                <div class="otherDiv center-vert z3500" style="position: relative;">
                     <div class="center-hrz">
                         <p class="cartItem--text">Size:</p>
                         <input type="number" placeholder="5" class="input-number input-size" min="6" max="9" value="${item.size}">
                     </div>
                 </div>
 
-                <div class="center-vert  z4000">
+                <div class="otherDiv  center-vert  z4000">
                     <div class="center-hrz">
                         <p class="cartItem--text">Qty:</p>
                         <input type="number" placeholder="1" class="input-number input-qty" min="1" max="50" value="${item.qty}">
                     </div>
                 </div>
 
-                <div class="center-vert  z4000">
+                <div class="otherDiv  center-vert  z4000">
                     <p class="cartItem--price">US$${parseInt(item.price.slice(3,9)) * item.qty}</p>
                 </div>
                 <div class="center-vert  z4000">
                 <p class="ppu">ppu:${item.price}</p>
                 </div>
 
-                <div class="center-vert  z4000">
+                <div class=" center-vert  z4000">
                     <span class="lnr lnr-trash cartItem--delete"></span>
                 </div>
             </div>

@@ -42,7 +42,7 @@
 
         pushProduct(logoSrc, shoeSrc, shoeBrand, shoeModel, shoePrice, color0, color1, color2, color3){
             document.getElementById("productDiv").innerHTML = `        
-         <div class="product u-margin-top">
+         <div class="product u-margin-top-big">
             <div class="product--details">
                 <h3 class="product--details--brand">${shoeBrand}</h3>
                 <h4 class="product--details--model">${shoeModel}</h4>
