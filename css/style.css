@@ -118,6 +118,9 @@ body {
   margin-bottom: 1rem; }
   @media (max-width: 56.25em) {
     .normal-text {
+      font-size: 2rem; } }
+  @media (max-width: 37.5em) {
+    .normal-text {
       font-size: 3rem; } }
 
 .medium-text {
@@ -1475,7 +1478,7 @@ body {
       @media (max-width: 56.25em) {
         .product--details--quantity--input {
           width: 10rem;
-          height: 5rem;
+          height: 2rem;
           font-size: 3rem; } }
       @media (max-width: 37.5em) {
         .product--details--quantity--input {
@@ -1514,7 +1517,7 @@ body {
         display: inline-block; }
         @media (max-width: 56.25em) {
           .product--details--cta--text {
-            font-size: 4rem; } }
+            font-size: 3rem; } }
       .product--details--cta--icon {
         width: 0;
         opacity: 0;

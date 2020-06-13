@@ -1,47 +1,48 @@
+import Nav from "./utils/navutil.js"
+// class Nav{
+//     constructor(){
+//         this.navBg = document.querySelector(".nav");
+//     }
 
-class Nav{
-    constructor(){
-        this.navBg = document.querySelector(".nav");
-    }
+//     navOpen(){
+//        this.navBg.style.animation = "comein 0.5s forwards"; 
+//     }
 
-    navOpen(){
-       this.navBg.style.animation = "comein 0.5s forwards"; 
-    }
+//     navClose(){
+//         this.navBg.style.animation = "goaway 0.5s forwards";
+//     }
 
-    navClose(){
-        this.navBg.style.animation = "goaway 0.5s forwards";
-    }
+//     gsapItems(str){
+//         if(str === "mouseover"){
+//             let tl = gsap.timeline({defaults: {duration: 0.7}});
+//             tl.to(".project-preview", {width: "600px", x:-100,ease: "Circ.easeInOut"});
+//         }
+//         else if(str === "mouseout"){
+//             let tl = gsap.timeline({defaults: {duration: 0.7}});
+//             tl.to(".project-preview", {width: "0px", x:100,ease: "Circ.easeInOut"});
+//         }
+//     }
 
-    gsapItems(str){
-        if(str === "mouseover"){
-            let tl = gsap.timeline({defaults: {duration: 0.7}});
-            tl.to(".project-preview", {width: "600px", x:-100,ease: "Circ.easeInOut"});
-        }
-        else if(str === "mouseout"){
-            let tl = gsap.timeline({defaults: {duration: 0.7}});
-            tl.to(".project-preview", {width: "0px", x:100,ease: "Circ.easeInOut"});
-        }
-    }
+//     gsapSpan(str, span){
+//         let projectPreview = document.querySelector(".project-preview");
+//         let abstract = document.querySelector(".abstract");
+//         if(str === "mouseover"){
+//             let imgSrc = span.dataset.text;
+//             projectPreview.style.background = `url(/img/${imgSrc}.jpg)`;
+//             projectPreview.style.backgroundSize = "cover";
+//             projectPreview.style.overflow = "visible";
+//             abstract.textContent = imgSrc;
+//             abstract.style.backgroundPosition = "100%"
+//             console.log( span.dataset.text)
+//         }
+//         else if(str === "mouseout"){
 
-    gsapSpan(str, span){
-        let projectPreview = document.querySelector(".project-preview");
-        let abstract = document.querySelector(".abstract");
-        if(str === "mouseover"){
-            let imgSrc = span.dataset.text;
-            projectPreview.style.background = `url(/img/${imgSrc}.jpg)`;
-            projectPreview.style.backgroundSize = "cover";
-            projectPreview.style.overflow = "visible";
-            abstract.textContent = imgSrc;
-            abstract.style.backgroundPosition = "100%"
-            console.log( span.dataset.text)
-        }
-        else if(str === "mouseout"){
+//             projectPreview.style.overflow = "hidden";
+//             abstract.style.backgroundPosition = "unset"
+//         }
+//     }
+// }
 
-            projectPreview.style.overflow = "hidden";
-            abstract.style.backgroundPosition = "unset"
-        }
-    }
-}
 
 
 //init 
@@ -83,12 +84,12 @@ navSpan.forEach(span=>{
 })
 
 
-let cartCount = ()=>{
+export let cartCount = ()=>{
     let bubble = document.querySelector(".header--bubble");
     //find the number of items in the cart if the cart exists
     // get the cart array string
     //peform only if the cart exists within the LS
-    if(localStorage.getItem("cart") !== "[]"){
+    if(localStorage.getItem("cart") !== null){
     let cart = JSON.parse(localStorage.getItem("cart"));
         //accumulate
         let acc = 0;
@@ -101,8 +102,6 @@ let cartCount = ()=>{
         bubble.style.display = "none";
     }
 }
-
-
 cartCount();
 
 
