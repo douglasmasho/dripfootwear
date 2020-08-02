@@ -29,6 +29,64 @@
 <div class="header">
 <a href="index.html"><img src="img/dripftwr.svg" alt="drip-logo" class="header--logo"></a> 
 <div class="header--right">
+ <button id="sign-up-btn" class="button u-margin-right" style="border: none; background-color: rgb(0, 255, 0); color: black; padding: 1rem">Sign Up</button>
+ <button id="sign-in-btn" class="button u-margin-right" style="border: none; background-color: rgb(238, 255, 0); color: black; padding: 1rem">Sign in</button>
+
+ <div class="modal" id="modal-signup">
+  <button data-close-button class="close-button">&times;</button>
+  <div class="modal-header">
+    <h2 class="modal-title blue-text normal-text">Sign Up</h2>
+  </div>
+  <div class="modal-body u-margin-bottom ">
+    <form>
+      <div class="input-group center-hrz--col u-margin-bottom">
+        <input type="text" name="text" id="signupname" class="input-textbox" placeholder="Name*" required>
+        <label for="signupname" class="input--label">Name</label>
+      </div>
+  
+      <div class="input-group  center-hrz--col u-margin-bottom">
+        <input type="email" name="email" id="signupemail" class="input-textbox" placeholder="Email address*" required>            
+        <label for="signupemail" class="input--label">Email address</label>
+      </div>
+
+      <div class="input-group  center-hrz--col u-margin-bottom">
+        <input type="password" name="signuppassword" id="Email-address" class="input-textbox" placeholder="Password*" required>            
+        <label for="signuppassword" class="input--label">Password</label>
+      </div>
+
+       <div class="center-hrz">
+        <button class="normal-text button u-margin-right" style="border: none; background-color: rgb(0, 255, 0); color: black; padding: 1rem">Sign Up</button>
+       </div>
+    </form>
+
+  </div>
+</div>
+
+<div class="modal" id="modal-signin">
+  <button data-close-button class="close-button">&times;</button>
+  <div class="modal-header">
+    <h2 class="modal-title blue-text normal-text">Sign In</h2>
+  </div>
+  <div class="modal-body u-margin-bottom ">
+    <form>
+      <div class="input-group center-hrz--col u-margin-bottom">
+        <input type="email" name="email" id="signinemail" class="input-textbox" placeholder="Email address*" required>            
+        <label for="signinemail" class="input--label">Email address</label>
+      </div>
+
+      <div class="input-group  center-hrz--col u-margin-bottom">
+        <input type="password" name="signinpassword" id="Email-address" class="input-textbox" placeholder="Password*" required>            
+        <label for="signinpassword" class="input--label">Password</label>
+      </div>
+      <div>
+        <button class="button u-margin-right normal-text" style="border: none; background-color: rgb(238, 255, 0); color: black; padding: 1rem">Sign in</button>
+      </div>
+    </form>
+
+  </div>
+</div>
+
+<div id="overlay"></div>
 <!-- <span></span><a href="#" class="link"><span class="header--cart lnr lnr-cart"></span></a><p class="header--bubble">40</p></span> -->
 <div onclick="location.href='cart.html'" class="header--cartContainer">
   <span class="header--cart lnr lnr-cart"></span>
@@ -37,6 +95,9 @@
 <span class="header--menu nav--icon lnr lnr-menu"></span>
 </div>
 </div>  
+
+
+
     <div class="nav">
        <a href="#" class="nav--back">
         <span><i class="lnr lnr-cross" ></i></span>    
@@ -602,16 +663,33 @@
       </footer>
 
 </div>
-
+<!-- <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TimelineLite.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenLite.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.4/TweenMax.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TimelineMax.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script> -->
 <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
 <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/CSSRulePlugin3.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
-  <script src="nav.js" type="module"></script>
-   <script src="js/index.js" type="module"></script>
+  <script src="js/nav.js"></script>
+   <script src="js/index/data.js"></script>
+   <script src="js/index/ui.js"></script>
+   <script src="js/index/script.js"></script>
    <!-- <script src="node_modules/@glidejs/glide/dist/glide.min.js"></script> -->
 </body>
+
+
 </html>
+<!-- <div class="home">
+  <div class="row row1">
+    <div class="feature__box">
+     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda magni dolore perferendis veritatis, in saepe cum laborum vel sit nulla odit placeat iusto, eos ipsam voluptates dicta velit dolorem deserunt.
+    </div>
+
+  </div>
+</div> -->
+
 
 
     

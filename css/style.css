@@ -674,7 +674,8 @@ body {
   position: absolute;
   top: 0;
   right: 0;
-  margin: 1rem; }
+  margin: 1rem;
+  cursor: pointer; }
 
 #overlay {
   position: fixed;
