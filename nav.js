@@ -46,8 +46,9 @@ import Nav from "./utils/navutil.js"
 
 
 //init 
-let nav = new Nav;
+console.log("here")
 
+let nav = new Nav;
 
 //add event listeners
 document.querySelector(".nav--icon").addEventListener("click", function(){
