@@ -1,6 +1,7 @@
 # DRIP Footwear
 ![Banner](./img/home.jpg )
 
+
 ## Description
 This project is a frontend for an e-commerce shoe store.
 
