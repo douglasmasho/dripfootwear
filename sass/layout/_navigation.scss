@@ -122,6 +122,11 @@
     height: 100%;
     width: 0;
     background-color: #0a0a0a;
+    background-image: url(../img/home2.jpg);
+    background-size: cover;
+    @include respond(phone){
+        background-image: url(../img/home2.jpg);
+    }
     z-index: 15000;
     position: absolute;
     right: 100vw; 
@@ -151,16 +156,27 @@
         z-index: 2000;
         list-style: none;
         position: absolute;
+        @include respond(phone){
+            margin-top: 0px;
+            margin-left: 50px;
+            // margin-bottom: 200px;   
+        }
         
     }
 
     &--item{
         display: block;
         margin: 120px 0;
+        @include respond(phone){
+        margin: 50px 0;
+        }
     }
     
     &--link{
         font-size: 50px;
+        @include respond(phone){
+            font-size: 8rem;
+        }
         text-decoration: none;
         text-transform: uppercase;
         color: transparent;
@@ -169,6 +185,9 @@
            position: relative;
            display: block;
            color: white;
+           @include respond(phone){
+            //    color: black;
+           }
 
            &::before{
                width: 0;
@@ -177,6 +196,9 @@
                position: absolute;
                content: attr(data-text);
                transition: all 1s cubic-bezier(0.84, 0, 0.08, 0.99);
+               @include respond(phone){
+                //    color: white;
+               }
            }
 
            &:hover::before{

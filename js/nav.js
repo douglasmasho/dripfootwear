@@ -188,14 +188,7 @@ function scrollanimation(element, classname){
 
 scrollanimation(".header", "black");
 
-//event handlers for opening modals;
-document.getElementById("sign-up-btn").addEventListener("click", ()=>{
-    nav.openModal("signup")
-});
 
-document.getElementById("sign-in-btn").addEventListener("click", ()=>{
-    nav.openModal("signin")
-})
 
 //init regex 
 

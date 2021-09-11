@@ -143,6 +143,9 @@
     @include respond(tab-port){  
         width: 90%;
     }
+    @include respond(phone){
+        width: 70%;
+    }
     &--icon{
         // width: 6rem;
         margin-bottom: 1rem;

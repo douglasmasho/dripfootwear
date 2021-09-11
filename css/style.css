@@ -311,7 +311,7 @@ body {
   flex-direction: column;
   width: 15rem;
   position: absolute;
-  top: 50%;
+  top: 10%;
   right: 0;
   transition: all .3s;
   margin: 5px 0px 5px 5px;
@@ -795,10 +795,15 @@ body {
   height: 100%;
   width: 0;
   background-color: #0a0a0a;
+  background-image: url(../img/home2.jpg);
+  background-size: cover;
   z-index: 15000;
   position: absolute;
   right: 100vw;
   overflow: scroll; }
+  @media (max-width: 37.5em) {
+    .nav {
+      background-image: url(../img/home2.jpg); } }
   .nav--backdrop {
     /* height: 100%; */
     width: 100%;
@@ -817,14 +822,24 @@ body {
     z-index: 2000;
     list-style: none;
     position: absolute; }
+    @media (max-width: 37.5em) {
+      .nav--list {
+        margin-top: 0px;
+        margin-left: 50px; } }
   .nav--item {
     display: block;
     margin: 120px 0; }
+    @media (max-width: 37.5em) {
+      .nav--item {
+        margin: 50px 0; } }
   .nav--link {
     font-size: 50px;
     text-decoration: none;
     text-transform: uppercase;
     color: transparent; }
+    @media (max-width: 37.5em) {
+      .nav--link {
+        font-size: 8rem; } }
     .nav--link span {
       position: relative;
       display: block;
@@ -1403,6 +1418,9 @@ body {
   @media (max-width: 56.25em) {
     .featurebox {
       width: 90%; } }
+  @media (max-width: 37.5em) {
+    .featurebox {
+      width: 70%; } }
   .featurebox--icon {
     margin-bottom: 1rem; }
     .featurebox--icon__1 {
@@ -1727,6 +1745,9 @@ body {
   border-radius: 25px;
   width: 50%;
   margin-bottom: 3rem; }
+  @media (max-width: 37.5em) {
+    .totalsDiv {
+      width: 90%; } }
 
 .total--head {
   font-size: 3rem; }

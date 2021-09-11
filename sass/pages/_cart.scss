@@ -147,6 +147,9 @@
     border-radius: 25px;
     width: 50%;
     margin-bottom: 3rem;
+    @include respond(phone){
+        width: 90%;
+    }
 }
 
 .total{
